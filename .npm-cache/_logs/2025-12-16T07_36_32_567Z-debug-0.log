@@ -1,0 +1,2621 @@
+0 verbose cli /Users/ironkim/.nvm/versions/node/v18.19.0/bin/node /Users/ironkim/.nvm/versions/node/v18.19.0/bin/npm
+1 info using npm@10.2.3
+2 info using node@v18.19.0
+3 timing npm:load:whichnode Completed in 1ms
+4 timing config:load:defaults Completed in 0ms
+5 timing config:load:file:/Users/ironkim/.nvm/versions/node/v18.19.0/lib/node_modules/npm/npmrc Completed in 1ms
+6 timing config:load:builtin Completed in 1ms
+7 timing config:load:cli Completed in 2ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:file:/Users/ironkim/WebstormProjects/kugs-world-admin/.npmrc Completed in 0ms
+10 timing config:load:project Completed in 3ms
+11 timing config:load:file:/Users/ironkim/.npmrc Completed in 0ms
+12 timing config:load:user Completed in 0ms
+13 timing config:load:file:/Users/ironkim/.nvm/versions/node/v18.19.0/etc/npmrc Completed in 1ms
+14 timing config:load:global Completed in 1ms
+15 timing config:load:setEnvs Completed in 0ms
+16 timing config:load Completed in 7ms
+17 timing npm:load:configload Completed in 7ms
+18 timing config:load:flatten Completed in 1ms
+19 timing npm:load:mkdirpcache Completed in 0ms
+20 timing npm:load:mkdirplogs Completed in 0ms
+21 verbose title npm i @refinedev/core @refinedev/nextjs-router @refinedev/antd @refinedev/supabase @tanstack/react-query @supabase/supabase-js antd @ant-design/icons dayjs @ant-design/nextjs-registry
+22 verbose argv "i" "@refinedev/core" "@refinedev/nextjs-router" "@refinedev/antd" "@refinedev/supabase" "@tanstack/react-query" "@supabase/supabase-js" "antd" "@ant-design/icons" "dayjs" "@ant-design/nextjs-registry"
+23 timing npm:load:setTitle Completed in 9ms
+24 timing npm:load:display Completed in 0ms
+25 verbose logfile logs-max:10 dir:/Users/ironkim/WebstormProjects/kugs-world-admin/.npm-cache/_logs/2025-12-16T07_36_32_567Z-
+26 verbose logfile /Users/ironkim/WebstormProjects/kugs-world-admin/.npm-cache/_logs/2025-12-16T07_36_32_567Z-debug-0.log
+27 timing npm:load:logFile Completed in 5ms
+28 timing npm:load:timers Completed in 0ms
+29 timing npm:load:configScope Completed in 0ms
+30 timing npm:load Completed in 30ms
+31 timing arborist:ctor Completed in 1ms
+32 silly logfile done cleaning log files
+33 timing idealTree:init Completed in 119ms
+34 timing idealTree:userRequests Completed in 1ms
+35 silly idealTree buildDeps
+36 silly fetch manifest @refinedev/core@*
+37 timing arborist:ctor Completed in 0ms
+38 http fetch GET 200 https://registry.npmjs.org/@refinedev%2fcore 165ms (cache miss)
+39 silly fetch manifest @types/react@^18
+40 http fetch GET 200 https://registry.npmjs.org/@types%2freact 8ms (cache hit)
+41 silly fetch manifest @types/react-dom@^18
+42 http fetch GET 200 https://registry.npmjs.org/@types%2freact-dom 4ms (cache hit)
+43 silly fetch manifest react@^18
+44 http fetch GET 200 https://registry.npmjs.org/react 13ms (cache hit)
+45 silly fetch manifest react-dom@^18
+46 http fetch GET 200 https://registry.npmjs.org/react-dom 20ms (cache hit)
+47 silly fetch manifest @refinedev/nextjs-router@*
+48 http fetch GET 200 https://registry.npmjs.org/@refinedev%2fnextjs-router 274ms (cache miss)
+49 silly fetch manifest next@14.2.20
+50 http fetch GET 200 https://registry.npmjs.org/next 54ms (cache hit)
+51 silly fetch manifest @opentelemetry/api@^1.1.0
+52 http fetch GET 200 https://registry.npmjs.org/@opentelemetry%2fapi 26ms (cache hit)
+53 silly fetch manifest @playwright/test@^1.41.2
+54 http fetch GET 200 https://registry.npmjs.org/@playwright%2ftest 27ms (cache hit)
+55 silly fetch manifest sass@^1.3.0
+56 http fetch GET 200 https://registry.npmjs.org/sass 11ms (cache hit)
+57 silly fetch manifest @refinedev/antd@*
+58 http fetch GET 200 https://registry.npmjs.org/@refinedev%2fantd 104ms (cache miss)
+59 silly fetch manifest @refinedev/supabase@*
+60 http fetch GET 200 https://registry.npmjs.org/@refinedev%2fsupabase 464ms (cache miss)
+61 silly fetch manifest @tanstack/react-query@*
+62 http fetch GET 200 https://registry.npmjs.org/@tanstack%2freact-query 98ms (cache miss)
+63 silly fetch manifest @supabase/supabase-js@*
+64 http fetch GET 200 https://registry.npmjs.org/@supabase%2fsupabase-js 1180ms (cache miss)
+65 silly fetch manifest antd@*
+66 http fetch GET 200 https://registry.npmjs.org/antd 185ms (cache miss)
+67 silly fetch manifest @ant-design/icons@*
+68 http fetch GET 200 https://registry.npmjs.org/@ant-design%2ficons 76ms (cache miss)
+69 silly fetch manifest dayjs@*
+70 http fetch GET 200 https://registry.npmjs.org/dayjs 76ms (cache miss)
+71 silly fetch manifest @ant-design/nextjs-registry@*
+72 http fetch GET 200 https://registry.npmjs.org/@ant-design%2fnextjs-registry 276ms (cache miss)
+73 silly fetch manifest @ant-design/cssinjs@>=1.0.0
+74 http fetch GET 200 https://registry.npmjs.org/@ant-design%2fcssinjs 64ms (cache miss)
+75 silly placeDep ROOT @ant-design/icons@6.1.0 OK for: tmp-next@0.1.0 want: *
+76 silly fetch manifest clsx@^2.1.1
+77 silly fetch manifest @ant-design/colors@^8.0.0
+78 silly fetch manifest @rc-component/util@^1.3.0
+79 silly fetch manifest @ant-design/icons-svg@^4.4.0
+80 silly placeDep ROOT @ant-design/nextjs-registry@1.3.0 OK for: tmp-next@0.1.0 want: *
+81 silly placeDep ROOT @ant-design/cssinjs@2.0.1 OK for: @ant-design/nextjs-registry@1.3.0 want: >=1.0.0
+82 silly placeDep ROOT antd@6.1.1 OK for: @ant-design/nextjs-registry@1.3.0 want: >=5.0.0
+83 silly fetch manifest dayjs@^1.11.11
+84 silly fetch manifest @babel/runtime@^7.28.4
+85 silly fetch manifest throttle-debounce@^5.0.2
+86 silly fetch manifest @rc-component/form@~1.5.0
+87 silly fetch manifest @rc-component/menu@~1.2.0
+88 silly fetch manifest @rc-component/rate@~1.0.1
+89 silly fetch manifest @rc-component/tabs@~1.7.0
+90 silly fetch manifest @rc-component/tour@~2.2.1
+91 silly fetch manifest @rc-component/tree@~1.1.0
+92 silly fetch manifest @rc-component/util@^1.6.0
+93 silly fetch manifest @rc-component/image@~1.5.3
+94 silly fetch manifest @rc-component/input@~1.1.2
+95 silly fetch manifest @rc-component/steps@~1.2.2
+96 silly fetch manifest @rc-component/table@~1.9.0
+97 silly fetch manifest @rc-component/dialog@~1.5.1
+98 silly fetch manifest @rc-component/drawer@~1.3.0
+99 silly fetch manifest @rc-component/motion@~1.1.6
+100 silly fetch manifest @rc-component/picker@~1.9.0
+101 silly fetch manifest @rc-component/qrcode@~1.1.1
+102 silly fetch manifest @rc-component/select@~1.3.5
+103 silly fetch manifest @rc-component/slider@~1.0.1
+104 silly fetch manifest @rc-component/switch@~1.0.3
+105 silly fetch manifest @rc-component/upload@~1.1.0
+106 silly fetch manifest @rc-component/tooltip@~1.4.0
+107 silly fetch manifest @rc-component/trigger@^3.7.1
+108 silly fetch manifest @ant-design/fast-color@^3.0.0
+109 silly fetch manifest @rc-component/cascader@~1.9.0
+110 silly fetch manifest @rc-component/checkbox@~1.0.1
+111 silly fetch manifest @rc-component/collapse@~1.1.2
+112 silly fetch manifest @rc-component/dropdown@~1.0.2
+113 silly fetch manifest @rc-component/mentions@~1.6.0
+114 silly fetch manifest @rc-component/progress@~1.0.2
+115 silly fetch manifest @rc-component/textarea@~1.1.2
+116 silly fetch manifest @ant-design/react-slick@~2.0.0
+117 silly fetch manifest @rc-component/segmented@~1.2.3
+118 silly fetch manifest @rc-component/pagination@~1.2.0
+119 silly fetch manifest @ant-design/cssinjs-utils@^2.0.2
+120 silly fetch manifest @rc-component/tree-select@~1.4.0
+121 silly fetch manifest @rc-component/color-picker@~3.0.3
+122 silly fetch manifest @rc-component/input-number@~1.6.2
+123 silly fetch manifest @rc-component/notification@~1.2.0
+124 silly fetch manifest scroll-into-view-if-needed@^3.1.0
+125 silly fetch manifest @rc-component/mutate-observer@^2.0.1
+126 silly fetch manifest @rc-component/resize-observer@^1.0.1
+127 silly fetch manifest @babel/runtime@^7.11.1
+128 silly fetch manifest @emotion/hash@^0.8.0
+129 silly fetch manifest @emotion/unitless@^0.7.5
+130 silly fetch manifest @rc-component/util@^1.4.0
+131 silly fetch manifest stylis@^4.3.4
+132 silly placeDep ROOT @refinedev/antd@6.0.3 OK for: tmp-next@0.1.0 want: *
+133 silly placeDep ROOT @refinedev/core@5.0.7 OK for: @refinedev/antd@6.0.3 want: ^5.0.0
+134 silly fetch manifest @ant-design/icons@^5.5.1
+135 silly fetch manifest @ant-design/pro-layout@^7.21.1
+136 silly fetch manifest @refinedev/ui-types@^2.0.1
+137 silly fetch manifest @tanstack/react-query@^5.81.5
+138 silly fetch manifest antd@^5.23.0
+139 silly fetch manifest dayjs@^1.10.7
+140 silly fetch manifest react-markdown@^6.0.1
+141 silly fetch manifest remark-gfm@^1.0.0
+142 silly fetch manifest sunflower-antd@1.0.0-beta.3
+143 silly fetch manifest @refinedev/devtools-internal@2.0.1
+144 silly fetch manifest lodash@^4.17.21
+145 silly fetch manifest lodash-es@^4.17.21
+146 silly fetch manifest papaparse@^5.3.0
+147 silly fetch manifest pluralize@^8.0.0
+148 silly fetch manifest qs@^6.10.1
+149 silly fetch manifest warn-once@^0.1.0
+150 silly placeDep ROOT @refinedev/core@5.0.7 REPLACE for: tmp-next@0.1.0 want: *
+151 silly placeDep ROOT @refinedev/nextjs-router@7.0.4 OK for: tmp-next@0.1.0 want: *
+152 silly placeDep ROOT @refinedev/supabase@6.0.1 OK for: tmp-next@0.1.0 want: *
+153 silly fetch manifest @supabase/supabase-js@^2.7.0
+154 silly placeDep ROOT @supabase/supabase-js@2.87.3 OK for: tmp-next@0.1.0 want: *
+155 silly fetch manifest @supabase/auth-js@2.87.3
+156 silly fetch manifest @supabase/storage-js@2.87.3
+157 silly fetch manifest @supabase/realtime-js@2.87.3
+158 silly fetch manifest @supabase/functions-js@2.87.3
+159 silly fetch manifest @supabase/postgrest-js@2.87.3
+160 silly placeDep ROOT @tanstack/react-query@5.90.12 OK for: tmp-next@0.1.0 want: *
+161 silly fetch manifest @tanstack/query-core@5.90.12
+162 silly placeDep ROOT antd@6.1.1 REPLACE for: tmp-next@0.1.0 want: *
+163 silly placeDep ROOT dayjs@1.11.19 OK for: tmp-next@0.1.0 want: *
+164 http fetch GET 200 https://registry.npmjs.org/clsx 93ms (cache miss)
+165 http fetch GET 200 https://registry.npmjs.org/pluralize 205ms (cache miss)
+166 http fetch GET 200 https://registry.npmjs.org/@babel%2fruntime 234ms (cache miss)
+167 http fetch GET 200 https://registry.npmjs.org/scroll-into-view-if-needed 225ms (cache miss)
+168 http fetch GET 200 https://registry.npmjs.org/lodash-es 220ms (cache miss)
+169 http fetch GET 200 https://registry.npmjs.org/throttle-debounce 243ms (cache miss)
+170 http fetch GET 200 https://registry.npmjs.org/@ant-design%2ficons-svg 249ms (cache miss)
+171 http fetch GET 200 https://registry.npmjs.org/react-markdown 226ms (cache miss)
+172 http fetch GET 200 https://registry.npmjs.org/lodash 226ms (cache miss)
+173 http fetch GET 200 https://registry.npmjs.org/stylis 252ms (cache miss)
+174 http fetch GET 200 https://registry.npmjs.org/@emotion%2funitless 254ms (cache miss)
+175 http fetch GET 200 https://registry.npmjs.org/warn-once 272ms (cache miss)
+176 http fetch GET 200 https://registry.npmjs.org/@tanstack%2fquery-core 267ms (cache miss)
+177 http fetch GET 200 https://registry.npmjs.org/@babel%2fruntime 290ms (cache miss)
+178 http fetch GET 200 https://registry.npmjs.org/@ant-design%2freact-slick 298ms (cache miss)
+179 http fetch GET 200 https://registry.npmjs.org/remark-gfm 306ms (cache miss)
+180 http fetch GET 200 https://registry.npmjs.org/@emotion%2fhash 315ms (cache miss)
+181 http fetch GET 200 https://registry.npmjs.org/papaparse 309ms (cache miss)
+182 http fetch GET 200 https://registry.npmjs.org/qs 309ms (cache miss)
+183 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fqrcode 449ms (cache miss)
+184 http fetch GET 200 https://registry.npmjs.org/@rc-component%2ftour 466ms (cache miss)
+185 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fmutate-observer 481ms (cache miss)
+186 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fcolor-picker 483ms (cache miss)
+187 http fetch GET 200 https://registry.npmjs.org/@rc-component%2ftrigger 486ms (cache miss)
+188 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fpicker 491ms (cache miss)
+189 http fetch GET 200 https://registry.npmjs.org/@ant-design%2fcssinjs-utils 510ms (cache miss)
+190 http fetch GET 200 https://registry.npmjs.org/@supabase%2frealtime-js 556ms (cache miss)
+191 http fetch GET 200 https://registry.npmjs.org/@ant-design%2fpro-layout 647ms (cache miss)
+192 http fetch GET 200 https://registry.npmjs.org/sunflower-antd 740ms (cache miss)
+193 http fetch GET 200 https://registry.npmjs.org/@ant-design%2fcolors 891ms (cache miss)
+194 http fetch GET 200 https://registry.npmjs.org/@ant-design%2ffast-color 1075ms (cache miss)
+195 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fslider 1177ms (cache miss)
+196 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fmentions 1347ms (cache miss)
+197 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fcollapse 1373ms (cache miss)
+198 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fcascader 1375ms (cache miss)
+199 http fetch GET 200 https://registry.npmjs.org/@rc-component%2frate 1400ms (cache miss)
+200 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fimage 1397ms (cache miss)
+201 http fetch GET 200 https://registry.npmjs.org/@rc-component%2ftree-select 1391ms (cache miss)
+202 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fupload 1395ms (cache miss)
+203 http fetch GET 200 https://registry.npmjs.org/@rc-component%2ftabs 1399ms (cache miss)
+204 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fmenu 1401ms (cache miss)
+205 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fform 1403ms (cache miss)
+206 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fresize-observer 1394ms (cache miss)
+207 http fetch GET 200 https://registry.npmjs.org/@supabase%2fauth-js 1379ms (cache miss)
+208 http fetch GET 200 https://registry.npmjs.org/@rc-component%2ftextarea 1428ms (cache miss)
+209 http fetch GET 200 https://registry.npmjs.org/@supabase%2ffunctions-js 1415ms (cache miss)
+210 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fsegmented 1436ms (cache miss)
+211 http fetch GET 200 https://registry.npmjs.org/@rc-component%2ftooltip 1440ms (cache miss)
+212 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fsteps 1443ms (cache miss)
+213 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fselect 1442ms (cache miss)
+214 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fnotification 1457ms (cache miss)
+215 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fcheckbox 1462ms (cache miss)
+216 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fprogress 1461ms (cache miss)
+217 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fpagination 1461ms (cache miss)
+218 http fetch GET 200 https://registry.npmjs.org/@rc-component%2finput-number 1460ms (cache miss)
+219 http fetch GET 200 https://registry.npmjs.org/@rc-component%2futil 1519ms (cache miss)
+220 http fetch GET 200 https://registry.npmjs.org/@rc-component%2futil 1534ms (cache miss)
+221 http fetch GET 200 https://registry.npmjs.org/@rc-component%2futil 1514ms (cache miss)
+222 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fdropdown 1522ms (cache miss)
+223 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fswitch 1526ms (cache miss)
+224 http fetch GET 200 https://registry.npmjs.org/@refinedev%2fdevtools-internal 1513ms (cache miss)
+225 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fdialog 1539ms (cache miss)
+226 http fetch GET 200 https://registry.npmjs.org/@supabase%2fpostgrest-js 1520ms (cache miss)
+227 http fetch GET 200 https://registry.npmjs.org/@supabase%2fstorage-js 1523ms (cache miss)
+228 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fmotion 1838ms (cache miss)
+229 http fetch GET 200 https://registry.npmjs.org/@rc-component%2ftable 1893ms (cache miss)
+230 http fetch GET 200 https://registry.npmjs.org/@refinedev%2fui-types 1880ms (cache miss)
+231 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fdrawer 1937ms (cache miss)
+232 http fetch GET 200 https://registry.npmjs.org/@rc-component%2ftree 1956ms (cache miss)
+233 http fetch GET 200 https://registry.npmjs.org/@rc-component%2finput 2061ms (cache miss)
+234 timing idealTree:#root Completed in 5495ms
+235 silly fetch manifest react@>=16.0.0
+236 silly fetch manifest react-dom@>=16.0.0
+237 silly placeDep ROOT @babel/runtime@7.28.4 OK for: @ant-design/cssinjs@2.0.1 want: ^7.11.1
+238 silly placeDep ROOT @emotion/hash@0.8.0 OK for: @ant-design/cssinjs@2.0.1 want: ^0.8.0
+239 silly placeDep ROOT @emotion/unitless@0.7.5 OK for: @ant-design/cssinjs@2.0.1 want: ^0.7.5
+240 silly placeDep ROOT @rc-component/util@1.6.0 OK for: @ant-design/cssinjs@2.0.1 want: ^1.4.0
+241 silly fetch manifest is-mobile@^5.0.0
+242 silly fetch manifest react-is@^18.2.0
+243 silly placeDep ROOT clsx@2.1.1 OK for: @ant-design/cssinjs@2.0.1 want: ^2.1.1
+244 silly placeDep ROOT stylis@4.3.6 OK for: @ant-design/cssinjs@2.0.1 want: ^4.3.4
+245 http fetch GET 200 https://registry.npmjs.org/react-is 11ms (cache hit)
+246 http fetch GET 200 https://registry.npmjs.org/is-mobile 54ms (cache miss)
+247 timing idealTree:node_modules/@ant-design/cssinjs Completed in 59ms
+248 silly placeDep ROOT @ant-design/colors@8.0.0 OK for: @ant-design/icons@6.1.0 want: ^8.0.0
+249 silly placeDep ROOT @ant-design/icons-svg@4.4.2 OK for: @ant-design/icons@6.1.0 want: ^4.4.0
+250 timing idealTree:node_modules/@ant-design/icons Completed in 1ms
+251 silly placeDep ROOT @ant-design/fast-color@3.0.0 OK for: @ant-design/colors@8.0.0 want: ^3.0.0
+252 timing idealTree:node_modules/@ant-design/colors Completed in 1ms
+253 timing idealTree:node_modules/@ant-design/fast-color Completed in 0ms
+254 timing idealTree:node_modules/@ant-design/icons-svg Completed in 0ms
+255 timing idealTree:node_modules/@ant-design/nextjs-registry Completed in 0ms
+256 timing idealTree:node_modules/@babel/runtime Completed in 0ms
+257 timing idealTree:node_modules/@emotion/hash Completed in 0ms
+258 timing idealTree:node_modules/@emotion/unitless Completed in 0ms
+259 silly placeDep ROOT is-mobile@5.0.0 OK for: @rc-component/util@1.6.0 want: ^5.0.0
+260 silly placeDep node_modules/@rc-component/util react-is@18.3.1 OK for: @rc-component/util@1.6.0 want: ^18.2.0
+261 timing idealTree:node_modules/@rc-component/util Completed in 1ms
+262 silly fetch manifest react@^18.0.0 || ^19.0.0
+263 silly fetch manifest react-dom@^18.0.0 || ^19.0.0
+264 silly fetch manifest @types/react@^18.0.0 || ^19.0.0
+265 silly placeDep node_modules/@refinedev/antd @ant-design/icons@5.6.1 OK for: @refinedev/antd@6.0.3 want: ^5.5.1
+266 silly fetch manifest rc-util@^5.31.1
+267 silly fetch manifest classnames@^2.2.6
+268 silly fetch manifest @ant-design/colors@^7.0.0
+269 silly placeDep ROOT @ant-design/pro-layout@7.22.7 OK for: @refinedev/antd@6.0.3 want: ^7.21.1
+270 silly placeDep ROOT antd@5.29.2 REPLACE for: @ant-design/pro-layout@7.22.7 want: ^4.24.15 || ^5.11.2
+271 silly fetch manifest swr@^2.0.0
+272 silly fetch manifest rc-util@^5.0.6
+273 silly fetch manifest warning@^4.0.3
+274 silly fetch manifest classnames@^2.3.2
+275 silly fetch manifest path-to-regexp@8.2.0
+276 silly fetch manifest @ant-design/icons@^5.0.0
+277 silly fetch manifest @umijs/use-params@^1.0.9
+278 silly fetch manifest @umijs/route-utils@^4.0.0
+279 silly fetch manifest rc-resize-observer@^1.1.0
+280 silly fetch manifest @ant-design/cssinjs@^1.21.1
+281 silly fetch manifest @ant-design/pro-utils@2.18.0
+282 silly fetch manifest @ant-design/pro-provider@2.16.2
+283 silly fetch manifest rc-menu@~9.16.1
+284 silly fetch manifest rc-rate@~2.13.1
+285 silly fetch manifest rc-tabs@~15.7.0
+286 silly fetch manifest rc-tree@~5.13.1
+287 silly fetch manifest rc-util@^5.44.4
+288 silly fetch manifest rc-image@~7.12.0
+289 silly fetch manifest rc-input@~1.8.0
+290 silly fetch manifest rc-steps@~6.0.1
+291 silly fetch manifest rc-table@~7.54.0
+292 silly fetch manifest rc-dialog@~9.6.0
+293 silly fetch manifest rc-drawer@~7.3.0
+294 silly fetch manifest rc-motion@^2.9.5
+295 silly fetch manifest rc-picker@~4.11.3
+296 silly fetch manifest rc-select@~14.16.8
+297 silly fetch manifest rc-slider@~11.1.9
+298 silly fetch manifest rc-switch@~4.1.0
+299 silly fetch manifest rc-upload@~4.11.0
+300 silly fetch manifest classnames@^2.5.1
+301 silly fetch manifest rc-tooltip@~6.4.0
+302 silly fetch manifest rc-cascader@~3.34.0
+303 silly fetch manifest rc-checkbox@~3.5.0
+304 silly fetch manifest rc-collapse@~3.9.0
+305 silly fetch manifest rc-dropdown@~4.2.1
+306 silly fetch manifest rc-mentions@~2.20.0
+307 silly fetch manifest rc-progress@~4.0.0
+308 silly fetch manifest rc-textarea@~1.10.2
+309 silly fetch manifest rc-segmented@~2.7.0
+310 silly fetch manifest rc-field-form@~2.7.1
+311 silly fetch manifest rc-pagination@~5.1.0
+312 silly fetch manifest rc-tree-select@~5.27.0
+313 silly fetch manifest rc-input-number@~9.5.0
+314 silly fetch manifest rc-notification@~5.6.4
+315 silly fetch manifest @ant-design/icons@^5.6.1
+316 silly fetch manifest copy-to-clipboard@^3.3.3
+317 silly fetch manifest @ant-design/colors@^7.2.1
+318 silly fetch manifest @rc-component/tour@~1.15.1
+319 silly fetch manifest rc-resize-observer@^1.4.3
+320 silly fetch manifest @ant-design/cssinjs@^1.23.0
+321 silly fetch manifest @rc-component/qrcode@~1.1.0
+322 silly fetch manifest @rc-component/trigger@^2.3.0
+323 silly fetch manifest @ant-design/fast-color@^2.0.6
+324 silly fetch manifest @ant-design/react-slick@~1.1.2
+325 silly fetch manifest @ant-design/cssinjs-utils@^1.1.3
+326 silly fetch manifest @rc-component/color-picker@~2.0.1
+327 silly fetch manifest @rc-component/mutate-observer@^1.1.0
+328 silly placeDep ROOT @refinedev/ui-types@2.0.1 OK for: @refinedev/antd@6.0.3 want: ^2.0.1
+329 silly placeDep ROOT react-markdown@6.0.3 OK for: @refinedev/antd@6.0.3 want: ^6.0.1
+330 silly fetch manifest vfile@^4.0.0
+331 silly fetch manifest unified@^9.0.0
+332 silly fetch manifest react-is@^17.0.0
+333 silly fetch manifest @types/hast@^2.0.0
+334 silly fetch manifest @types/unist@^2.0.3
+335 silly fetch manifest remark-parse@^9.0.0
+336 silly fetch manifest remark-rehype@^8.0.0
+337 silly fetch manifest style-to-object@^0.3.0
+338 silly fetch manifest unist-util-visit@^2.0.0
+339 silly fetch manifest property-information@^5.3.0
+340 silly fetch manifest comma-separated-tokens@^1.0.0
+341 silly fetch manifest space-separated-tokens@^1.1.0
+342 silly placeDep ROOT remark-gfm@1.0.0 OK for: @refinedev/antd@6.0.3 want: ^1.0.0
+343 silly fetch manifest mdast-util-gfm@^0.1.0
+344 silly fetch manifest micromark-extension-gfm@^0.3.0
+345 silly placeDep ROOT sunflower-antd@1.0.0-beta.3 OK for: @refinedev/antd@6.0.3 want: 1.0.0-beta.3
+346 http fetch GET 200 https://registry.npmjs.org/rc-tabs 143ms (cache miss)
+347 http fetch GET 200 https://registry.npmjs.org/path-to-regexp 154ms (cache miss)
+348 http fetch GET 200 https://registry.npmjs.org/rc-util 170ms (cache miss)
+349 http fetch GET 200 https://registry.npmjs.org/rc-util 180ms (cache miss)
+350 http fetch GET 200 https://registry.npmjs.org/classnames 180ms (cache miss)
+351 http fetch GET 200 https://registry.npmjs.org/classnames 175ms (cache miss)
+352 http fetch GET 200 https://registry.npmjs.org/rc-resize-observer 180ms (cache miss)
+353 http fetch GET 200 https://registry.npmjs.org/rc-rate 183ms (cache miss)
+354 http fetch GET 200 https://registry.npmjs.org/swr 192ms (cache miss)
+355 http fetch GET 200 https://registry.npmjs.org/warning 195ms (cache miss)
+356 http fetch GET 200 https://registry.npmjs.org/rc-menu 248ms (cache miss)
+357 http fetch GET 200 https://registry.npmjs.org/rc-steps 272ms (cache miss)
+358 http fetch GET 200 https://registry.npmjs.org/rc-input 275ms (cache miss)
+359 http fetch GET 200 https://registry.npmjs.org/rc-image 276ms (cache miss)
+360 http fetch GET 200 https://registry.npmjs.org/rc-drawer 313ms (cache miss)
+361 http fetch GET 200 https://registry.npmjs.org/rc-util 325ms (cache miss)
+362 http fetch GET 200 https://registry.npmjs.org/rc-dialog 335ms (cache miss)
+363 http fetch GET 200 https://registry.npmjs.org/rc-picker 347ms (cache miss)
+364 http fetch GET 200 https://registry.npmjs.org/rc-switch 360ms (cache miss)
+365 http fetch GET 200 https://registry.npmjs.org/rc-motion 400ms (cache miss)
+366 http fetch GET 200 https://registry.npmjs.org/rc-slider 382ms (cache miss)
+367 http fetch GET 200 https://registry.npmjs.org/rc-upload 387ms (cache miss)
+368 http fetch GET 200 https://registry.npmjs.org/rc-select 398ms (cache miss)
+369 http fetch GET 200 https://registry.npmjs.org/classnames 409ms (cache miss)
+370 http fetch GET 200 https://registry.npmjs.org/rc-table 432ms (cache miss)
+371 http fetch GET 200 https://registry.npmjs.org/rc-tooltip 418ms (cache miss)
+372 http fetch GET 200 https://registry.npmjs.org/rc-cascader 428ms (cache miss)
+373 http fetch GET 200 https://registry.npmjs.org/@umijs%2froute-utils 458ms (cache miss)
+374 http fetch GET 200 https://registry.npmjs.org/rc-checkbox 434ms (cache miss)
+375 http fetch GET 200 https://registry.npmjs.org/rc-collapse 422ms (cache miss)
+376 http fetch GET 200 https://registry.npmjs.org/rc-dropdown 447ms (cache miss)
+377 http fetch GET 200 https://registry.npmjs.org/rc-mentions 449ms (cache miss)
+378 http fetch GET 200 https://registry.npmjs.org/rc-progress 451ms (cache miss)
+379 http fetch GET 200 https://registry.npmjs.org/rc-textarea 452ms (cache miss)
+380 http fetch GET 200 https://registry.npmjs.org/rc-segmented 454ms (cache miss)
+381 http fetch GET 200 https://registry.npmjs.org/@umijs%2fuse-params 503ms (cache miss)
+382 http fetch GET 200 https://registry.npmjs.org/rc-pagination 471ms (cache miss)
+383 http fetch GET 200 https://registry.npmjs.org/rc-field-form 480ms (cache miss)
+384 http fetch GET 200 https://registry.npmjs.org/copy-to-clipboard 482ms (cache miss)
+385 http fetch GET 200 https://registry.npmjs.org/rc-input-number 494ms (cache miss)
+386 http fetch GET 200 https://registry.npmjs.org/rc-tree-select 500ms (cache miss)
+387 http fetch GET 200 https://registry.npmjs.org/rc-resize-observer 502ms (cache miss)
+388 http fetch GET 200 https://registry.npmjs.org/rc-notification 504ms (cache miss)
+389 http fetch GET 200 https://registry.npmjs.org/vfile 501ms (cache miss)
+390 http fetch GET 200 https://registry.npmjs.org/@types%2funist 503ms (cache miss)
+391 http fetch GET 200 https://registry.npmjs.org/unified 507ms (cache miss)
+392 http fetch GET 200 https://registry.npmjs.org/remark-rehype 505ms (cache miss)
+393 http fetch GET 200 https://registry.npmjs.org/@types%2fhast 507ms (cache miss)
+394 http fetch GET 200 https://registry.npmjs.org/rc-tree 588ms (cache miss)
+395 http fetch GET 200 https://registry.npmjs.org/style-to-object 528ms (cache miss)
+396 http fetch GET 200 https://registry.npmjs.org/unist-util-visit 530ms (cache miss)
+397 http fetch GET 200 https://registry.npmjs.org/property-information 537ms (cache miss)
+398 http fetch GET 200 https://registry.npmjs.org/comma-separated-tokens 537ms (cache miss)
+399 http fetch GET 200 https://registry.npmjs.org/mdast-util-gfm 537ms (cache miss)
+400 http fetch GET 200 https://registry.npmjs.org/remark-parse 539ms (cache miss)
+401 http fetch GET 200 https://registry.npmjs.org/micromark-extension-gfm 537ms (cache miss)
+402 http fetch GET 200 https://registry.npmjs.org/space-separated-tokens 539ms (cache miss)
+403 http fetch GET 200 https://registry.npmjs.org/@ant-design%2fpro-provider 1110ms (cache miss)
+404 http fetch GET 200 https://registry.npmjs.org/@ant-design%2fpro-utils 1249ms (cache miss)
+405 timing idealTree:node_modules/@refinedev/antd Completed in 1268ms
+406 silly fetch manifest react@>=17.0.0
+407 silly fetch manifest react-dom@>=17.0.0
+408 silly fetch manifest antd@^4.24.15 || ^5.11.2
+409 silly placeDep node_modules/@ant-design/pro-layout @ant-design/cssinjs@1.24.0 OK for: @ant-design/pro-layout@7.22.7 want: ^1.21.1
+410 silly fetch manifest rc-util@^5.35.0
+411 silly fetch manifest classnames@^2.3.1
+412 silly placeDep node_modules/@ant-design/pro-layout @ant-design/icons@5.6.1 OK for: @ant-design/pro-layout@7.22.7 want: ^5.0.0
+413 silly placeDep ROOT @ant-design/pro-provider@2.16.2 OK for: @ant-design/pro-layout@7.22.7 want: 2.16.2
+414 silly fetch manifest rc-util@^5.0.1
+415 silly fetch manifest @ctrl/tinycolor@^3.4.0
+416 silly placeDep ROOT @ant-design/pro-utils@2.18.0 OK for: @ant-design/pro-layout@7.22.7 want: 2.18.0
+417 silly fetch manifest safe-stable-stringify@^2.4.3
+418 silly placeDep ROOT @umijs/route-utils@4.0.3 OK for: @ant-design/pro-layout@7.22.7 want: ^4.0.0
+419 silly placeDep ROOT @umijs/use-params@1.0.9 OK for: @ant-design/pro-layout@7.22.7 want: ^1.0.9
+420 silly placeDep ROOT classnames@2.5.1 OK for: @ant-design/pro-layout@7.22.7 want: ^2.3.2
+421 silly placeDep ROOT lodash@4.17.21 OK for: @ant-design/pro-layout@7.22.7 want: ^4.17.21
+422 silly placeDep ROOT lodash-es@4.17.21 OK for: @ant-design/pro-layout@7.22.7 want: ^4.17.21
+423 silly placeDep ROOT path-to-regexp@8.2.0 OK for: @ant-design/pro-layout@7.22.7 want: 8.2.0
+424 silly placeDep ROOT rc-resize-observer@1.4.3 OK for: @ant-design/pro-layout@7.22.7 want: ^1.1.0
+425 silly fetch manifest rc-util@^5.44.1
+426 silly fetch manifest resize-observer-polyfill@^1.5.1
+427 silly placeDep ROOT rc-util@5.44.4 OK for: @ant-design/pro-layout@7.22.7 want: ^5.0.6
+428 silly placeDep ROOT swr@2.3.8 OK for: @ant-design/pro-layout@7.22.7 want: ^2.0.0
+429 silly fetch manifest dequal@^2.0.3
+430 silly fetch manifest use-sync-external-store@^1.6.0
+431 silly placeDep ROOT warning@4.0.3 OK for: @ant-design/pro-layout@7.22.7 want: ^4.0.3
+432 http fetch GET 200 https://registry.npmjs.org/safe-stable-stringify 56ms (cache miss)
+433 http fetch GET 200 https://registry.npmjs.org/resize-observer-polyfill 59ms (cache miss)
+434 http fetch GET 200 https://registry.npmjs.org/@ctrl%2ftinycolor 68ms (cache miss)
+435 http fetch GET 200 https://registry.npmjs.org/dequal 83ms (cache miss)
+436 http fetch GET 200 https://registry.npmjs.org/use-sync-external-store 127ms (cache miss)
+437 timing idealTree:node_modules/@ant-design/pro-layout Completed in 166ms
+438 silly placeDep node_modules/@ant-design/pro-provider @ant-design/cssinjs@1.24.0 OK for: @ant-design/pro-provider@2.16.2 want: ^1.21.1
+439 silly placeDep ROOT @ctrl/tinycolor@3.6.1 OK for: @ant-design/pro-provider@2.16.2 want: ^3.4.0
+440 timing idealTree:node_modules/@ant-design/pro-provider Completed in 3ms
+441 silly placeDep node_modules/@ant-design/pro-utils @ant-design/icons@5.6.1 OK for: @ant-design/pro-utils@2.18.0 want: ^5.0.0
+442 silly placeDep ROOT safe-stable-stringify@2.5.0 OK for: @ant-design/pro-utils@2.18.0 want: ^2.4.3
+443 timing idealTree:node_modules/@ant-design/pro-utils Completed in 3ms
+444 timing idealTree:node_modules/@ctrl/tinycolor Completed in 0ms
+445 silly fetch manifest @types/react-dom@^18.0.0 || ^19.0.0
+446 silly placeDep ROOT @refinedev/devtools-internal@2.0.1 OK for: @refinedev/core@5.0.7 want: 2.0.1
+447 silly fetch manifest @refinedev/devtools-shared@2.0.1
+448 silly fetch manifest error-stack-parser@^2.1.4
+449 silly placeDep ROOT papaparse@5.5.3 OK for: @refinedev/core@5.0.7 want: ^5.3.0
+450 silly placeDep ROOT pluralize@8.0.0 OK for: @refinedev/core@5.0.7 want: ^8.0.0
+451 silly placeDep ROOT qs@6.14.0 OK for: @refinedev/core@5.0.7 want: ^6.10.1
+452 silly placeDep ROOT warn-once@0.1.1 OK for: @refinedev/core@5.0.7 want: ^0.1.0
+453 http fetch GET 200 https://registry.npmjs.org/error-stack-parser 91ms (cache miss)
+454 http fetch GET 200 https://registry.npmjs.org/@refinedev%2fdevtools-shared 1447ms (cache miss)
+455 timing idealTree:node_modules/@refinedev/core Completed in 1453ms
+456 silly placeDep ROOT @refinedev/devtools-shared@2.0.1 OK for: @refinedev/devtools-internal@2.0.1 want: 2.0.1
+457 silly placeDep ROOT error-stack-parser@2.1.4 OK for: @refinedev/devtools-internal@2.0.1 want: ^2.1.4
+458 silly fetch manifest stackframe@^1.3.4
+459 http fetch GET 200 https://registry.npmjs.org/stackframe 34ms (cache miss)
+460 timing idealTree:node_modules/@refinedev/devtools-internal Completed in 42ms
+461 timing idealTree:node_modules/@refinedev/devtools-shared Completed in 0ms
+462 timing idealTree:node_modules/@refinedev/nextjs-router Completed in 0ms
+463 timing idealTree:node_modules/@refinedev/supabase Completed in 0ms
+464 timing idealTree:node_modules/@refinedev/ui-types Completed in 0ms
+465 silly placeDep ROOT @supabase/auth-js@2.87.3 OK for: @supabase/supabase-js@2.87.3 want: 2.87.3
+466 silly placeDep ROOT @supabase/functions-js@2.87.3 OK for: @supabase/supabase-js@2.87.3 want: 2.87.3
+467 silly placeDep ROOT @supabase/postgrest-js@2.87.3 OK for: @supabase/supabase-js@2.87.3 want: 2.87.3
+468 silly placeDep ROOT @supabase/realtime-js@2.87.3 OK for: @supabase/supabase-js@2.87.3 want: 2.87.3
+469 silly fetch manifest ws@^8.18.2
+470 silly fetch manifest @types/ws@^8.18.1
+471 silly fetch manifest @types/phoenix@^1.6.6
+472 silly placeDep ROOT @supabase/storage-js@2.87.3 OK for: @supabase/supabase-js@2.87.3 want: 2.87.3
+473 silly fetch manifest iceberg-js@^0.8.1
+474 http fetch GET 200 https://registry.npmjs.org/ws 45ms (cache miss)
+475 http fetch GET 200 https://registry.npmjs.org/@types%2fws 56ms (cache miss)
+476 http fetch GET 200 https://registry.npmjs.org/@types%2fphoenix 144ms (cache miss)
+477 http fetch GET 200 https://registry.npmjs.org/iceberg-js 509ms (cache miss)
+478 timing idealTree:node_modules/@supabase/supabase-js Completed in 516ms
+479 timing idealTree:node_modules/@supabase/auth-js Completed in 0ms
+480 timing idealTree:node_modules/@supabase/functions-js Completed in 0ms
+481 timing idealTree:node_modules/@supabase/postgrest-js Completed in 0ms
+482 silly fetch manifest bufferutil@^4.0.1
+483 http fetch GET 200 https://registry.npmjs.org/bufferutil 41ms (cache miss)
+484 silly fetch manifest utf-8-validate@>=5.0.2
+485 http fetch GET 200 https://registry.npmjs.org/utf-8-validate 72ms (cache miss)
+486 silly placeDep ROOT @types/phoenix@1.6.7 OK for: @supabase/realtime-js@2.87.3 want: ^1.6.6
+487 silly placeDep ROOT @types/ws@8.18.1 OK for: @supabase/realtime-js@2.87.3 want: ^8.18.1
+488 silly placeDep ROOT ws@8.18.3 OK for: @supabase/realtime-js@2.87.3 want: ^8.18.2
+489 timing idealTree:node_modules/@supabase/realtime-js Completed in 119ms
+490 silly placeDep ROOT iceberg-js@0.8.1 OK for: @supabase/storage-js@2.87.3 want: ^0.8.1
+491 timing idealTree:node_modules/@supabase/storage-js Completed in 1ms
+492 silly placeDep ROOT @tanstack/query-core@5.90.12 OK for: @tanstack/react-query@5.90.12 want: 5.90.12
+493 timing idealTree:node_modules/@tanstack/react-query Completed in 2ms
+494 timing idealTree:node_modules/@tanstack/query-core Completed in 0ms
+495 timing idealTree:node_modules/@types/phoenix Completed in 0ms
+496 timing idealTree:node_modules/@types/ws Completed in 0ms
+497 timing idealTree:node_modules/@umijs/route-utils Completed in 0ms
+498 timing idealTree:node_modules/@umijs/use-params Completed in 0ms
+499 silly fetch manifest react@>=16.9.0
+500 silly fetch manifest react-dom@>=16.9.0
+501 silly fetch manifest date-fns@>= 2.x
+502 http fetch GET 200 https://registry.npmjs.org/date-fns 46ms (cache miss)
+503 silly fetch manifest luxon@>= 3.x
+504 http fetch GET 200 https://registry.npmjs.org/luxon 44ms (cache miss)
+505 silly fetch manifest moment@>= 2.x
+506 http fetch GET 200 https://registry.npmjs.org/moment 44ms (cache miss)
+507 silly placeDep node_modules/antd @ant-design/colors@7.2.1 OK for: antd@5.29.2 want: ^7.2.1
+508 silly placeDep node_modules/antd @ant-design/cssinjs@1.24.0 OK for: antd@5.29.2 want: ^1.23.0
+509 silly placeDep ROOT @ant-design/cssinjs-utils@1.1.3 OK for: antd@5.29.2 want: ^1.1.3
+510 silly fetch manifest @ant-design/cssinjs@^1.21.0
+511 silly placeDep node_modules/antd @ant-design/fast-color@2.0.6 OK for: antd@5.29.2 want: ^2.0.6
+512 silly placeDep node_modules/antd @ant-design/icons@5.6.1 OK for: antd@5.29.2 want: ^5.6.1
+513 silly placeDep ROOT @ant-design/react-slick@1.1.2 OK for: antd@5.29.2 want: ~1.1.2
+514 silly fetch manifest json2mq@^0.2.0
+515 silly fetch manifest throttle-debounce@^5.0.0
+516 silly placeDep ROOT @rc-component/color-picker@2.0.1 OK for: antd@5.29.2 want: ~2.0.1
+517 silly placeDep ROOT @rc-component/mutate-observer@1.1.0 OK for: antd@5.29.2 want: ^1.1.0
+518 silly placeDep ROOT @rc-component/qrcode@1.1.1 OK for: antd@5.29.2 want: ~1.1.0
+519 silly placeDep ROOT @rc-component/tour@1.15.1 OK for: antd@5.29.2 want: ~1.15.1
+520 silly fetch manifest @rc-component/portal@^1.0.0-9
+521 silly fetch manifest @rc-component/trigger@^2.0.0
+522 silly placeDep ROOT @rc-component/trigger@2.3.0 OK for: antd@5.29.2 want: ^2.3.0
+523 silly fetch manifest rc-motion@^2.0.0
+524 silly fetch manifest @rc-component/portal@^1.1.0
+525 silly placeDep ROOT copy-to-clipboard@3.3.3 OK for: antd@5.29.2 want: ^3.3.3
+526 silly fetch manifest toggle-selection@^1.0.6
+527 silly placeDep ROOT rc-cascader@3.34.0 OK for: antd@5.29.2 want: ~3.34.0
+528 silly fetch manifest rc-select@~14.16.2
+529 silly fetch manifest rc-tree@~5.13.0
+530 silly placeDep ROOT rc-checkbox@3.5.0 OK for: antd@5.29.2 want: ~3.5.0
+531 silly placeDep ROOT rc-collapse@3.9.0 OK for: antd@5.29.2 want: ~3.9.0
+532 silly fetch manifest rc-motion@^2.3.4
+533 silly placeDep ROOT rc-dialog@9.6.0 OK for: antd@5.29.2 want: ~9.6.0
+534 silly fetch manifest rc-motion@^2.3.0
+535 silly fetch manifest @rc-component/portal@^1.0.0-8
+536 silly placeDep ROOT rc-drawer@7.3.0 OK for: antd@5.29.2 want: ~7.3.0
+537 silly fetch manifest @rc-component/portal@^1.1.1
+538 silly fetch manifest rc-motion@^2.6.1
+539 silly placeDep ROOT rc-dropdown@4.2.1 OK for: antd@5.29.2 want: ~4.2.1
+540 silly placeDep ROOT rc-field-form@2.7.1 OK for: antd@5.29.2 want: ~2.7.1
+541 silly fetch manifest @rc-component/async-validator@^5.0.3
+542 silly placeDep ROOT rc-image@7.12.0 OK for: antd@5.29.2 want: ~7.12.0
+543 silly fetch manifest @rc-component/portal@^1.0.2
+544 silly fetch manifest rc-motion@^2.6.2
+545 silly placeDep ROOT rc-input@1.8.0 OK for: antd@5.29.2 want: ~1.8.0
+546 silly placeDep ROOT rc-input-number@9.5.0 OK for: antd@5.29.2 want: ~9.5.0
+547 silly fetch manifest @rc-component/mini-decimal@^1.0.1
+548 silly placeDep ROOT rc-mentions@2.20.0 OK for: antd@5.29.2 want: ~2.20.0
+549 silly fetch manifest rc-menu@~9.16.0
+550 silly fetch manifest rc-textarea@~1.10.0
+551 silly placeDep ROOT rc-menu@9.16.1 OK for: antd@5.29.2 want: ~9.16.1
+552 silly fetch manifest rc-motion@^2.4.3
+553 silly fetch manifest rc-overflow@^1.3.1
+554 silly placeDep ROOT rc-motion@2.9.5 OK for: antd@5.29.2 want: ^2.9.5
+555 silly placeDep ROOT rc-notification@5.6.4 OK for: antd@5.29.2 want: ~5.6.4
+556 silly placeDep ROOT rc-pagination@5.1.0 OK for: antd@5.29.2 want: ~5.1.0
+557 silly placeDep ROOT rc-picker@4.11.3 OK for: antd@5.29.2 want: ~4.11.3
+558 silly fetch manifest rc-overflow@^1.3.2
+559 silly placeDep ROOT rc-progress@4.0.0 OK for: antd@5.29.2 want: ~4.0.0
+560 silly placeDep ROOT rc-rate@2.13.1 OK for: antd@5.29.2 want: ~2.13.1
+561 silly placeDep ROOT rc-segmented@2.7.0 OK for: antd@5.29.2 want: ~2.7.0
+562 silly placeDep ROOT rc-select@14.16.8 OK for: antd@5.29.2 want: ~14.16.8
+563 silly fetch manifest rc-virtual-list@^3.5.2
+564 silly placeDep ROOT rc-slider@11.1.9 OK for: antd@5.29.2 want: ~11.1.9
+565 silly placeDep ROOT rc-steps@6.0.1 OK for: antd@5.29.2 want: ~6.0.1
+566 silly placeDep ROOT rc-switch@4.1.0 OK for: antd@5.29.2 want: ~4.1.0
+567 silly placeDep ROOT rc-table@7.54.0 OK for: antd@5.29.2 want: ~7.54.0
+568 silly fetch manifest rc-virtual-list@^3.14.2
+569 silly fetch manifest @rc-component/context@^1.4.0
+570 silly placeDep ROOT rc-tabs@15.7.0 OK for: antd@5.29.2 want: ~15.7.0
+571 silly placeDep ROOT rc-textarea@1.10.2 OK for: antd@5.29.2 want: ~1.10.2
+572 silly placeDep ROOT rc-tooltip@6.4.0 OK for: antd@5.29.2 want: ~6.4.0
+573 silly placeDep ROOT rc-tree@5.13.1 OK for: antd@5.29.2 want: ~5.13.1
+574 silly fetch manifest rc-virtual-list@^3.5.1
+575 silly placeDep ROOT rc-tree-select@5.27.0 OK for: antd@5.29.2 want: ~5.27.0
+576 silly placeDep ROOT rc-upload@4.11.0 OK for: antd@5.29.2 want: ~4.11.0
+577 silly placeDep ROOT scroll-into-view-if-needed@3.1.0 OK for: antd@5.29.2 want: ^3.1.0
+578 silly fetch manifest compute-scroll-into-view@^3.0.2
+579 silly placeDep ROOT throttle-debounce@5.0.2 OK for: antd@5.29.2 want: ^5.0.2
+580 http fetch GET 200 https://registry.npmjs.org/rc-virtual-list 43ms (cache miss)
+581 http fetch GET 200 https://registry.npmjs.org/rc-virtual-list 70ms (cache miss)
+582 http fetch GET 200 https://registry.npmjs.org/rc-virtual-list 83ms (cache miss)
+583 http fetch GET 200 https://registry.npmjs.org/toggle-selection 122ms (cache miss)
+584 http fetch GET 200 https://registry.npmjs.org/json2mq 134ms (cache miss)
+585 http fetch GET 200 https://registry.npmjs.org/rc-overflow 93ms (cache miss)
+586 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fportal 122ms (cache miss)
+587 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fportal 131ms (cache miss)
+588 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fportal 143ms (cache miss)
+589 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fportal 126ms (cache miss)
+590 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fportal 143ms (cache miss)
+591 http fetch GET 200 https://registry.npmjs.org/rc-overflow 121ms (cache miss)
+592 http fetch GET 200 https://registry.npmjs.org/compute-scroll-into-view 90ms (cache miss)
+593 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fcontext 582ms (cache miss)
+594 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fmini-decimal 1078ms (cache miss)
+595 http fetch GET 200 https://registry.npmjs.org/@rc-component%2fasync-validator 1307ms (cache miss)
+596 timing idealTree:node_modules/antd Completed in 1511ms
+597 silly placeDep node_modules/@ant-design/cssinjs-utils @ant-design/cssinjs@1.24.0 OK for: @ant-design/cssinjs-utils@1.1.3 want: ^1.21.0
+598 timing idealTree:node_modules/@ant-design/cssinjs-utils Completed in 2ms
+599 silly placeDep ROOT json2mq@0.2.0 OK for: @ant-design/react-slick@1.1.2 want: ^0.2.0
+600 silly fetch manifest string-convert@^0.2.0
+601 silly placeDep ROOT resize-observer-polyfill@1.5.1 OK for: @ant-design/react-slick@1.1.2 want: ^1.5.1
+602 http fetch GET 200 https://registry.npmjs.org/string-convert 30ms (cache miss)
+603 timing idealTree:node_modules/@ant-design/react-slick Completed in 32ms
+604 silly placeDep node_modules/@rc-component/color-picker @ant-design/fast-color@2.0.6 OK for: @rc-component/color-picker@2.0.1 want: ^2.0.6
+605 timing idealTree:node_modules/@rc-component/color-picker Completed in 1ms
+606 timing idealTree:node_modules/@rc-component/mutate-observer Completed in 0ms
+607 timing idealTree:node_modules/@rc-component/qrcode Completed in 0ms
+608 silly placeDep ROOT @rc-component/portal@1.1.2 OK for: @rc-component/tour@1.15.1 want: ^1.0.0-9
+609 timing idealTree:node_modules/@rc-component/tour Completed in 3ms
+610 timing idealTree:node_modules/@rc-component/portal Completed in 0ms
+611 timing idealTree:node_modules/@rc-component/trigger Completed in 0ms
+612 timing idealTree:node_modules/classnames Completed in 0ms
+613 timing idealTree:node_modules/clsx Completed in 0ms
+614 silly placeDep ROOT toggle-selection@1.0.6 OK for: copy-to-clipboard@3.3.3 want: ^1.0.6
+615 timing idealTree:node_modules/copy-to-clipboard Completed in 1ms
+616 timing idealTree:node_modules/dayjs Completed in 0ms
+617 silly placeDep ROOT stackframe@1.3.4 OK for: error-stack-parser@2.1.4 want: ^1.3.4
+618 timing idealTree:node_modules/error-stack-parser Completed in 1ms
+619 timing idealTree:node_modules/iceberg-js Completed in 0ms
+620 timing idealTree:node_modules/is-mobile Completed in 0ms
+621 silly placeDep ROOT string-convert@0.2.1 OK for: json2mq@0.2.0 want: ^0.2.0
+622 timing idealTree:node_modules/json2mq Completed in 0ms
+623 timing idealTree:node_modules/lodash Completed in 0ms
+624 timing idealTree:node_modules/lodash-es Completed in 0ms
+625 timing idealTree:node_modules/papaparse Completed in 0ms
+626 timing idealTree:node_modules/path-to-regexp Completed in 0ms
+627 timing idealTree:node_modules/pluralize Completed in 0ms
+628 timing idealTree:node_modules/qs Completed in 0ms
+629 timing idealTree:node_modules/rc-cascader Completed in 0ms
+630 timing idealTree:node_modules/rc-checkbox Completed in 0ms
+631 timing idealTree:node_modules/rc-collapse Completed in 0ms
+632 timing idealTree:node_modules/rc-dialog Completed in 0ms
+633 timing idealTree:node_modules/rc-drawer Completed in 0ms
+634 timing idealTree:node_modules/rc-dropdown Completed in 0ms
+635 silly placeDep ROOT @rc-component/async-validator@5.0.4 OK for: rc-field-form@2.7.1 want: ^5.0.3
+636 timing idealTree:node_modules/rc-field-form Completed in 0ms
+637 timing idealTree:node_modules/@rc-component/async-validator Completed in 0ms
+638 timing idealTree:node_modules/rc-image Completed in 0ms
+639 timing idealTree:node_modules/rc-input Completed in 0ms
+640 silly placeDep ROOT @rc-component/mini-decimal@1.1.0 OK for: rc-input-number@9.5.0 want: ^1.0.1
+641 timing idealTree:node_modules/rc-input-number Completed in 0ms
+642 timing idealTree:node_modules/@rc-component/mini-decimal Completed in 0ms
+643 timing idealTree:node_modules/rc-mentions Completed in 0ms
+644 silly placeDep ROOT rc-overflow@1.5.0 OK for: rc-menu@9.16.1 want: ^1.3.1
+645 timing idealTree:node_modules/rc-menu Completed in 3ms
+646 timing idealTree:node_modules/rc-motion Completed in 0ms
+647 timing idealTree:node_modules/rc-notification Completed in 0ms
+648 timing idealTree:node_modules/rc-overflow Completed in 0ms
+649 timing idealTree:node_modules/rc-pagination Completed in 0ms
+650 timing idealTree:node_modules/rc-picker Completed in 0ms
+651 timing idealTree:node_modules/rc-progress Completed in 0ms
+652 timing idealTree:node_modules/rc-rate Completed in 0ms
+653 timing idealTree:node_modules/rc-resize-observer Completed in 0ms
+654 timing idealTree:node_modules/rc-segmented Completed in 0ms
+655 silly fetch manifest react@*
+656 silly fetch manifest react-dom@*
+657 silly placeDep ROOT rc-virtual-list@3.19.2 OK for: rc-select@14.16.8 want: ^3.5.2
+658 timing idealTree:node_modules/rc-select Completed in 3ms
+659 timing idealTree:node_modules/rc-slider Completed in 0ms
+660 timing idealTree:node_modules/rc-steps Completed in 0ms
+661 timing idealTree:node_modules/rc-switch Completed in 0ms
+662 silly placeDep ROOT @rc-component/context@1.4.0 OK for: rc-table@7.54.0 want: ^1.4.0
+663 timing idealTree:node_modules/rc-table Completed in 2ms
+664 timing idealTree:node_modules/@rc-component/context Completed in 0ms
+665 timing idealTree:node_modules/rc-tabs Completed in 0ms
+666 timing idealTree:node_modules/rc-textarea Completed in 0ms
+667 timing idealTree:node_modules/rc-tooltip Completed in 0ms
+668 timing idealTree:node_modules/rc-tree Completed in 0ms
+669 timing idealTree:node_modules/rc-tree-select Completed in 0ms
+670 timing idealTree:node_modules/rc-upload Completed in 0ms
+671 silly placeDep node_modules/rc-util react-is@18.3.1 OK for: rc-util@5.44.4 want: ^18.2.0
+672 timing idealTree:node_modules/rc-util Completed in 0ms
+673 timing idealTree:node_modules/rc-virtual-list Completed in 0ms
+674 silly placeDep ROOT @types/hast@2.3.10 OK for: react-markdown@6.0.3 want: ^2.0.0
+675 silly fetch manifest @types/unist@^2
+676 silly placeDep ROOT @types/unist@2.0.11 OK for: react-markdown@6.0.3 want: ^2.0.3
+677 silly placeDep ROOT comma-separated-tokens@1.0.8 OK for: react-markdown@6.0.3 want: ^1.0.0
+678 silly placeDep ROOT property-information@5.6.0 OK for: react-markdown@6.0.3 want: ^5.3.0
+679 silly fetch manifest xtend@^4.0.0
+680 silly placeDep node_modules/react-markdown react-is@17.0.2 OK for: react-markdown@6.0.3 want: ^17.0.0
+681 silly placeDep ROOT remark-parse@9.0.0 OK for: react-markdown@6.0.3 want: ^9.0.0
+682 silly fetch manifest mdast-util-from-markdown@^0.8.0
+683 silly placeDep ROOT remark-rehype@8.1.0 OK for: react-markdown@6.0.3 want: ^8.0.0
+684 silly fetch manifest mdast-util-to-hast@^10.2.0
+685 silly placeDep ROOT space-separated-tokens@1.1.5 OK for: react-markdown@6.0.3 want: ^1.1.0
+686 silly placeDep ROOT style-to-object@0.3.0 OK for: react-markdown@6.0.3 want: ^0.3.0
+687 silly fetch manifest inline-style-parser@0.1.1
+688 silly placeDep ROOT unified@9.2.2 OK for: react-markdown@6.0.3 want: ^9.0.0
+689 silly fetch manifest bail@^1.0.0
+690 silly fetch manifest extend@^3.0.0
+691 silly fetch manifest trough@^1.0.0
+692 silly fetch manifest is-buffer@^2.0.0
+693 silly fetch manifest is-plain-obj@^2.0.0
+694 silly placeDep ROOT unist-util-visit@2.0.3 OK for: react-markdown@6.0.3 want: ^2.0.0
+695 silly fetch manifest unist-util-is@^4.0.0
+696 silly fetch manifest unist-util-visit-parents@^3.0.0
+697 silly placeDep ROOT vfile@4.2.1 OK for: react-markdown@6.0.3 want: ^4.0.0
+698 silly fetch manifest vfile-message@^2.0.0
+699 silly fetch manifest unist-util-stringify-position@^2.0.0
+700 http fetch GET 200 https://registry.npmjs.org/unist-util-visit-parents 37ms (cache miss)
+701 http fetch GET 200 https://registry.npmjs.org/mdast-util-to-hast 47ms (cache miss)
+702 http fetch GET 200 https://registry.npmjs.org/xtend 51ms (cache miss)
+703 http fetch GET 200 https://registry.npmjs.org/is-buffer 46ms (cache miss)
+704 http fetch GET 200 https://registry.npmjs.org/extend 47ms (cache miss)
+705 http fetch GET 200 https://registry.npmjs.org/vfile-message 45ms (cache miss)
+706 http fetch GET 200 https://registry.npmjs.org/inline-style-parser 48ms (cache miss)
+707 http fetch GET 200 https://registry.npmjs.org/unist-util-is 46ms (cache miss)
+708 http fetch GET 200 https://registry.npmjs.org/bail 49ms (cache miss)
+709 http fetch GET 200 https://registry.npmjs.org/trough 56ms (cache miss)
+710 http fetch GET 200 https://registry.npmjs.org/unist-util-stringify-position 53ms (cache miss)
+711 http fetch GET 200 https://registry.npmjs.org/mdast-util-from-markdown 64ms (cache miss)
+712 http fetch GET 200 https://registry.npmjs.org/is-plain-obj 76ms (cache miss)
+713 timing idealTree:node_modules/react-markdown Completed in 85ms
+714 timing idealTree:node_modules/@types/hast Completed in 0ms
+715 timing idealTree:node_modules/@types/unist Completed in 0ms
+716 timing idealTree:node_modules/comma-separated-tokens Completed in 0ms
+717 silly placeDep ROOT xtend@4.0.2 OK for: property-information@5.6.0 want: ^4.0.0
+718 timing idealTree:node_modules/property-information Completed in 1ms
+719 silly placeDep ROOT mdast-util-gfm@0.1.2 OK for: remark-gfm@1.0.0 want: ^0.1.0
+720 silly fetch manifest mdast-util-gfm-table@^0.1.0
+721 silly fetch manifest mdast-util-to-markdown@^0.6.1
+722 silly fetch manifest mdast-util-gfm-strikethrough@^0.2.0
+723 silly fetch manifest mdast-util-gfm-task-list-item@^0.1.0
+724 silly fetch manifest mdast-util-gfm-autolink-literal@^0.1.0
+725 silly placeDep ROOT micromark-extension-gfm@0.3.3 OK for: remark-gfm@1.0.0 want: ^0.3.0
+726 silly fetch manifest micromark@~2.11.0
+727 silly fetch manifest micromark-extension-gfm-autolink-literal@~0.5.0
+728 silly fetch manifest micromark-extension-gfm-strikethrough@~0.6.5
+729 silly fetch manifest micromark-extension-gfm-table@~0.4.0
+730 silly fetch manifest micromark-extension-gfm-tagfilter@~0.3.0
+731 silly fetch manifest micromark-extension-gfm-task-list-item@~0.3.0
+732 http fetch GET 200 https://registry.npmjs.org/micromark-extension-gfm-table 47ms (cache miss)
+733 http fetch GET 200 https://registry.npmjs.org/mdast-util-gfm-table 50ms (cache miss)
+734 http fetch GET 200 https://registry.npmjs.org/micromark-extension-gfm-tagfilter 48ms (cache miss)
+735 http fetch GET 200 https://registry.npmjs.org/mdast-util-gfm-autolink-literal 56ms (cache miss)
+736 http fetch GET 200 https://registry.npmjs.org/micromark-extension-gfm-task-list-item 55ms (cache miss)
+737 http fetch GET 200 https://registry.npmjs.org/micromark-extension-gfm-autolink-literal 56ms (cache miss)
+738 http fetch GET 200 https://registry.npmjs.org/mdast-util-gfm-strikethrough 58ms (cache miss)
+739 http fetch GET 200 https://registry.npmjs.org/mdast-util-to-markdown 59ms (cache miss)
+740 http fetch GET 200 https://registry.npmjs.org/micromark 61ms (cache miss)
+741 http fetch GET 200 https://registry.npmjs.org/micromark-extension-gfm-strikethrough 62ms (cache miss)
+742 http fetch GET 200 https://registry.npmjs.org/mdast-util-gfm-task-list-item 69ms (cache miss)
+743 timing idealTree:node_modules/remark-gfm Completed in 71ms
+744 silly placeDep ROOT mdast-util-gfm-autolink-literal@0.1.3 OK for: mdast-util-gfm@0.1.2 want: ^0.1.0
+745 silly fetch manifest ccount@^1.0.0
+746 silly fetch manifest micromark@^2.11.3
+747 silly fetch manifest mdast-util-find-and-replace@^1.1.0
+748 silly placeDep ROOT mdast-util-gfm-strikethrough@0.2.3 OK for: mdast-util-gfm@0.1.2 want: ^0.2.0
+749 silly fetch manifest mdast-util-to-markdown@^0.6.0
+750 silly placeDep ROOT mdast-util-gfm-table@0.1.6 OK for: mdast-util-gfm@0.1.2 want: ^0.1.0
+751 silly fetch manifest markdown-table@^2.0.0
+752 silly fetch manifest mdast-util-to-markdown@~0.6.0
+753 silly placeDep ROOT mdast-util-gfm-task-list-item@0.1.6 OK for: mdast-util-gfm@0.1.2 want: ^0.1.0
+754 silly placeDep ROOT mdast-util-to-markdown@0.6.5 OK for: mdast-util-gfm@0.1.2 want: ^0.6.1
+755 silly fetch manifest zwitch@^1.0.0
+756 silly fetch manifest repeat-string@^1.0.0
+757 silly fetch manifest longest-streak@^2.0.0
+758 silly fetch manifest parse-entities@^2.0.0
+759 silly fetch manifest mdast-util-to-string@^2.0.0
+760 http fetch GET 200 https://registry.npmjs.org/ccount 34ms (cache miss)
+761 http fetch GET 200 https://registry.npmjs.org/longest-streak 41ms (cache miss)
+762 http fetch GET 200 https://registry.npmjs.org/markdown-table 46ms (cache miss)
+763 http fetch GET 200 https://registry.npmjs.org/mdast-util-find-and-replace 47ms (cache miss)
+764 http fetch GET 200 https://registry.npmjs.org/parse-entities 44ms (cache miss)
+765 http fetch GET 200 https://registry.npmjs.org/repeat-string 47ms (cache miss)
+766 http fetch GET 200 https://registry.npmjs.org/mdast-util-to-string 47ms (cache miss)
+767 http fetch GET 200 https://registry.npmjs.org/zwitch 514ms (cache miss)
+768 timing idealTree:node_modules/mdast-util-gfm Completed in 520ms
+769 silly placeDep ROOT ccount@1.1.0 OK for: mdast-util-gfm-autolink-literal@0.1.3 want: ^1.0.0
+770 silly placeDep ROOT mdast-util-find-and-replace@1.1.1 OK for: mdast-util-gfm-autolink-literal@0.1.3 want: ^1.1.0
+771 silly placeDep ROOT micromark@2.11.4 OK for: mdast-util-gfm-autolink-literal@0.1.3 want: ^2.11.3
+772 timing idealTree:node_modules/mdast-util-gfm-autolink-literal Completed in 5ms
+773 timing idealTree:node_modules/ccount Completed in 0ms
+774 silly placeDep ROOT unist-util-is@4.1.0 OK for: mdast-util-find-and-replace@1.1.1 want: ^4.0.0
+775 silly placeDep ROOT unist-util-visit-parents@3.1.1 OK for: mdast-util-find-and-replace@1.1.1 want: ^3.0.0
+776 timing idealTree:node_modules/mdast-util-find-and-replace Completed in 2ms
+777 timing idealTree:node_modules/mdast-util-gfm-strikethrough Completed in 0ms
+778 silly placeDep ROOT markdown-table@2.0.0 OK for: mdast-util-gfm-table@0.1.6 want: ^2.0.0
+779 timing idealTree:node_modules/mdast-util-gfm-table Completed in 0ms
+780 silly placeDep ROOT repeat-string@1.6.1 OK for: markdown-table@2.0.0 want: ^1.0.0
+781 timing idealTree:node_modules/markdown-table Completed in 2ms
+782 timing idealTree:node_modules/mdast-util-gfm-task-list-item Completed in 0ms
+783 silly placeDep ROOT longest-streak@2.0.4 OK for: mdast-util-to-markdown@0.6.5 want: ^2.0.0
+784 silly placeDep ROOT mdast-util-to-string@2.0.0 OK for: mdast-util-to-markdown@0.6.5 want: ^2.0.0
+785 silly placeDep ROOT parse-entities@2.0.0 OK for: mdast-util-to-markdown@0.6.5 want: ^2.0.0
+786 silly fetch manifest is-decimal@^1.0.0
+787 silly fetch manifest is-hexadecimal@^1.0.0
+788 silly fetch manifest is-alphanumerical@^1.0.0
+789 silly fetch manifest character-entities@^1.0.0
+790 silly fetch manifest character-entities-legacy@^1.0.0
+791 silly fetch manifest character-reference-invalid@^1.0.0
+792 silly placeDep ROOT zwitch@1.0.5 OK for: mdast-util-to-markdown@0.6.5 want: ^1.0.0
+793 http fetch GET 200 https://registry.npmjs.org/character-entities 33ms (cache miss)
+794 http fetch GET 200 https://registry.npmjs.org/character-reference-invalid 36ms (cache miss)
+795 http fetch GET 200 https://registry.npmjs.org/character-entities-legacy 37ms (cache miss)
+796 http fetch GET 200 https://registry.npmjs.org/is-decimal 45ms (cache miss)
+797 http fetch GET 200 https://registry.npmjs.org/is-alphanumerical 45ms (cache miss)
+798 http fetch GET 200 https://registry.npmjs.org/is-hexadecimal 46ms (cache miss)
+799 timing idealTree:node_modules/mdast-util-to-markdown Completed in 50ms
+800 timing idealTree:node_modules/longest-streak Completed in 0ms
+801 timing idealTree:node_modules/mdast-util-to-string Completed in 0ms
+802 timing idealTree:node_modules/micromark Completed in 0ms
+803 silly placeDep ROOT micromark-extension-gfm-autolink-literal@0.5.7 OK for: micromark-extension-gfm@0.3.3 want: ~0.5.0
+804 silly placeDep ROOT micromark-extension-gfm-strikethrough@0.6.5 OK for: micromark-extension-gfm@0.3.3 want: ~0.6.5
+805 silly placeDep ROOT micromark-extension-gfm-table@0.4.3 OK for: micromark-extension-gfm@0.3.3 want: ~0.4.0
+806 silly placeDep ROOT micromark-extension-gfm-tagfilter@0.3.0 OK for: micromark-extension-gfm@0.3.3 want: ~0.3.0
+807 silly placeDep ROOT micromark-extension-gfm-task-list-item@0.3.3 OK for: micromark-extension-gfm@0.3.3 want: ~0.3.0
+808 timing idealTree:node_modules/micromark-extension-gfm Completed in 5ms
+809 timing idealTree:node_modules/micromark-extension-gfm-autolink-literal Completed in 0ms
+810 timing idealTree:node_modules/micromark-extension-gfm-strikethrough Completed in 0ms
+811 timing idealTree:node_modules/micromark-extension-gfm-table Completed in 0ms
+812 timing idealTree:node_modules/micromark-extension-gfm-tagfilter Completed in 0ms
+813 timing idealTree:node_modules/micromark-extension-gfm-task-list-item Completed in 0ms
+814 silly placeDep ROOT character-entities@1.2.4 OK for: parse-entities@2.0.0 want: ^1.0.0
+815 silly placeDep ROOT character-entities-legacy@1.1.4 OK for: parse-entities@2.0.0 want: ^1.0.0
+816 silly placeDep ROOT character-reference-invalid@1.1.4 OK for: parse-entities@2.0.0 want: ^1.0.0
+817 silly placeDep ROOT is-alphanumerical@1.0.4 OK for: parse-entities@2.0.0 want: ^1.0.0
+818 silly fetch manifest is-alphabetical@^1.0.0
+819 silly placeDep ROOT is-decimal@1.0.4 OK for: parse-entities@2.0.0 want: ^1.0.0
+820 silly placeDep ROOT is-hexadecimal@1.0.4 OK for: parse-entities@2.0.0 want: ^1.0.0
+821 http fetch GET 200 https://registry.npmjs.org/is-alphabetical 40ms (cache miss)
+822 timing idealTree:node_modules/parse-entities Completed in 44ms
+823 timing idealTree:node_modules/character-entities Completed in 0ms
+824 timing idealTree:node_modules/character-entities-legacy Completed in 0ms
+825 timing idealTree:node_modules/character-reference-invalid Completed in 0ms
+826 silly placeDep ROOT is-alphabetical@1.0.4 OK for: is-alphanumerical@1.0.4 want: ^1.0.0
+827 timing idealTree:node_modules/is-alphanumerical Completed in 1ms
+828 timing idealTree:node_modules/is-alphabetical Completed in 0ms
+829 timing idealTree:node_modules/is-decimal Completed in 0ms
+830 timing idealTree:node_modules/is-hexadecimal Completed in 0ms
+831 silly placeDep ROOT mdast-util-from-markdown@0.8.5 OK for: remark-parse@9.0.0 want: ^0.8.0
+832 silly fetch manifest @types/mdast@^3.0.0
+833 http fetch GET 200 https://registry.npmjs.org/@types%2fmdast 67ms (cache miss)
+834 timing idealTree:node_modules/remark-parse Completed in 68ms
+835 silly placeDep ROOT @types/mdast@3.0.15 OK for: mdast-util-from-markdown@0.8.5 want: ^3.0.0
+836 silly placeDep ROOT unist-util-stringify-position@2.0.3 OK for: mdast-util-from-markdown@0.8.5 want: ^2.0.0
+837 timing idealTree:node_modules/mdast-util-from-markdown Completed in 2ms
+838 timing idealTree:node_modules/@types/mdast Completed in 0ms
+839 silly placeDep ROOT mdast-util-to-hast@10.2.0 OK for: remark-rehype@8.1.0 want: ^10.2.0
+840 silly fetch manifest mdurl@^1.0.0
+841 silly fetch manifest unist-builder@^2.0.0
+842 silly fetch manifest unist-util-position@^3.0.0
+843 silly fetch manifest unist-util-generated@^1.0.0
+844 silly fetch manifest mdast-util-definitions@^4.0.0
+845 http fetch GET 200 https://registry.npmjs.org/unist-util-generated 43ms (cache miss)
+846 http fetch GET 200 https://registry.npmjs.org/mdurl 59ms (cache miss)
+847 http fetch GET 200 https://registry.npmjs.org/unist-util-position 86ms (cache miss)
+848 http fetch GET 200 https://registry.npmjs.org/unist-builder 480ms (cache miss)
+849 http fetch GET 200 https://registry.npmjs.org/mdast-util-definitions 554ms (cache miss)
+850 timing idealTree:node_modules/remark-rehype Completed in 557ms
+851 silly placeDep ROOT mdast-util-definitions@4.0.0 OK for: mdast-util-to-hast@10.2.0 want: ^4.0.0
+852 silly placeDep ROOT mdurl@1.0.1 OK for: mdast-util-to-hast@10.2.0 want: ^1.0.0
+853 silly placeDep ROOT unist-builder@2.0.3 OK for: mdast-util-to-hast@10.2.0 want: ^2.0.0
+854 silly placeDep ROOT unist-util-generated@1.1.6 OK for: mdast-util-to-hast@10.2.0 want: ^1.0.0
+855 silly placeDep ROOT unist-util-position@3.1.0 OK for: mdast-util-to-hast@10.2.0 want: ^3.0.0
+856 timing idealTree:node_modules/mdast-util-to-hast Completed in 5ms
+857 timing idealTree:node_modules/mdast-util-definitions Completed in 0ms
+858 timing idealTree:node_modules/mdurl Completed in 0ms
+859 timing idealTree:node_modules/repeat-string Completed in 0ms
+860 timing idealTree:node_modules/resize-observer-polyfill Completed in 0ms
+861 timing idealTree:node_modules/safe-stable-stringify Completed in 0ms
+862 silly placeDep ROOT compute-scroll-into-view@3.1.1 OK for: scroll-into-view-if-needed@3.1.0 want: ^3.0.2
+863 timing idealTree:node_modules/scroll-into-view-if-needed Completed in 1ms
+864 timing idealTree:node_modules/compute-scroll-into-view Completed in 0ms
+865 timing idealTree:node_modules/space-separated-tokens Completed in 0ms
+866 timing idealTree:node_modules/stackframe Completed in 0ms
+867 timing idealTree:node_modules/string-convert Completed in 0ms
+868 silly placeDep ROOT inline-style-parser@0.1.1 OK for: style-to-object@0.3.0 want: 0.1.1
+869 timing idealTree:node_modules/style-to-object Completed in 1ms
+870 timing idealTree:node_modules/inline-style-parser Completed in 0ms
+871 timing idealTree:node_modules/stylis Completed in 0ms
+872 timing idealTree:node_modules/sunflower-antd Completed in 0ms
+873 silly fetch manifest react@^16.11.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+874 silly placeDep ROOT dequal@2.0.3 OK for: swr@2.3.8 want: ^2.0.3
+875 silly placeDep ROOT use-sync-external-store@1.6.0 OK for: swr@2.3.8 want: ^1.6.0
+876 timing idealTree:node_modules/swr Completed in 4ms
+877 timing idealTree:node_modules/dequal Completed in 0ms
+878 timing idealTree:node_modules/throttle-debounce Completed in 0ms
+879 timing idealTree:node_modules/toggle-selection Completed in 0ms
+880 silly placeDep ROOT bail@1.0.5 OK for: unified@9.2.2 want: ^1.0.0
+881 silly placeDep ROOT extend@3.0.2 OK for: unified@9.2.2 want: ^3.0.0
+882 silly placeDep ROOT is-buffer@2.0.5 OK for: unified@9.2.2 want: ^2.0.0
+883 silly placeDep ROOT is-plain-obj@2.1.0 OK for: unified@9.2.2 want: ^2.0.0
+884 silly placeDep ROOT trough@1.0.5 OK for: unified@9.2.2 want: ^1.0.0
+885 timing idealTree:node_modules/unified Completed in 4ms
+886 timing idealTree:node_modules/bail Completed in 0ms
+887 timing idealTree:node_modules/extend Completed in 0ms
+888 timing idealTree:node_modules/is-buffer Completed in 0ms
+889 timing idealTree:node_modules/is-plain-obj Completed in 0ms
+890 timing idealTree:node_modules/trough Completed in 0ms
+891 timing idealTree:node_modules/unist-builder Completed in 0ms
+892 timing idealTree:node_modules/unist-util-generated Completed in 0ms
+893 timing idealTree:node_modules/unist-util-is Completed in 0ms
+894 timing idealTree:node_modules/unist-util-position Completed in 0ms
+895 timing idealTree:node_modules/unist-util-stringify-position Completed in 0ms
+896 timing idealTree:node_modules/unist-util-visit Completed in 0ms
+897 timing idealTree:node_modules/unist-util-visit-parents Completed in 0ms
+898 timing idealTree:node_modules/use-sync-external-store Completed in 0ms
+899 silly placeDep ROOT vfile-message@2.0.4 OK for: vfile@4.2.1 want: ^2.0.0
+900 timing idealTree:node_modules/vfile Completed in 1ms
+901 timing idealTree:node_modules/vfile-message Completed in 0ms
+902 timing idealTree:node_modules/warn-once Completed in 0ms
+903 timing idealTree:node_modules/warning Completed in 0ms
+904 timing idealTree:node_modules/ws Completed in 0ms
+905 timing idealTree:node_modules/xtend Completed in 0ms
+906 timing idealTree:node_modules/zwitch Completed in 0ms
+907 timing idealTree:node_modules/@ant-design/cssinjs-utils/node_modules/@ant-design/cssinjs Completed in 0ms
+908 timing idealTree:node_modules/@ant-design/pro-layout/node_modules/@ant-design/cssinjs Completed in 0ms
+909 silly placeDep node_modules/@ant-design/pro-layout @ant-design/colors@7.2.1 OK for: @ant-design/icons@5.6.1 want: ^7.0.0
+910 timing idealTree:node_modules/@ant-design/pro-layout/node_modules/@ant-design/icons Completed in 1ms
+911 silly placeDep node_modules/@ant-design/pro-layout @ant-design/fast-color@2.0.6 OK for: @ant-design/colors@7.2.1 want: ^2.0.6
+912 timing idealTree:node_modules/@ant-design/pro-layout/node_modules/@ant-design/colors Completed in 1ms
+913 timing idealTree:node_modules/@ant-design/pro-layout/node_modules/@ant-design/fast-color Completed in 0ms
+914 timing idealTree:node_modules/@ant-design/pro-provider/node_modules/@ant-design/cssinjs Completed in 0ms
+915 silly placeDep node_modules/@ant-design/pro-utils @ant-design/colors@7.2.1 OK for: @ant-design/icons@5.6.1 want: ^7.0.0
+916 timing idealTree:node_modules/@ant-design/pro-utils/node_modules/@ant-design/icons Completed in 1ms
+917 silly placeDep node_modules/@ant-design/pro-utils @ant-design/fast-color@2.0.6 OK for: @ant-design/colors@7.2.1 want: ^2.0.6
+918 timing idealTree:node_modules/@ant-design/pro-utils/node_modules/@ant-design/colors Completed in 2ms
+919 timing idealTree:node_modules/@ant-design/pro-utils/node_modules/@ant-design/fast-color Completed in 0ms
+920 timing idealTree:node_modules/@rc-component/color-picker/node_modules/@ant-design/fast-color Completed in 0ms
+921 timing idealTree:node_modules/@rc-component/util/node_modules/react-is Completed in 0ms
+922 silly placeDep node_modules/@refinedev/antd @ant-design/colors@7.2.1 OK for: @ant-design/icons@5.6.1 want: ^7.0.0
+923 timing idealTree:node_modules/@refinedev/antd/node_modules/@ant-design/icons Completed in 1ms
+924 silly placeDep node_modules/@refinedev/antd @ant-design/fast-color@2.0.6 OK for: @ant-design/colors@7.2.1 want: ^2.0.6
+925 timing idealTree:node_modules/@refinedev/antd/node_modules/@ant-design/colors Completed in 1ms
+926 timing idealTree:node_modules/@refinedev/antd/node_modules/@ant-design/fast-color Completed in 0ms
+927 timing idealTree:node_modules/antd/node_modules/@ant-design/colors Completed in 0ms
+928 timing idealTree:node_modules/antd/node_modules/@ant-design/cssinjs Completed in 0ms
+929 timing idealTree:node_modules/antd/node_modules/@ant-design/fast-color Completed in 0ms
+930 timing idealTree:node_modules/antd/node_modules/@ant-design/icons Completed in 0ms
+931 timing idealTree:node_modules/rc-util/node_modules/react-is Completed in 0ms
+932 timing idealTree:node_modules/react-markdown/node_modules/react-is Completed in 0ms
+933 timing idealTree:buildDeps Completed in 12132ms
+934 timing idealTree:fixDepFlags Completed in 2ms
+935 warn EBADENGINE Unsupported engine {
+935 warn EBADENGINE   package: '@refinedev/antd@6.0.3',
+935 warn EBADENGINE   required: { node: '>=20' },
+935 warn EBADENGINE   current: { node: 'v18.19.0', npm: '10.2.3' }
+935 warn EBADENGINE }
+936 warn EBADENGINE Unsupported engine {
+936 warn EBADENGINE   package: '@refinedev/core@5.0.7',
+936 warn EBADENGINE   required: { node: '>=20' },
+936 warn EBADENGINE   current: { node: 'v18.19.0', npm: '10.2.3' }
+936 warn EBADENGINE }
+937 warn EBADENGINE Unsupported engine {
+937 warn EBADENGINE   package: '@refinedev/nextjs-router@7.0.4',
+937 warn EBADENGINE   required: { node: '>=20' },
+937 warn EBADENGINE   current: { node: 'v18.19.0', npm: '10.2.3' }
+937 warn EBADENGINE }
+938 warn EBADENGINE Unsupported engine {
+938 warn EBADENGINE   package: '@refinedev/supabase@6.0.1',
+938 warn EBADENGINE   required: { node: '>=20' },
+938 warn EBADENGINE   current: { node: 'v18.19.0', npm: '10.2.3' }
+938 warn EBADENGINE }
+939 warn EBADENGINE Unsupported engine {
+939 warn EBADENGINE   package: '@supabase/supabase-js@2.87.3',
+939 warn EBADENGINE   required: { node: '>=20.0.0' },
+939 warn EBADENGINE   current: { node: 'v18.19.0', npm: '10.2.3' }
+939 warn EBADENGINE }
+940 warn EBADENGINE Unsupported engine {
+940 warn EBADENGINE   package: '@refinedev/ui-types@2.0.1',
+940 warn EBADENGINE   required: { node: '>=20' },
+940 warn EBADENGINE   current: { node: 'v18.19.0', npm: '10.2.3' }
+940 warn EBADENGINE }
+941 warn EBADENGINE Unsupported engine {
+941 warn EBADENGINE   package: '@refinedev/devtools-internal@2.0.1',
+941 warn EBADENGINE   required: { node: '>=20' },
+941 warn EBADENGINE   current: { node: 'v18.19.0', npm: '10.2.3' }
+941 warn EBADENGINE }
+942 warn EBADENGINE Unsupported engine {
+942 warn EBADENGINE   package: '@refinedev/devtools-shared@2.0.1',
+942 warn EBADENGINE   required: { node: '>=20' },
+942 warn EBADENGINE   current: { node: 'v18.19.0', npm: '10.2.3' }
+942 warn EBADENGINE }
+943 warn EBADENGINE Unsupported engine {
+943 warn EBADENGINE   package: '@supabase/auth-js@2.87.3',
+943 warn EBADENGINE   required: { node: '>=20.0.0' },
+943 warn EBADENGINE   current: { node: 'v18.19.0', npm: '10.2.3' }
+943 warn EBADENGINE }
+944 warn EBADENGINE Unsupported engine {
+944 warn EBADENGINE   package: '@supabase/functions-js@2.87.3',
+944 warn EBADENGINE   required: { node: '>=20.0.0' },
+944 warn EBADENGINE   current: { node: 'v18.19.0', npm: '10.2.3' }
+944 warn EBADENGINE }
+945 warn EBADENGINE Unsupported engine {
+945 warn EBADENGINE   package: '@supabase/postgrest-js@2.87.3',
+945 warn EBADENGINE   required: { node: '>=20.0.0' },
+945 warn EBADENGINE   current: { node: 'v18.19.0', npm: '10.2.3' }
+945 warn EBADENGINE }
+946 warn EBADENGINE Unsupported engine {
+946 warn EBADENGINE   package: '@supabase/realtime-js@2.87.3',
+946 warn EBADENGINE   required: { node: '>=20.0.0' },
+946 warn EBADENGINE   current: { node: 'v18.19.0', npm: '10.2.3' }
+946 warn EBADENGINE }
+947 warn EBADENGINE Unsupported engine {
+947 warn EBADENGINE   package: '@supabase/storage-js@2.87.3',
+947 warn EBADENGINE   required: { node: '>=20.0.0' },
+947 warn EBADENGINE   current: { node: 'v18.19.0', npm: '10.2.3' }
+947 warn EBADENGINE }
+948 warn EBADENGINE Unsupported engine {
+948 warn EBADENGINE   package: 'iceberg-js@0.8.1',
+948 warn EBADENGINE   required: { node: '>=20.0.0' },
+948 warn EBADENGINE   current: { node: 'v18.19.0', npm: '10.2.3' }
+948 warn EBADENGINE }
+949 timing idealTree Completed in 12264ms
+950 timing reify:loadTrees Completed in 12265ms
+951 timing reify:diffTrees Completed in 3ms
+952 silly reify moves {}
+953 timing reify:retireShallow Completed in 0ms
+954 timing reify:createSparse Completed in 11ms
+955 timing reify:loadBundles Completed in 0ms
+956 silly audit bulk request {
+956 silly audit   '@emnapi/core': [ '1.7.1' ],
+956 silly audit   '@emnapi/runtime': [ '1.7.1' ],
+956 silly audit   '@emnapi/wasi-threads': [ '1.1.0' ],
+956 silly audit   '@eslint-community/eslint-utils': [ '4.9.0' ],
+956 silly audit   '@eslint-community/regexpp': [ '4.12.2' ],
+956 silly audit   '@eslint/eslintrc': [ '2.1.4' ],
+956 silly audit   '@eslint/js': [ '8.57.1' ],
+956 silly audit   '@humanwhocodes/config-array': [ '0.13.0' ],
+956 silly audit   '@humanwhocodes/module-importer': [ '1.0.1' ],
+956 silly audit   '@humanwhocodes/object-schema': [ '2.0.3' ],
+956 silly audit   '@isaacs/cliui': [ '8.0.2' ],
+956 silly audit   'ansi-regex': [ '6.2.2', '5.0.1' ],
+956 silly audit   'strip-ansi': [ '7.1.2', '6.0.1' ],
+956 silly audit   '@napi-rs/wasm-runtime': [ '0.2.12' ],
+956 silly audit   '@next/env': [ '14.2.20' ],
+956 silly audit   '@next/eslint-plugin-next': [ '14.2.20' ],
+956 silly audit   '@next/swc-darwin-arm64': [ '14.2.20' ],
+956 silly audit   '@next/swc-darwin-x64': [ '14.2.20' ],
+956 silly audit   '@next/swc-linux-arm64-gnu': [ '14.2.20' ],
+956 silly audit   '@next/swc-linux-arm64-musl': [ '14.2.20' ],
+956 silly audit   '@next/swc-linux-x64-gnu': [ '14.2.20' ],
+956 silly audit   '@next/swc-linux-x64-musl': [ '14.2.20' ],
+956 silly audit   '@next/swc-win32-arm64-msvc': [ '14.2.20' ],
+956 silly audit   '@next/swc-win32-ia32-msvc': [ '14.2.20' ],
+956 silly audit   '@next/swc-win32-x64-msvc': [ '14.2.20' ],
+956 silly audit   '@nodelib/fs.scandir': [ '2.1.5' ],
+956 silly audit   '@nodelib/fs.stat': [ '2.0.5' ],
+956 silly audit   '@nodelib/fs.walk': [ '1.2.8' ],
+956 silly audit   '@nolyfill/is-core-module': [ '1.0.39' ],
+956 silly audit   '@pkgjs/parseargs': [ '0.11.0' ],
+956 silly audit   '@rtsao/scc': [ '1.1.0' ],
+956 silly audit   '@rushstack/eslint-patch': [ '1.15.0' ],
+956 silly audit   '@swc/counter': [ '0.1.3' ],
+956 silly audit   '@swc/helpers': [ '0.5.5' ],
+956 silly audit   '@tybys/wasm-util': [ '0.10.1' ],
+956 silly audit   '@types/json5': [ '0.0.29' ],
+956 silly audit   '@types/node': [ '20.19.27' ],
+956 silly audit   '@types/prop-types': [ '15.7.15' ],
+956 silly audit   '@types/react': [ '18.3.27' ],
+956 silly audit   '@types/react-dom': [ '18.3.7' ],
+956 silly audit   '@typescript-eslint/eslint-plugin': [ '8.50.0' ],
+956 silly audit   ignore: [ '7.0.5', '5.3.2' ],
+956 silly audit   '@typescript-eslint/parser': [ '8.50.0' ],
+956 silly audit   '@typescript-eslint/project-service': [ '8.50.0' ],
+956 silly audit   '@typescript-eslint/scope-manager': [ '8.50.0' ],
+956 silly audit   '@typescript-eslint/tsconfig-utils': [ '8.50.0' ],
+956 silly audit   '@typescript-eslint/type-utils': [ '8.50.0' ],
+956 silly audit   '@typescript-eslint/types': [ '8.50.0' ],
+956 silly audit   '@typescript-eslint/typescript-estree': [ '8.50.0' ],
+956 silly audit   'brace-expansion': [ '2.0.2', '1.1.12' ],
+956 silly audit   minimatch: [ '9.0.5', '3.1.2' ],
+956 silly audit   '@typescript-eslint/utils': [ '8.50.0' ],
+956 silly audit   '@typescript-eslint/visitor-keys': [ '8.50.0' ],
+956 silly audit   'eslint-visitor-keys': [ '4.2.1', '3.4.3' ],
+956 silly audit   '@ungap/structured-clone': [ '1.3.0' ],
+956 silly audit   '@unrs/resolver-binding-android-arm-eabi': [ '1.11.1' ],
+956 silly audit   '@unrs/resolver-binding-android-arm64': [ '1.11.1' ],
+956 silly audit   '@unrs/resolver-binding-darwin-arm64': [ '1.11.1' ],
+956 silly audit   '@unrs/resolver-binding-darwin-x64': [ '1.11.1' ],
+956 silly audit   '@unrs/resolver-binding-freebsd-x64': [ '1.11.1' ],
+956 silly audit   '@unrs/resolver-binding-linux-arm-gnueabihf': [ '1.11.1' ],
+956 silly audit   '@unrs/resolver-binding-linux-arm-musleabihf': [ '1.11.1' ],
+956 silly audit   '@unrs/resolver-binding-linux-arm64-gnu': [ '1.11.1' ],
+956 silly audit   '@unrs/resolver-binding-linux-arm64-musl': [ '1.11.1' ],
+956 silly audit   '@unrs/resolver-binding-linux-ppc64-gnu': [ '1.11.1' ],
+956 silly audit   '@unrs/resolver-binding-linux-riscv64-gnu': [ '1.11.1' ],
+956 silly audit   '@unrs/resolver-binding-linux-riscv64-musl': [ '1.11.1' ],
+956 silly audit   '@unrs/resolver-binding-linux-s390x-gnu': [ '1.11.1' ],
+956 silly audit   '@unrs/resolver-binding-linux-x64-gnu': [ '1.11.1' ],
+956 silly audit   '@unrs/resolver-binding-linux-x64-musl': [ '1.11.1' ],
+956 silly audit   '@unrs/resolver-binding-wasm32-wasi': [ '1.11.1' ],
+956 silly audit   '@unrs/resolver-binding-win32-arm64-msvc': [ '1.11.1' ],
+956 silly audit   '@unrs/resolver-binding-win32-ia32-msvc': [ '1.11.1' ],
+956 silly audit   '@unrs/resolver-binding-win32-x64-msvc': [ '1.11.1' ],
+956 silly audit   acorn: [ '8.15.0' ],
+956 silly audit   'acorn-jsx': [ '5.3.2' ],
+956 silly audit   ajv: [ '6.12.6' ],
+956 silly audit   'ansi-styles': [ '4.3.0', '6.2.3' ],
+956 silly audit   argparse: [ '2.0.1' ],
+956 silly audit   'aria-query': [ '5.3.2' ],
+956 silly audit   'array-buffer-byte-length': [ '1.0.2' ],
+956 silly audit   'array-includes': [ '3.1.9' ],
+956 silly audit   'array.prototype.findlast': [ '1.2.5' ],
+956 silly audit   'array.prototype.findlastindex': [ '1.2.6' ],
+956 silly audit   'array.prototype.flat': [ '1.3.3' ],
+956 silly audit   'array.prototype.flatmap': [ '1.3.3' ],
+956 silly audit   'array.prototype.tosorted': [ '1.1.4' ],
+956 silly audit   'arraybuffer.prototype.slice': [ '1.0.4' ],
+956 silly audit   'ast-types-flow': [ '0.0.8' ],
+956 silly audit   'async-function': [ '1.0.0' ],
+956 silly audit   'available-typed-arrays': [ '1.0.7' ],
+956 silly audit   'axe-core': [ '4.11.0' ],
+956 silly audit   'axobject-query': [ '4.1.0' ],
+956 silly audit   'balanced-match': [ '1.0.2' ],
+956 silly audit   busboy: [ '1.6.0' ],
+956 silly audit   'call-bind': [ '1.0.8' ],
+956 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+956 silly audit   'call-bound': [ '1.0.4' ],
+956 silly audit   callsites: [ '3.1.0' ],
+956 silly audit   'caniuse-lite': [ '1.0.30001760' ],
+956 silly audit   chalk: [ '4.1.2' ],
+956 silly audit   'client-only': [ '0.0.1' ],
+956 silly audit   'color-convert': [ '2.0.1' ],
+956 silly audit   'color-name': [ '1.1.4' ],
+956 silly audit   'concat-map': [ '0.0.1' ],
+956 silly audit   'cross-spawn': [ '7.0.6' ],
+956 silly audit   csstype: [ '3.2.3' ],
+956 silly audit   'damerau-levenshtein': [ '1.0.8' ],
+956 silly audit   'data-view-buffer': [ '1.0.2' ],
+956 silly audit   'data-view-byte-length': [ '1.0.2' ],
+956 silly audit   'data-view-byte-offset': [ '1.0.1' ],
+956 silly audit   debug: [ '4.4.3', '3.2.7' ],
+956 silly audit   'deep-is': [ '0.1.4' ],
+956 silly audit   'define-data-property': [ '1.1.4' ],
+956 silly audit   'define-properties': [ '1.2.1' ],
+956 silly audit   doctrine: [ '3.0.0', '2.1.0' ],
+956 silly audit   'dunder-proto': [ '1.0.1' ],
+956 silly audit   eastasianwidth: [ '0.2.0' ],
+956 silly audit   'emoji-regex': [ '9.2.2', '8.0.0' ],
+956 silly audit   'es-abstract': [ '1.24.1' ],
+956 silly audit   'es-define-property': [ '1.0.1' ],
+956 silly audit   'es-errors': [ '1.3.0' ],
+956 silly audit   'es-iterator-helpers': [ '1.2.2' ],
+956 silly audit   'es-object-atoms': [ '1.1.1' ],
+956 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+956 silly audit   'es-shim-unscopables': [ '1.1.0' ],
+956 silly audit   'es-to-primitive': [ '1.3.0' ],
+956 silly audit   'escape-string-regexp': [ '4.0.0' ],
+956 silly audit   eslint: [ '8.57.1' ],
+956 silly audit   'eslint-config-next': [ '14.2.20' ],
+956 silly audit   'eslint-import-resolver-node': [ '0.3.9' ],
+956 silly audit   'eslint-import-resolver-typescript': [ '3.10.1' ],
+956 silly audit   'eslint-module-utils': [ '2.12.1' ],
+956 silly audit   'eslint-plugin-import': [ '2.32.0' ],
+956 silly audit   semver: [ '6.3.1', '7.7.3' ],
+956 silly audit   'eslint-plugin-jsx-a11y': [ '6.10.2' ],
+956 silly audit   'eslint-plugin-react': [ '7.37.5' ],
+956 silly audit   'eslint-plugin-react-hooks': [ '5.0.0-canary-7118f5dd7-20230705' ],
+956 silly audit   resolve: [ '2.0.0-next.5', '1.22.11' ],
+956 silly audit   'eslint-scope': [ '7.2.2' ],
+956 silly audit   espree: [ '9.6.1' ],
+956 silly audit   esquery: [ '1.6.0' ],
+956 silly audit   esrecurse: [ '4.3.0' ],
+956 silly audit   estraverse: [ '5.3.0' ],
+956 silly audit   esutils: [ '2.0.3' ],
+956 silly audit   'fast-deep-equal': [ '3.1.3' ],
+956 silly audit   'fast-json-stable-stringify': [ '2.1.0' ],
+956 silly audit   'fast-levenshtein': [ '2.0.6' ],
+956 silly audit   fastq: [ '1.19.1' ],
+956 silly audit   fdir: [ '6.5.0' ],
+956 silly audit   'file-entry-cache': [ '6.0.1' ],
+956 silly audit   'find-up': [ '5.0.0' ],
+956 silly audit   'flat-cache': [ '3.2.0' ],
+956 silly audit   flatted: [ '3.3.3' ],
+956 silly audit   'for-each': [ '0.3.5' ],
+956 silly audit   'foreground-child': [ '3.3.1' ],
+956 silly audit   'fs.realpath': [ '1.0.0' ],
+956 silly audit   'function-bind': [ '1.1.2' ],
+956 silly audit   'function.prototype.name': [ '1.1.8' ],
+956 silly audit   'functions-have-names': [ '1.2.3' ],
+956 silly audit   'generator-function': [ '2.0.1' ],
+956 silly audit   'get-intrinsic': [ '1.3.0' ],
+956 silly audit   'get-proto': [ '1.0.1' ],
+956 silly audit   'get-symbol-description': [ '1.1.0' ],
+956 silly audit   'get-tsconfig': [ '4.13.0' ],
+956 silly audit   glob: [ '10.3.10', '7.2.3' ],
+956 silly audit   'glob-parent': [ '6.0.2' ],
+956 silly audit   globals: [ '13.24.0' ],
+956 silly audit   globalthis: [ '1.0.4' ],
+956 silly audit   gopd: [ '1.2.0' ],
+956 silly audit   'graceful-fs': [ '4.2.11' ],
+956 silly audit   graphemer: [ '1.4.0' ],
+956 silly audit   'has-bigints': [ '1.1.0' ],
+956 silly audit   'has-flag': [ '4.0.0' ],
+956 silly audit   'has-property-descriptors': [ '1.0.2' ],
+956 silly audit   'has-proto': [ '1.2.0' ],
+956 silly audit   'has-symbols': [ '1.1.0' ],
+956 silly audit   'has-tostringtag': [ '1.0.2' ],
+956 silly audit   hasown: [ '2.0.2' ],
+956 silly audit   'import-fresh': [ '3.3.1' ],
+956 silly audit   imurmurhash: [ '0.1.4' ],
+956 silly audit   inflight: [ '1.0.6' ],
+956 silly audit   inherits: [ '2.0.4' ],
+956 silly audit   'internal-slot': [ '1.1.0' ],
+956 silly audit   'is-array-buffer': [ '3.0.5' ],
+956 silly audit   'is-async-function': [ '2.1.1' ],
+956 silly audit   'is-bigint': [ '1.1.0' ],
+956 silly audit   'is-boolean-object': [ '1.2.2' ],
+956 silly audit   'is-bun-module': [ '2.0.0' ],
+956 silly audit   'is-callable': [ '1.2.7' ],
+956 silly audit   'is-core-module': [ '2.16.1' ],
+956 silly audit   'is-data-view': [ '1.0.2' ],
+956 silly audit   'is-date-object': [ '1.1.0' ],
+956 silly audit   'is-extglob': [ '2.1.1' ],
+956 silly audit   'is-finalizationregistry': [ '1.1.1' ],
+956 silly audit   'is-fullwidth-code-point': [ '3.0.0' ],
+956 silly audit   'is-generator-function': [ '1.1.2' ],
+956 silly audit   'is-glob': [ '4.0.3' ],
+956 silly audit   'is-map': [ '2.0.3' ],
+956 silly audit   'is-negative-zero': [ '2.0.3' ],
+956 silly audit   'is-number-object': [ '1.1.1' ],
+956 silly audit   'is-path-inside': [ '3.0.3' ],
+956 silly audit   'is-regex': [ '1.2.1' ],
+956 silly audit   'is-set': [ '2.0.3' ],
+956 silly audit   'is-shared-array-buffer': [ '1.0.4' ],
+956 silly audit   'is-string': [ '1.1.1' ],
+956 silly audit   'is-symbol': [ '1.1.1' ],
+956 silly audit   'is-typed-array': [ '1.1.15' ],
+956 silly audit   'is-weakmap': [ '2.0.2' ],
+956 silly audit   'is-weakref': [ '1.1.1' ],
+956 silly audit   'is-weakset': [ '2.0.4' ],
+956 silly audit   isarray: [ '2.0.5' ],
+956 silly audit   isexe: [ '2.0.0' ],
+956 silly audit   'iterator.prototype': [ '1.1.5' ],
+956 silly audit   jackspeak: [ '2.3.6' ],
+956 silly audit   'js-tokens': [ '4.0.0' ],
+956 silly audit   'js-yaml': [ '4.1.1' ],
+956 silly audit   'json-buffer': [ '3.0.1' ],
+956 silly audit   'json-schema-traverse': [ '0.4.1' ],
+956 silly audit   'json-stable-stringify-without-jsonify': [ '1.0.1' ],
+956 silly audit   json5: [ '1.0.2' ],
+956 silly audit   'jsx-ast-utils': [ '3.3.5' ],
+956 silly audit   keyv: [ '4.5.4' ],
+956 silly audit   'language-subtag-registry': [ '0.3.23' ],
+956 silly audit   'language-tags': [ '1.0.9' ],
+956 silly audit   levn: [ '0.4.1' ],
+956 silly audit   'locate-path': [ '6.0.0' ],
+956 silly audit   'lodash.merge': [ '4.6.2' ],
+956 silly audit   'loose-envify': [ '1.4.0' ],
+956 silly audit   'lru-cache': [ '10.4.3' ],
+956 silly audit   'math-intrinsics': [ '1.1.0' ],
+956 silly audit   minimist: [ '1.2.8' ],
+956 silly audit   minipass: [ '7.1.2' ],
+956 silly audit   ms: [ '2.1.3' ],
+956 silly audit   nanoid: [ '3.3.11' ],
+956 silly audit   'napi-postinstall': [ '0.3.4' ],
+956 silly audit   'natural-compare': [ '1.4.0' ],
+956 silly audit   next: [ '14.2.20' ],
+956 silly audit   'object-assign': [ '4.1.1' ],
+956 silly audit   'object-inspect': [ '1.13.4' ],
+956 silly audit   'object-keys': [ '1.1.1' ],
+956 silly audit   'object.assign': [ '4.1.7' ],
+956 silly audit   'object.entries': [ '1.1.9' ],
+956 silly audit   'object.fromentries': [ '2.0.8' ],
+956 silly audit   'object.groupby': [ '1.0.3' ],
+956 silly audit   'object.values': [ '1.2.1' ],
+956 silly audit   once: [ '1.4.0' ],
+956 silly audit   optionator: [ '0.9.4' ],
+956 silly audit   'own-keys': [ '1.0.1' ],
+956 silly audit   'p-limit': [ '3.1.0' ],
+956 silly audit   'p-locate': [ '5.0.0' ],
+956 silly audit   'parent-module': [ '1.0.1' ],
+956 silly audit   'path-exists': [ '4.0.0' ],
+956 silly audit   'path-is-absolute': [ '1.0.1' ],
+956 silly audit   'path-key': [ '3.1.1' ],
+956 silly audit   'path-parse': [ '1.0.7' ],
+956 silly audit   'path-scurry': [ '1.11.1' ],
+956 silly audit   picocolors: [ '1.1.1' ],
+956 silly audit   picomatch: [ '4.0.3' ],
+956 silly audit   'possible-typed-array-names': [ '1.1.0' ],
+956 silly audit   postcss: [ '8.4.31' ],
+956 silly audit   'prelude-ls': [ '1.2.1' ],
+956 silly audit   'prop-types': [ '15.8.1' ],
+956 silly audit   punycode: [ '2.3.1' ],
+956 silly audit   'queue-microtask': [ '1.2.3' ],
+956 silly audit   react: [ '18.3.1' ],
+956 silly audit   'react-dom': [ '18.3.1' ],
+956 silly audit   'react-is': [ '16.13.1', '18.3.1', '17.0.2' ],
+956 silly audit   'reflect.getprototypeof': [ '1.0.10' ],
+956 silly audit   'regexp.prototype.flags': [ '1.5.4' ],
+956 silly audit   'resolve-from': [ '4.0.0' ],
+956 silly audit   'resolve-pkg-maps': [ '1.0.0' ],
+956 silly audit   reusify: [ '1.1.0' ],
+956 silly audit   rimraf: [ '3.0.2' ],
+956 silly audit   'run-parallel': [ '1.2.0' ],
+956 silly audit   'safe-array-concat': [ '1.1.3' ],
+956 silly audit   'safe-push-apply': [ '1.0.0' ],
+956 silly audit   'safe-regex-test': [ '1.1.0' ],
+956 silly audit   scheduler: [ '0.23.2' ],
+956 silly audit   'set-function-length': [ '1.2.2' ],
+956 silly audit   'set-function-name': [ '2.0.2' ],
+956 silly audit   'set-proto': [ '1.0.0' ],
+956 silly audit   'shebang-command': [ '2.0.0' ],
+956 silly audit   'shebang-regex': [ '3.0.0' ],
+956 silly audit   'side-channel': [ '1.1.0' ],
+956 silly audit   'side-channel-list': [ '1.0.0' ],
+956 silly audit   'side-channel-map': [ '1.0.1' ],
+956 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+956 silly audit   'signal-exit': [ '4.1.0' ],
+956 silly audit   'source-map-js': [ '1.2.1' ],
+956 silly audit   'stable-hash': [ '0.0.5' ],
+956 silly audit   'stop-iteration-iterator': [ '1.1.0' ],
+956 silly audit   streamsearch: [ '1.1.0' ],
+956 silly audit   'string-width': [ '5.1.2', '4.2.3' ],
+956 silly audit   'string.prototype.includes': [ '2.0.1' ],
+956 silly audit   'string.prototype.matchall': [ '4.0.12' ],
+956 silly audit   'string.prototype.repeat': [ '1.0.0' ],
+956 silly audit   'string.prototype.trim': [ '1.2.10' ],
+956 silly audit   'string.prototype.trimend': [ '1.0.9' ],
+956 silly audit   'string.prototype.trimstart': [ '1.0.8' ],
+956 silly audit   'strip-bom': [ '3.0.0' ],
+956 silly audit   'strip-json-comments': [ '3.1.1' ],
+956 silly audit   'styled-jsx': [ '5.1.1' ],
+956 silly audit   'supports-color': [ '7.2.0' ],
+956 silly audit   'supports-preserve-symlinks-flag': [ '1.0.0' ],
+956 silly audit   'text-table': [ '0.2.0' ],
+956 silly audit   tinyglobby: [ '0.2.15' ],
+956 silly audit   'ts-api-utils': [ '2.1.0' ],
+956 silly audit   'tsconfig-paths': [ '3.15.0' ],
+956 silly audit   tslib: [ '2.8.1' ],
+956 silly audit   'type-check': [ '0.4.0' ],
+956 silly audit   'type-fest': [ '0.20.2' ],
+956 silly audit   'typed-array-buffer': [ '1.0.3' ],
+956 silly audit   'typed-array-byte-length': [ '1.0.3' ],
+956 silly audit   'typed-array-byte-offset': [ '1.0.4' ],
+956 silly audit   'typed-array-length': [ '1.0.7' ],
+956 silly audit   typescript: [ '5.9.3' ],
+956 silly audit   'unbox-primitive': [ '1.1.0' ],
+956 silly audit   'undici-types': [ '6.21.0' ],
+956 silly audit   'unrs-resolver': [ '1.11.1' ],
+956 silly audit   'uri-js': [ '4.4.1' ],
+956 silly audit   which: [ '2.0.2' ],
+956 silly audit   'which-boxed-primitive': [ '1.1.1' ],
+956 silly audit   'which-builtin-type': [ '1.2.1' ],
+956 silly audit   'which-collection': [ '1.0.2' ],
+956 silly audit   'which-typed-array': [ '1.1.19' ],
+956 silly audit   'word-wrap': [ '1.2.5' ],
+956 silly audit   'wrap-ansi': [ '8.1.0', '7.0.0' ],
+956 silly audit   wrappy: [ '1.0.2' ],
+956 silly audit   'yocto-queue': [ '0.1.0' ],
+956 silly audit   '@ant-design/icons': [ '6.1.0', '5.6.1' ],
+956 silly audit   '@ant-design/nextjs-registry': [ '1.3.0' ],
+956 silly audit   '@ant-design/cssinjs': [ '2.0.1', '1.24.0' ],
+956 silly audit   '@refinedev/antd': [ '6.0.3' ],
+956 silly audit   '@refinedev/core': [ '5.0.7' ],
+956 silly audit   '@refinedev/nextjs-router': [ '7.0.4' ],
+956 silly audit   '@refinedev/supabase': [ '6.0.1' ],
+956 silly audit   '@supabase/supabase-js': [ '2.87.3' ],
+956 silly audit   '@tanstack/react-query': [ '5.90.12' ],
+956 silly audit   dayjs: [ '1.11.19' ],
+956 silly audit   '@babel/runtime': [ '7.28.4' ],
+956 silly audit   '@emotion/hash': [ '0.8.0' ],
+956 silly audit   '@emotion/unitless': [ '0.7.5' ],
+956 silly audit   '@rc-component/util': [ '1.6.0' ],
+956 silly audit   clsx: [ '2.1.1' ],
+956 silly audit   stylis: [ '4.3.6' ],
+956 silly audit   '@ant-design/colors': [ '8.0.0', '7.2.1' ],
+956 silly audit   '@ant-design/icons-svg': [ '4.4.2' ],
+956 silly audit   '@ant-design/fast-color': [ '3.0.0', '2.0.6' ],
+956 silly audit   'is-mobile': [ '5.0.0' ],
+956 silly audit   '@ant-design/pro-layout': [ '7.22.7' ],
+956 silly audit   antd: [ '5.29.2' ],
+956 silly audit   '@refinedev/ui-types': [ '2.0.1' ],
+956 silly audit   'react-markdown': [ '6.0.3' ],
+956 silly audit   'remark-gfm': [ '1.0.0' ],
+956 silly audit   'sunflower-antd': [ '1.0.0-beta.3' ],
+956 silly audit   '@ant-design/pro-provider': [ '2.16.2' ],
+956 silly audit   '@ant-design/pro-utils': [ '2.18.0' ],
+956 silly audit   '@umijs/route-utils': [ '4.0.3' ],
+956 silly audit   '@umijs/use-params': [ '1.0.9' ],
+956 silly audit   classnames: [ '2.5.1' ],
+956 silly audit   lodash: [ '4.17.21' ],
+956 silly audit   'lodash-es': [ '4.17.21' ],
+956 silly audit   'path-to-regexp': [ '8.2.0' ],
+956 silly audit   'rc-resize-observer': [ '1.4.3' ],
+956 silly audit   'rc-util': [ '5.44.4' ],
+956 silly audit   swr: [ '2.3.8' ],
+956 silly audit   warning: [ '4.0.3' ],
+956 silly audit   '@ctrl/tinycolor': [ '3.6.1' ],
+956 silly audit   'safe-stable-stringify': [ '2.5.0' ],
+956 silly audit   '@refinedev/devtools-internal': [ '2.0.1' ],
+956 silly audit   papaparse: [ '5.5.3' ],
+956 silly audit   pluralize: [ '8.0.0' ],
+956 silly audit   qs: [ '6.14.0' ],
+956 silly audit   'warn-once': [ '0.1.1' ],
+956 silly audit   '@refinedev/devtools-shared': [ '2.0.1' ],
+956 silly audit   'error-stack-parser': [ '2.1.4' ],
+956 silly audit   '@supabase/auth-js': [ '2.87.3' ],
+956 silly audit   '@supabase/functions-js': [ '2.87.3' ],
+956 silly audit   '@supabase/postgrest-js': [ '2.87.3' ],
+956 silly audit   '@supabase/realtime-js': [ '2.87.3' ],
+956 silly audit   '@supabase/storage-js': [ '2.87.3' ],
+956 silly audit   '@types/phoenix': [ '1.6.7' ],
+956 silly audit   '@types/ws': [ '8.18.1' ],
+956 silly audit   ws: [ '8.18.3' ],
+956 silly audit   'iceberg-js': [ '0.8.1' ],
+956 silly audit   '@tanstack/query-core': [ '5.90.12' ],
+956 silly audit   '@ant-design/cssinjs-utils': [ '1.1.3' ],
+956 silly audit   '@ant-design/react-slick': [ '1.1.2' ],
+956 silly audit   '@rc-component/color-picker': [ '2.0.1' ],
+956 silly audit   '@rc-component/mutate-observer': [ '1.1.0' ],
+956 silly audit   '@rc-component/qrcode': [ '1.1.1' ],
+956 silly audit   '@rc-component/tour': [ '1.15.1' ],
+956 silly audit   '@rc-component/trigger': [ '2.3.0' ],
+956 silly audit   'copy-to-clipboard': [ '3.3.3' ],
+956 silly audit   'rc-cascader': [ '3.34.0' ],
+956 silly audit   'rc-checkbox': [ '3.5.0' ],
+956 silly audit   'rc-collapse': [ '3.9.0' ],
+956 silly audit   'rc-dialog': [ '9.6.0' ],
+956 silly audit   'rc-drawer': [ '7.3.0' ],
+956 silly audit   'rc-dropdown': [ '4.2.1' ],
+956 silly audit   'rc-field-form': [ '2.7.1' ],
+956 silly audit   'rc-image': [ '7.12.0' ],
+956 silly audit   'rc-input': [ '1.8.0' ],
+956 silly audit   'rc-input-number': [ '9.5.0' ],
+956 silly audit   'rc-mentions': [ '2.20.0' ],
+956 silly audit   'rc-menu': [ '9.16.1' ],
+956 silly audit   'rc-motion': [ '2.9.5' ],
+956 silly audit   'rc-notification': [ '5.6.4' ],
+956 silly audit   'rc-pagination': [ '5.1.0' ],
+956 silly audit   'rc-picker': [ '4.11.3' ],
+956 silly audit   'rc-progress': [ '4.0.0' ],
+956 silly audit   'rc-rate': [ '2.13.1' ],
+956 silly audit   'rc-segmented': [ '2.7.0' ],
+956 silly audit   'rc-select': [ '14.16.8' ],
+956 silly audit   'rc-slider': [ '11.1.9' ],
+956 silly audit   'rc-steps': [ '6.0.1' ],
+956 silly audit   'rc-switch': [ '4.1.0' ],
+956 silly audit   'rc-table': [ '7.54.0' ],
+956 silly audit   'rc-tabs': [ '15.7.0' ],
+956 silly audit   'rc-textarea': [ '1.10.2' ],
+956 silly audit   'rc-tooltip': [ '6.4.0' ],
+956 silly audit   'rc-tree': [ '5.13.1' ],
+956 silly audit   'rc-tree-select': [ '5.27.0' ],
+956 silly audit   'rc-upload': [ '4.11.0' ],
+956 silly audit   'scroll-into-view-if-needed': [ '3.1.0' ],
+956 silly audit   'throttle-debounce': [ '5.0.2' ],
+956 silly audit   json2mq: [ '0.2.0' ],
+956 silly audit   'resize-observer-polyfill': [ '1.5.1' ],
+956 silly audit   '@rc-component/portal': [ '1.1.2' ],
+956 silly audit   'toggle-selection': [ '1.0.6' ],
+956 silly audit   stackframe: [ '1.3.4' ],
+956 silly audit   'string-convert': [ '0.2.1' ],
+956 silly audit   '@rc-component/async-validator': [ '5.0.4' ],
+956 silly audit   '@rc-component/mini-decimal': [ '1.1.0' ],
+956 silly audit   'rc-overflow': [ '1.5.0' ],
+956 silly audit   'rc-virtual-list': [ '3.19.2' ],
+956 silly audit   '@rc-component/context': [ '1.4.0' ],
+956 silly audit   '@types/hast': [ '2.3.10' ],
+956 silly audit   '@types/unist': [ '2.0.11' ],
+956 silly audit   'comma-separated-tokens': [ '1.0.8' ],
+956 silly audit   'property-information': [ '5.6.0' ],
+956 silly audit   'remark-parse': [ '9.0.0' ],
+956 silly audit   'remark-rehype': [ '8.1.0' ],
+956 silly audit   'space-separated-tokens': [ '1.1.5' ],
+956 silly audit   'style-to-object': [ '0.3.0' ],
+956 silly audit   unified: [ '9.2.2' ],
+956 silly audit   'unist-util-visit': [ '2.0.3' ],
+956 silly audit   vfile: [ '4.2.1' ],
+956 silly audit   xtend: [ '4.0.2' ],
+956 silly audit   'mdast-util-gfm': [ '0.1.2' ],
+956 silly audit   'micromark-extension-gfm': [ '0.3.3' ],
+956 silly audit   'mdast-util-gfm-autolink-literal': [ '0.1.3' ],
+956 silly audit   'mdast-util-gfm-strikethrough': [ '0.2.3' ],
+956 silly audit   'mdast-util-gfm-table': [ '0.1.6' ],
+956 silly audit   'mdast-util-gfm-task-list-item': [ '0.1.6' ],
+956 silly audit   'mdast-util-to-markdown': [ '0.6.5' ],
+956 silly audit   ccount: [ '1.1.0' ],
+956 silly audit   'mdast-util-find-and-replace': [ '1.1.1' ],
+956 silly audit   micromark: [ '2.11.4' ],
+956 silly audit   'unist-util-is': [ '4.1.0' ],
+956 silly audit   'unist-util-visit-parents': [ '3.1.1' ],
+956 silly audit   'markdown-table': [ '2.0.0' ],
+956 silly audit   'repeat-string': [ '1.6.1' ],
+956 silly audit   'longest-streak': [ '2.0.4' ],
+956 silly audit   'mdast-util-to-string': [ '2.0.0' ],
+956 silly audit   'parse-entities': [ '2.0.0' ],
+956 silly audit   zwitch: [ '1.0.5' ],
+956 silly audit   'micromark-extension-gfm-autolink-literal': [ '0.5.7' ],
+956 silly audit   'micromark-extension-gfm-strikethrough': [ '0.6.5' ],
+956 silly audit   'micromark-extension-gfm-table': [ '0.4.3' ],
+956 silly audit   'micromark-extension-gfm-tagfilter': [ '0.3.0' ],
+956 silly audit   'micromark-extension-gfm-task-list-item': [ '0.3.3' ],
+956 silly audit   'character-entities': [ '1.2.4' ],
+956 silly audit   'character-entities-legacy': [ '1.1.4' ],
+956 silly audit   'character-reference-invalid': [ '1.1.4' ],
+956 silly audit   'is-alphanumerical': [ '1.0.4' ],
+956 silly audit   'is-decimal': [ '1.0.4' ],
+956 silly audit   'is-hexadecimal': [ '1.0.4' ],
+956 silly audit   'is-alphabetical': [ '1.0.4' ],
+956 silly audit   'mdast-util-from-markdown': [ '0.8.5' ],
+956 silly audit   '@types/mdast': [ '3.0.15' ],
+956 silly audit   'unist-util-stringify-position': [ '2.0.3' ],
+956 silly audit   'mdast-util-to-hast': [ '10.2.0' ],
+956 silly audit   'mdast-util-definitions': [ '4.0.0' ],
+956 silly audit   mdurl: [ '1.0.1' ],
+956 silly audit   'unist-builder': [ '2.0.3' ],
+956 silly audit   'unist-util-generated': [ '1.1.6' ],
+956 silly audit   'unist-util-position': [ '3.1.0' ],
+956 silly audit   'compute-scroll-into-view': [ '3.1.1' ],
+956 silly audit   'inline-style-parser': [ '0.1.1' ],
+956 silly audit   dequal: [ '2.0.3' ],
+956 silly audit   'use-sync-external-store': [ '1.6.0' ],
+956 silly audit   bail: [ '1.0.5' ],
+956 silly audit   extend: [ '3.0.2' ],
+956 silly audit   'is-buffer': [ '2.0.5' ],
+956 silly audit   'is-plain-obj': [ '2.1.0' ],
+956 silly audit   trough: [ '1.0.5' ],
+956 silly audit   'vfile-message': [ '2.0.4' ]
+956 silly audit }
+957 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-win32-x64-msvc
+958 silly reify mark deleted [
+958 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-win32-x64-msvc'
+958 silly reify ]
+959 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-win32-ia32-msvc
+960 silly reify mark deleted [
+960 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-win32-ia32-msvc'
+960 silly reify ]
+961 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-win32-arm64-msvc
+962 silly reify mark deleted [
+962 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-win32-arm64-msvc'
+962 silly reify ]
+963 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-wasm32-wasi
+964 silly reify mark deleted [
+964 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-wasm32-wasi'
+964 silly reify ]
+965 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@napi-rs/wasm-runtime
+966 silly reify mark deleted [
+966 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@napi-rs/wasm-runtime'
+966 silly reify ]
+967 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@emnapi/core
+968 silly reify mark deleted [
+968 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@emnapi/core'
+968 silly reify ]
+969 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@emnapi/runtime
+970 silly reify mark deleted [
+970 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@emnapi/runtime'
+970 silly reify ]
+971 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@tybys/wasm-util
+972 silly reify mark deleted [
+972 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@tybys/wasm-util'
+972 silly reify ]
+973 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@emnapi/wasi-threads
+974 silly reify mark deleted [
+974 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@emnapi/wasi-threads'
+974 silly reify ]
+975 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-linux-x64-musl
+976 silly reify mark deleted [
+976 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-linux-x64-musl'
+976 silly reify ]
+977 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-linux-x64-gnu
+978 silly reify mark deleted [
+978 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-linux-x64-gnu'
+978 silly reify ]
+979 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-linux-s390x-gnu
+980 silly reify mark deleted [
+980 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-linux-s390x-gnu'
+980 silly reify ]
+981 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-linux-riscv64-musl
+982 silly reify mark deleted [
+982 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-linux-riscv64-musl'
+982 silly reify ]
+983 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-linux-riscv64-gnu
+984 silly reify mark deleted [
+984 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-linux-riscv64-gnu'
+984 silly reify ]
+985 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-linux-ppc64-gnu
+986 silly reify mark deleted [
+986 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-linux-ppc64-gnu'
+986 silly reify ]
+987 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-linux-arm64-musl
+988 silly reify mark deleted [
+988 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-linux-arm64-musl'
+988 silly reify ]
+989 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-linux-arm64-gnu
+990 silly reify mark deleted [
+990 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-linux-arm64-gnu'
+990 silly reify ]
+991 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-linux-arm-musleabihf
+992 silly reify mark deleted [
+992 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-linux-arm-musleabihf'
+992 silly reify ]
+993 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-linux-arm-gnueabihf
+994 silly reify mark deleted [
+994 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-linux-arm-gnueabihf'
+994 silly reify ]
+995 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-freebsd-x64
+996 silly reify mark deleted [
+996 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-freebsd-x64'
+996 silly reify ]
+997 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-darwin-x64
+998 silly reify mark deleted [
+998 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-darwin-x64'
+998 silly reify ]
+999 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-android-arm64
+1000 silly reify mark deleted [
+1000 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-android-arm64'
+1000 silly reify ]
+1001 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-android-arm-eabi
+1002 silly reify mark deleted [
+1002 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@unrs/resolver-binding-android-arm-eabi'
+1002 silly reify ]
+1003 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@next/swc-win32-x64-msvc
+1004 silly reify mark deleted [
+1004 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@next/swc-win32-x64-msvc'
+1004 silly reify ]
+1005 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@next/swc-win32-ia32-msvc
+1006 silly reify mark deleted [
+1006 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@next/swc-win32-ia32-msvc'
+1006 silly reify ]
+1007 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@next/swc-win32-arm64-msvc
+1008 silly reify mark deleted [
+1008 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@next/swc-win32-arm64-msvc'
+1008 silly reify ]
+1009 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@next/swc-linux-x64-musl
+1010 silly reify mark deleted [
+1010 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@next/swc-linux-x64-musl'
+1010 silly reify ]
+1011 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@next/swc-linux-x64-gnu
+1012 silly reify mark deleted [
+1012 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@next/swc-linux-x64-gnu'
+1012 silly reify ]
+1013 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@next/swc-linux-arm64-musl
+1014 silly reify mark deleted [
+1014 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@next/swc-linux-arm64-musl'
+1014 silly reify ]
+1015 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@next/swc-linux-arm64-gnu
+1016 silly reify mark deleted [
+1016 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@next/swc-linux-arm64-gnu'
+1016 silly reify ]
+1017 verbose reify failed optional dependency /Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@next/swc-darwin-x64
+1018 silly reify mark deleted [
+1018 silly reify   '/Users/ironkim/WebstormProjects/kugs-world-admin/node_modules/@next/swc-darwin-x64'
+1018 silly reify ]
+1019 timing reifyNode:node_modules/@unrs/resolver-binding-win32-x64-msvc Completed in 14ms
+1020 timing reifyNode:node_modules/@unrs/resolver-binding-win32-ia32-msvc Completed in 14ms
+1021 timing reifyNode:node_modules/@unrs/resolver-binding-win32-arm64-msvc Completed in 14ms
+1022 timing reifyNode:node_modules/@unrs/resolver-binding-wasm32-wasi Completed in 14ms
+1023 timing reifyNode:node_modules/@unrs/resolver-binding-linux-x64-musl Completed in 14ms
+1024 timing reifyNode:node_modules/@unrs/resolver-binding-linux-x64-gnu Completed in 14ms
+1025 timing reifyNode:node_modules/@unrs/resolver-binding-linux-s390x-gnu Completed in 14ms
+1026 timing reifyNode:node_modules/@unrs/resolver-binding-linux-riscv64-musl Completed in 14ms
+1027 timing reifyNode:node_modules/@unrs/resolver-binding-linux-riscv64-gnu Completed in 15ms
+1028 timing reifyNode:node_modules/@unrs/resolver-binding-linux-ppc64-gnu Completed in 15ms
+1029 timing reifyNode:node_modules/@unrs/resolver-binding-linux-arm64-musl Completed in 15ms
+1030 timing reifyNode:node_modules/@unrs/resolver-binding-linux-arm64-gnu Completed in 15ms
+1031 timing reifyNode:node_modules/@unrs/resolver-binding-linux-arm-musleabihf Completed in 14ms
+1032 timing reifyNode:node_modules/@unrs/resolver-binding-linux-arm-gnueabihf Completed in 14ms
+1033 timing reifyNode:node_modules/@unrs/resolver-binding-freebsd-x64 Completed in 14ms
+1034 timing reifyNode:node_modules/@unrs/resolver-binding-darwin-x64 Completed in 14ms
+1035 timing reifyNode:node_modules/@unrs/resolver-binding-android-arm64 Completed in 14ms
+1036 timing reifyNode:node_modules/@unrs/resolver-binding-android-arm-eabi Completed in 14ms
+1037 timing reifyNode:node_modules/@next/swc-win32-x64-msvc Completed in 14ms
+1038 timing reifyNode:node_modules/@next/swc-win32-ia32-msvc Completed in 14ms
+1039 timing reifyNode:node_modules/@next/swc-win32-arm64-msvc Completed in 14ms
+1040 timing reifyNode:node_modules/@next/swc-linux-x64-musl Completed in 14ms
+1041 timing reifyNode:node_modules/@next/swc-linux-x64-gnu Completed in 14ms
+1042 timing reifyNode:node_modules/@next/swc-linux-arm64-musl Completed in 14ms
+1043 timing reifyNode:node_modules/@next/swc-linux-arm64-gnu Completed in 14ms
+1044 timing reifyNode:node_modules/@next/swc-darwin-x64 Completed in 14ms
+1045 silly tarball no local data for trough@https://registry.npmjs.org/trough/-/trough-1.0.5.tgz. Extracting by manifest.
+1046 silly tarball no local data for vfile-message@https://registry.npmjs.org/vfile-message/-/vfile-message-2.0.4.tgz. Extracting by manifest.
+1047 silly tarball no local data for is-plain-obj@https://registry.npmjs.org/is-plain-obj/-/is-plain-obj-2.1.0.tgz. Extracting by manifest.
+1048 silly tarball no local data for bail@https://registry.npmjs.org/bail/-/bail-1.0.5.tgz. Extracting by manifest.
+1049 silly tarball no local data for inline-style-parser@https://registry.npmjs.org/inline-style-parser/-/inline-style-parser-0.1.1.tgz. Extracting by manifest.
+1050 silly tarball no local data for dequal@https://registry.npmjs.org/dequal/-/dequal-2.0.3.tgz. Extracting by manifest.
+1051 silly tarball no local data for extend@https://registry.npmjs.org/extend/-/extend-3.0.2.tgz. Extracting by manifest.
+1052 silly tarball no local data for unist-util-position@https://registry.npmjs.org/unist-util-position/-/unist-util-position-3.1.0.tgz. Extracting by manifest.
+1053 silly tarball no local data for compute-scroll-into-view@https://registry.npmjs.org/compute-scroll-into-view/-/compute-scroll-into-view-3.1.1.tgz. Extracting by manifest.
+1054 silly tarball no local data for is-buffer@https://registry.npmjs.org/is-buffer/-/is-buffer-2.0.5.tgz. Extracting by manifest.
+1055 silly tarball no local data for use-sync-external-store@https://registry.npmjs.org/use-sync-external-store/-/use-sync-external-store-1.6.0.tgz. Extracting by manifest.
+1056 silly tarball no local data for unist-util-generated@https://registry.npmjs.org/unist-util-generated/-/unist-util-generated-1.1.6.tgz. Extracting by manifest.
+1057 silly tarball no local data for mdurl@https://registry.npmjs.org/mdurl/-/mdurl-1.0.1.tgz. Extracting by manifest.
+1058 silly tarball no local data for mdast-util-to-hast@https://registry.npmjs.org/mdast-util-to-hast/-/mdast-util-to-hast-10.2.0.tgz. Extracting by manifest.
+1059 silly tarball no local data for unist-util-stringify-position@https://registry.npmjs.org/unist-util-stringify-position/-/unist-util-stringify-position-2.0.3.tgz. Extracting by manifest.
+1060 silly tarball no local data for @types/mdast@https://registry.npmjs.org/@types/mdast/-/mdast-3.0.15.tgz. Extracting by manifest.
+1061 silly tarball no local data for is-alphabetical@https://registry.npmjs.org/is-alphabetical/-/is-alphabetical-1.0.4.tgz. Extracting by manifest.
+1062 silly tarball no local data for unist-builder@https://registry.npmjs.org/unist-builder/-/unist-builder-2.0.3.tgz. Extracting by manifest.
+1063 silly tarball no local data for mdast-util-from-markdown@https://registry.npmjs.org/mdast-util-from-markdown/-/mdast-util-from-markdown-0.8.5.tgz. Extracting by manifest.
+1064 silly tarball no local data for character-reference-invalid@https://registry.npmjs.org/character-reference-invalid/-/character-reference-invalid-1.1.4.tgz. Extracting by manifest.
+1065 silly tarball no local data for is-decimal@https://registry.npmjs.org/is-decimal/-/is-decimal-1.0.4.tgz. Extracting by manifest.
+1066 silly tarball no local data for character-entities@https://registry.npmjs.org/character-entities/-/character-entities-1.2.4.tgz. Extracting by manifest.
+1067 silly tarball no local data for character-entities-legacy@https://registry.npmjs.org/character-entities-legacy/-/character-entities-legacy-1.1.4.tgz. Extracting by manifest.
+1068 silly tarball no local data for is-hexadecimal@https://registry.npmjs.org/is-hexadecimal/-/is-hexadecimal-1.0.4.tgz. Extracting by manifest.
+1069 silly tarball no local data for micromark-extension-gfm-task-list-item@https://registry.npmjs.org/micromark-extension-gfm-task-list-item/-/micromark-extension-gfm-task-list-item-0.3.3.tgz. Extracting by manifest.
+1070 silly tarball no local data for is-alphanumerical@https://registry.npmjs.org/is-alphanumerical/-/is-alphanumerical-1.0.4.tgz. Extracting by manifest.
+1071 silly tarball no local data for micromark-extension-gfm-table@https://registry.npmjs.org/micromark-extension-gfm-table/-/micromark-extension-gfm-table-0.4.3.tgz. Extracting by manifest.
+1072 silly tarball no local data for mdast-util-definitions@https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-4.0.0.tgz. Extracting by manifest.
+1073 silly tarball no local data for micromark-extension-gfm-strikethrough@https://registry.npmjs.org/micromark-extension-gfm-strikethrough/-/micromark-extension-gfm-strikethrough-0.6.5.tgz. Extracting by manifest.
+1074 silly tarball no local data for micromark-extension-gfm-autolink-literal@https://registry.npmjs.org/micromark-extension-gfm-autolink-literal/-/micromark-extension-gfm-autolink-literal-0.5.7.tgz. Extracting by manifest.
+1075 silly tarball no local data for mdast-util-to-string@https://registry.npmjs.org/mdast-util-to-string/-/mdast-util-to-string-2.0.0.tgz. Extracting by manifest.
+1076 silly tarball no local data for zwitch@https://registry.npmjs.org/zwitch/-/zwitch-1.0.5.tgz. Extracting by manifest.
+1077 silly tarball no local data for micromark-extension-gfm-tagfilter@https://registry.npmjs.org/micromark-extension-gfm-tagfilter/-/micromark-extension-gfm-tagfilter-0.3.0.tgz. Extracting by manifest.
+1078 silly tarball no local data for unist-util-visit-parents@https://registry.npmjs.org/unist-util-visit-parents/-/unist-util-visit-parents-3.1.1.tgz. Extracting by manifest.
+1079 silly tarball no local data for parse-entities@https://registry.npmjs.org/parse-entities/-/parse-entities-2.0.0.tgz. Extracting by manifest.
+1080 silly tarball no local data for repeat-string@https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz. Extracting by manifest.
+1081 silly tarball no local data for longest-streak@https://registry.npmjs.org/longest-streak/-/longest-streak-2.0.4.tgz. Extracting by manifest.
+1082 silly tarball no local data for micromark@https://registry.npmjs.org/micromark/-/micromark-2.11.4.tgz. Extracting by manifest.
+1083 silly tarball no local data for ccount@https://registry.npmjs.org/ccount/-/ccount-1.1.0.tgz. Extracting by manifest.
+1084 silly tarball no local data for mdast-util-gfm-task-list-item@https://registry.npmjs.org/mdast-util-gfm-task-list-item/-/mdast-util-gfm-task-list-item-0.1.6.tgz. Extracting by manifest.
+1085 silly tarball no local data for mdast-util-to-markdown@https://registry.npmjs.org/mdast-util-to-markdown/-/mdast-util-to-markdown-0.6.5.tgz. Extracting by manifest.
+1086 silly tarball no local data for mdast-util-find-and-replace@https://registry.npmjs.org/mdast-util-find-and-replace/-/mdast-util-find-and-replace-1.1.1.tgz. Extracting by manifest.
+1087 silly tarball no local data for mdast-util-gfm-table@https://registry.npmjs.org/mdast-util-gfm-table/-/mdast-util-gfm-table-0.1.6.tgz. Extracting by manifest.
+1088 silly tarball no local data for mdast-util-gfm-strikethrough@https://registry.npmjs.org/mdast-util-gfm-strikethrough/-/mdast-util-gfm-strikethrough-0.2.3.tgz. Extracting by manifest.
+1089 silly tarball no local data for mdast-util-gfm-autolink-literal@https://registry.npmjs.org/mdast-util-gfm-autolink-literal/-/mdast-util-gfm-autolink-literal-0.1.3.tgz. Extracting by manifest.
+1090 silly tarball no local data for unist-util-is@https://registry.npmjs.org/unist-util-is/-/unist-util-is-4.1.0.tgz. Extracting by manifest.
+1091 silly tarball no local data for xtend@https://registry.npmjs.org/xtend/-/xtend-4.0.2.tgz. Extracting by manifest.
+1092 silly tarball no local data for mdast-util-gfm@https://registry.npmjs.org/mdast-util-gfm/-/mdast-util-gfm-0.1.2.tgz. Extracting by manifest.
+1093 silly tarball no local data for unist-util-visit@https://registry.npmjs.org/unist-util-visit/-/unist-util-visit-2.0.3.tgz. Extracting by manifest.
+1094 silly tarball no local data for unified@https://registry.npmjs.org/unified/-/unified-9.2.2.tgz. Extracting by manifest.
+1095 silly tarball no local data for markdown-table@https://registry.npmjs.org/markdown-table/-/markdown-table-2.0.0.tgz. Extracting by manifest.
+1096 silly tarball no local data for space-separated-tokens@https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-1.1.5.tgz. Extracting by manifest.
+1097 silly tarball no local data for micromark-extension-gfm@https://registry.npmjs.org/micromark-extension-gfm/-/micromark-extension-gfm-0.3.3.tgz. Extracting by manifest.
+1098 silly tarball no local data for vfile@https://registry.npmjs.org/vfile/-/vfile-4.2.1.tgz. Extracting by manifest.
+1099 silly tarball no local data for style-to-object@https://registry.npmjs.org/style-to-object/-/style-to-object-0.3.0.tgz. Extracting by manifest.
+1100 silly tarball no local data for remark-parse@https://registry.npmjs.org/remark-parse/-/remark-parse-9.0.0.tgz. Extracting by manifest.
+1101 silly tarball no local data for property-information@https://registry.npmjs.org/property-information/-/property-information-5.6.0.tgz. Extracting by manifest.
+1102 silly tarball no local data for @types/unist@https://registry.npmjs.org/@types/unist/-/unist-2.0.11.tgz. Extracting by manifest.
+1103 silly tarball no local data for comma-separated-tokens@https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-1.0.8.tgz. Extracting by manifest.
+1104 silly tarball no local data for @rc-component/mini-decimal@https://registry.npmjs.org/@rc-component/mini-decimal/-/mini-decimal-1.1.0.tgz. Extracting by manifest.
+1105 silly tarball no local data for rc-overflow@https://registry.npmjs.org/rc-overflow/-/rc-overflow-1.5.0.tgz. Extracting by manifest.
+1106 silly tarball no local data for remark-rehype@https://registry.npmjs.org/remark-rehype/-/remark-rehype-8.1.0.tgz. Extracting by manifest.
+1107 silly tarball no local data for @types/hast@https://registry.npmjs.org/@types/hast/-/hast-2.3.10.tgz. Extracting by manifest.
+1108 silly tarball no local data for toggle-selection@https://registry.npmjs.org/toggle-selection/-/toggle-selection-1.0.6.tgz. Extracting by manifest.
+1109 silly tarball no local data for rc-virtual-list@https://registry.npmjs.org/rc-virtual-list/-/rc-virtual-list-3.19.2.tgz. Extracting by manifest.
+1110 silly tarball no local data for stackframe@https://registry.npmjs.org/stackframe/-/stackframe-1.3.4.tgz. Extracting by manifest.
+1111 silly tarball no local data for @rc-component/async-validator@https://registry.npmjs.org/@rc-component/async-validator/-/async-validator-5.0.4.tgz. Extracting by manifest.
+1112 silly tarball no local data for resize-observer-polyfill@https://registry.npmjs.org/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz. Extracting by manifest.
+1113 silly tarball no local data for string-convert@https://registry.npmjs.org/string-convert/-/string-convert-0.2.1.tgz. Extracting by manifest.
+1114 silly tarball no local data for @rc-component/portal@https://registry.npmjs.org/@rc-component/portal/-/portal-1.1.2.tgz. Extracting by manifest.
+1115 silly tarball no local data for json2mq@https://registry.npmjs.org/json2mq/-/json2mq-0.2.0.tgz. Extracting by manifest.
+1116 silly tarball no local data for throttle-debounce@https://registry.npmjs.org/throttle-debounce/-/throttle-debounce-5.0.2.tgz. Extracting by manifest.
+1117 silly tarball no local data for scroll-into-view-if-needed@https://registry.npmjs.org/scroll-into-view-if-needed/-/scroll-into-view-if-needed-3.1.0.tgz. Extracting by manifest.
+1118 silly tarball no local data for rc-tree@https://registry.npmjs.org/rc-tree/-/rc-tree-5.13.1.tgz. Extracting by manifest.
+1119 silly tarball no local data for rc-upload@https://registry.npmjs.org/rc-upload/-/rc-upload-4.11.0.tgz. Extracting by manifest.
+1120 silly tarball no local data for rc-tooltip@https://registry.npmjs.org/rc-tooltip/-/rc-tooltip-6.4.0.tgz. Extracting by manifest.
+1121 silly tarball no local data for rc-textarea@https://registry.npmjs.org/rc-textarea/-/rc-textarea-1.10.2.tgz. Extracting by manifest.
+1122 silly tarball no local data for @rc-component/context@https://registry.npmjs.org/@rc-component/context/-/context-1.4.0.tgz. Extracting by manifest.
+1123 silly tarball no local data for rc-tabs@https://registry.npmjs.org/rc-tabs/-/rc-tabs-15.7.0.tgz. Extracting by manifest.
+1124 silly tarball no local data for rc-tree-select@https://registry.npmjs.org/rc-tree-select/-/rc-tree-select-5.27.0.tgz. Extracting by manifest.
+1125 silly tarball no local data for rc-table@https://registry.npmjs.org/rc-table/-/rc-table-7.54.0.tgz. Extracting by manifest.
+1126 silly tarball no local data for rc-steps@https://registry.npmjs.org/rc-steps/-/rc-steps-6.0.1.tgz. Extracting by manifest.
+1127 silly tarball no local data for rc-segmented@https://registry.npmjs.org/rc-segmented/-/rc-segmented-2.7.0.tgz. Extracting by manifest.
+1128 silly tarball no local data for rc-slider@https://registry.npmjs.org/rc-slider/-/rc-slider-11.1.9.tgz. Extracting by manifest.
+1129 silly tarball no local data for rc-switch@https://registry.npmjs.org/rc-switch/-/rc-switch-4.1.0.tgz. Extracting by manifest.
+1130 silly tarball no local data for rc-rate@https://registry.npmjs.org/rc-rate/-/rc-rate-2.13.1.tgz. Extracting by manifest.
+1131 silly tarball no local data for rc-progress@https://registry.npmjs.org/rc-progress/-/rc-progress-4.0.0.tgz. Extracting by manifest.
+1132 silly tarball no local data for rc-picker@https://registry.npmjs.org/rc-picker/-/rc-picker-4.11.3.tgz. Extracting by manifest.
+1133 silly tarball no local data for rc-pagination@https://registry.npmjs.org/rc-pagination/-/rc-pagination-5.1.0.tgz. Extracting by manifest.
+1134 silly tarball no local data for rc-notification@https://registry.npmjs.org/rc-notification/-/rc-notification-5.6.4.tgz. Extracting by manifest.
+1135 silly tarball no local data for rc-mentions@https://registry.npmjs.org/rc-mentions/-/rc-mentions-2.20.0.tgz. Extracting by manifest.
+1136 silly tarball no local data for rc-menu@https://registry.npmjs.org/rc-menu/-/rc-menu-9.16.1.tgz. Extracting by manifest.
+1137 silly tarball no local data for rc-motion@https://registry.npmjs.org/rc-motion/-/rc-motion-2.9.5.tgz. Extracting by manifest.
+1138 silly tarball no local data for rc-input@https://registry.npmjs.org/rc-input/-/rc-input-1.8.0.tgz. Extracting by manifest.
+1139 silly tarball no local data for rc-image@https://registry.npmjs.org/rc-image/-/rc-image-7.12.0.tgz. Extracting by manifest.
+1140 silly tarball no local data for rc-field-form@https://registry.npmjs.org/rc-field-form/-/rc-field-form-2.7.1.tgz. Extracting by manifest.
+1141 silly tarball no local data for rc-select@https://registry.npmjs.org/rc-select/-/rc-select-14.16.8.tgz. Extracting by manifest.
+1142 silly tarball no local data for rc-input-number@https://registry.npmjs.org/rc-input-number/-/rc-input-number-9.5.0.tgz. Extracting by manifest.
+1143 silly tarball no local data for rc-dialog@https://registry.npmjs.org/rc-dialog/-/rc-dialog-9.6.0.tgz. Extracting by manifest.
+1144 silly tarball no local data for rc-collapse@https://registry.npmjs.org/rc-collapse/-/rc-collapse-3.9.0.tgz. Extracting by manifest.
+1145 silly tarball no local data for rc-dropdown@https://registry.npmjs.org/rc-dropdown/-/rc-dropdown-4.2.1.tgz. Extracting by manifest.
+1146 silly tarball no local data for rc-checkbox@https://registry.npmjs.org/rc-checkbox/-/rc-checkbox-3.5.0.tgz. Extracting by manifest.
+1147 silly tarball no local data for rc-cascader@https://registry.npmjs.org/rc-cascader/-/rc-cascader-3.34.0.tgz. Extracting by manifest.
+1148 silly tarball no local data for copy-to-clipboard@https://registry.npmjs.org/copy-to-clipboard/-/copy-to-clipboard-3.3.3.tgz. Extracting by manifest.
+1149 silly tarball no local data for rc-drawer@https://registry.npmjs.org/rc-drawer/-/rc-drawer-7.3.0.tgz. Extracting by manifest.
+1150 silly tarball no local data for @rc-component/trigger@https://registry.npmjs.org/@rc-component/trigger/-/trigger-2.3.0.tgz. Extracting by manifest.
+1151 silly tarball no local data for @rc-component/qrcode@https://registry.npmjs.org/@rc-component/qrcode/-/qrcode-1.1.1.tgz. Extracting by manifest.
+1152 silly tarball no local data for @rc-component/mutate-observer@https://registry.npmjs.org/@rc-component/mutate-observer/-/mutate-observer-1.1.0.tgz. Extracting by manifest.
+1153 silly tarball no local data for @rc-component/tour@https://registry.npmjs.org/@rc-component/tour/-/tour-1.15.1.tgz. Extracting by manifest.
+1154 silly tarball no local data for @tanstack/query-core@https://registry.npmjs.org/@tanstack/query-core/-/query-core-5.90.12.tgz. Extracting by manifest.
+1155 silly tarball no local data for @rc-component/color-picker@https://registry.npmjs.org/@rc-component/color-picker/-/color-picker-2.0.1.tgz. Extracting by manifest.
+1156 silly tarball no local data for @ant-design/react-slick@https://registry.npmjs.org/@ant-design/react-slick/-/react-slick-1.1.2.tgz. Extracting by manifest.
+1157 silly tarball no local data for @ant-design/cssinjs-utils@https://registry.npmjs.org/@ant-design/cssinjs-utils/-/cssinjs-utils-1.1.3.tgz. Extracting by manifest.
+1158 silly tarball no local data for @types/phoenix@https://registry.npmjs.org/@types/phoenix/-/phoenix-1.6.7.tgz. Extracting by manifest.
+1159 silly tarball no local data for @types/ws@https://registry.npmjs.org/@types/ws/-/ws-8.18.1.tgz. Extracting by manifest.
+1160 silly tarball no local data for ws@https://registry.npmjs.org/ws/-/ws-8.18.3.tgz. Extracting by manifest.
+1161 silly tarball no local data for iceberg-js@https://registry.npmjs.org/iceberg-js/-/iceberg-js-0.8.1.tgz. Extracting by manifest.
+1162 silly tarball no local data for @supabase/functions-js@https://registry.npmjs.org/@supabase/functions-js/-/functions-js-2.87.3.tgz. Extracting by manifest.
+1163 silly tarball no local data for @supabase/auth-js@https://registry.npmjs.org/@supabase/auth-js/-/auth-js-2.87.3.tgz. Extracting by manifest.
+1164 silly tarball no local data for @supabase/storage-js@https://registry.npmjs.org/@supabase/storage-js/-/storage-js-2.87.3.tgz. Extracting by manifest.
+1165 silly tarball no local data for @refinedev/devtools-shared@https://registry.npmjs.org/@refinedev/devtools-shared/-/devtools-shared-2.0.1.tgz. Extracting by manifest.
+1166 silly tarball no local data for error-stack-parser@https://registry.npmjs.org/error-stack-parser/-/error-stack-parser-2.1.4.tgz. Extracting by manifest.
+1167 silly tarball no local data for warn-once@https://registry.npmjs.org/warn-once/-/warn-once-0.1.1.tgz. Extracting by manifest.
+1168 silly tarball no local data for @supabase/realtime-js@https://registry.npmjs.org/@supabase/realtime-js/-/realtime-js-2.87.3.tgz. Extracting by manifest.
+1169 silly tarball no local data for qs@https://registry.npmjs.org/qs/-/qs-6.14.0.tgz. Extracting by manifest.
+1170 silly tarball no local data for papaparse@https://registry.npmjs.org/papaparse/-/papaparse-5.5.3.tgz. Extracting by manifest.
+1171 silly tarball no local data for @supabase/postgrest-js@https://registry.npmjs.org/@supabase/postgrest-js/-/postgrest-js-2.87.3.tgz. Extracting by manifest.
+1172 silly tarball no local data for pluralize@https://registry.npmjs.org/pluralize/-/pluralize-8.0.0.tgz. Extracting by manifest.
+1173 silly tarball no local data for @refinedev/devtools-internal@https://registry.npmjs.org/@refinedev/devtools-internal/-/devtools-internal-2.0.1.tgz. Extracting by manifest.
+1174 silly tarball no local data for warning@https://registry.npmjs.org/warning/-/warning-4.0.3.tgz. Extracting by manifest.
+1175 silly tarball no local data for safe-stable-stringify@https://registry.npmjs.org/safe-stable-stringify/-/safe-stable-stringify-2.5.0.tgz. Extracting by manifest.
+1176 silly tarball no local data for @ctrl/tinycolor@https://registry.npmjs.org/@ctrl/tinycolor/-/tinycolor-3.6.1.tgz. Extracting by manifest.
+1177 silly tarball no local data for swr@https://registry.npmjs.org/swr/-/swr-2.3.8.tgz. Extracting by manifest.
+1178 silly tarball no local data for path-to-regexp@https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-8.2.0.tgz. Extracting by manifest.
+1179 silly tarball no local data for lodash-es@https://registry.npmjs.org/lodash-es/-/lodash-es-4.17.21.tgz. Extracting by manifest.
+1180 silly tarball no local data for rc-util@https://registry.npmjs.org/rc-util/-/rc-util-5.44.4.tgz. Extracting by manifest.
+1181 silly tarball no local data for lodash@https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz. Extracting by manifest.
+1182 silly tarball no local data for rc-resize-observer@https://registry.npmjs.org/rc-resize-observer/-/rc-resize-observer-1.4.3.tgz. Extracting by manifest.
+1183 silly tarball no local data for @umijs/route-utils@https://registry.npmjs.org/@umijs/route-utils/-/route-utils-4.0.3.tgz. Extracting by manifest.
+1184 silly tarball no local data for classnames@https://registry.npmjs.org/classnames/-/classnames-2.5.1.tgz. Extracting by manifest.
+1185 silly tarball no local data for @umijs/use-params@https://registry.npmjs.org/@umijs/use-params/-/use-params-1.0.9.tgz. Extracting by manifest.
+1186 silly tarball no local data for @ant-design/pro-utils@https://registry.npmjs.org/@ant-design/pro-utils/-/pro-utils-2.18.0.tgz. Extracting by manifest.
+1187 silly tarball no local data for sunflower-antd@https://registry.npmjs.org/sunflower-antd/-/sunflower-antd-1.0.0-beta.3.tgz. Extracting by manifest.
+1188 silly tarball no local data for remark-gfm@https://registry.npmjs.org/remark-gfm/-/remark-gfm-1.0.0.tgz. Extracting by manifest.
+1189 silly tarball no local data for @ant-design/pro-provider@https://registry.npmjs.org/@ant-design/pro-provider/-/pro-provider-2.16.2.tgz. Extracting by manifest.
+1190 silly tarball no local data for react-markdown@https://registry.npmjs.org/react-markdown/-/react-markdown-6.0.3.tgz. Extracting by manifest.
+1191 silly tarball no local data for @refinedev/ui-types@https://registry.npmjs.org/@refinedev/ui-types/-/ui-types-2.0.1.tgz. Extracting by manifest.
+1192 silly tarball no local data for @ant-design/pro-layout@https://registry.npmjs.org/@ant-design/pro-layout/-/pro-layout-7.22.7.tgz. Extracting by manifest.
+1193 silly tarball no local data for antd@https://registry.npmjs.org/antd/-/antd-5.29.2.tgz. Extracting by manifest.
+1194 silly tarball no local data for is-mobile@https://registry.npmjs.org/is-mobile/-/is-mobile-5.0.0.tgz. Extracting by manifest.
+1195 silly tarball no local data for @ant-design/icons-svg@https://registry.npmjs.org/@ant-design/icons-svg/-/icons-svg-4.4.2.tgz. Extracting by manifest.
+1196 silly tarball no local data for @ant-design/colors@https://registry.npmjs.org/@ant-design/colors/-/colors-8.0.0.tgz. Extracting by manifest.
+1197 silly tarball no local data for @ant-design/fast-color@https://registry.npmjs.org/@ant-design/fast-color/-/fast-color-3.0.0.tgz. Extracting by manifest.
+1198 silly tarball no local data for stylis@https://registry.npmjs.org/stylis/-/stylis-4.3.6.tgz. Extracting by manifest.
+1199 silly tarball no local data for clsx@https://registry.npmjs.org/clsx/-/clsx-2.1.1.tgz. Extracting by manifest.
+1200 silly tarball no local data for @rc-component/util@https://registry.npmjs.org/@rc-component/util/-/util-1.6.0.tgz. Extracting by manifest.
+1201 silly tarball no local data for @babel/runtime@https://registry.npmjs.org/@babel/runtime/-/runtime-7.28.4.tgz. Extracting by manifest.
+1202 silly tarball no local data for @emotion/unitless@https://registry.npmjs.org/@emotion/unitless/-/unitless-0.7.5.tgz. Extracting by manifest.
+1203 silly tarball no local data for @emotion/hash@https://registry.npmjs.org/@emotion/hash/-/hash-0.8.0.tgz. Extracting by manifest.
+1204 silly tarball no local data for dayjs@https://registry.npmjs.org/dayjs/-/dayjs-1.11.19.tgz. Extracting by manifest.
+1205 silly tarball no local data for @refinedev/supabase@https://registry.npmjs.org/@refinedev/supabase/-/supabase-6.0.1.tgz. Extracting by manifest.
+1206 silly tarball no local data for @tanstack/react-query@https://registry.npmjs.org/@tanstack/react-query/-/react-query-5.90.12.tgz. Extracting by manifest.
+1207 silly tarball no local data for @supabase/supabase-js@https://registry.npmjs.org/@supabase/supabase-js/-/supabase-js-2.87.3.tgz. Extracting by manifest.
+1208 silly tarball no local data for @refinedev/core@https://registry.npmjs.org/@refinedev/core/-/core-5.0.7.tgz. Extracting by manifest.
+1209 silly tarball no local data for @refinedev/nextjs-router@https://registry.npmjs.org/@refinedev/nextjs-router/-/nextjs-router-7.0.4.tgz. Extracting by manifest.
+1210 silly tarball no local data for @ant-design/cssinjs@https://registry.npmjs.org/@ant-design/cssinjs/-/cssinjs-2.0.1.tgz. Extracting by manifest.
+1211 silly tarball no local data for @ant-design/nextjs-registry@https://registry.npmjs.org/@ant-design/nextjs-registry/-/nextjs-registry-1.3.0.tgz. Extracting by manifest.
+1212 silly tarball no local data for @refinedev/antd@https://registry.npmjs.org/@refinedev/antd/-/antd-6.0.3.tgz. Extracting by manifest.
+1213 silly tarball no local data for @ant-design/icons@https://registry.npmjs.org/@ant-design/icons/-/icons-6.1.0.tgz. Extracting by manifest.
+1214 silly tarball no local data for @ant-design/fast-color@https://registry.npmjs.org/@ant-design/fast-color/-/fast-color-2.0.6.tgz. Extracting by manifest.
+1215 silly tarball no local data for @ant-design/cssinjs@https://registry.npmjs.org/@ant-design/cssinjs/-/cssinjs-1.24.0.tgz. Extracting by manifest.
+1216 silly tarball no local data for react-is@https://registry.npmjs.org/react-is/-/react-is-18.3.1.tgz. Extracting by manifest.
+1217 silly tarball no local data for @ant-design/fast-color@https://registry.npmjs.org/@ant-design/fast-color/-/fast-color-2.0.6.tgz. Extracting by manifest.
+1218 silly tarball no local data for @ant-design/icons@https://registry.npmjs.org/@ant-design/icons/-/icons-5.6.1.tgz. Extracting by manifest.
+1219 silly tarball no local data for @ant-design/cssinjs@https://registry.npmjs.org/@ant-design/cssinjs/-/cssinjs-1.24.0.tgz. Extracting by manifest.
+1220 silly tarball no local data for @ant-design/colors@https://registry.npmjs.org/@ant-design/colors/-/colors-7.2.1.tgz. Extracting by manifest.
+1221 silly tarball no local data for @ant-design/icons@https://registry.npmjs.org/@ant-design/icons/-/icons-5.6.1.tgz. Extracting by manifest.
+1222 silly tarball no local data for @ant-design/colors@https://registry.npmjs.org/@ant-design/colors/-/colors-7.2.1.tgz. Extracting by manifest.
+1223 silly tarball no local data for @ant-design/fast-color@https://registry.npmjs.org/@ant-design/fast-color/-/fast-color-2.0.6.tgz. Extracting by manifest.
+1224 silly tarball no local data for @ant-design/cssinjs@https://registry.npmjs.org/@ant-design/cssinjs/-/cssinjs-1.24.0.tgz. Extracting by manifest.
+1225 silly tarball no local data for react-is@https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz. Extracting by manifest.
+1226 silly tarball no local data for @ant-design/colors@https://registry.npmjs.org/@ant-design/colors/-/colors-7.2.1.tgz. Extracting by manifest.
+1227 silly tarball no local data for react-is@https://registry.npmjs.org/react-is/-/react-is-18.3.1.tgz. Extracting by manifest.
+1228 silly tarball no local data for @ant-design/fast-color@https://registry.npmjs.org/@ant-design/fast-color/-/fast-color-2.0.6.tgz. Extracting by manifest.
+1229 silly tarball no local data for @ant-design/icons@https://registry.npmjs.org/@ant-design/icons/-/icons-5.6.1.tgz. Extracting by manifest.
+1230 silly tarball no local data for @ant-design/cssinjs@https://registry.npmjs.org/@ant-design/cssinjs/-/cssinjs-1.24.0.tgz. Extracting by manifest.
+1231 silly tarball no local data for @ant-design/fast-color@https://registry.npmjs.org/@ant-design/fast-color/-/fast-color-2.0.6.tgz. Extracting by manifest.
+1232 silly tarball no local data for @ant-design/colors@https://registry.npmjs.org/@ant-design/colors/-/colors-7.2.1.tgz. Extracting by manifest.
+1233 silly tarball no local data for @ant-design/icons@https://registry.npmjs.org/@ant-design/icons/-/icons-5.6.1.tgz. Extracting by manifest.
+1234 http fetch GET 200 https://registry.npmjs.org/is-plain-obj/-/is-plain-obj-2.1.0.tgz 143ms (cache miss)
+1235 timing reifyNode:node_modules/is-plain-obj Completed in 173ms
+1236 http fetch GET 200 https://registry.npmjs.org/use-sync-external-store/-/use-sync-external-store-1.6.0.tgz 139ms (cache miss)
+1237 http fetch GET 200 https://registry.npmjs.org/extend/-/extend-3.0.2.tgz 143ms (cache miss)
+1238 timing reifyNode:node_modules/extend Completed in 174ms
+1239 http fetch GET 200 https://registry.npmjs.org/is-buffer/-/is-buffer-2.0.5.tgz 142ms (cache miss)
+1240 timing reifyNode:node_modules/is-buffer Completed in 174ms
+1241 http fetch GET 200 https://registry.npmjs.org/unist-util-position/-/unist-util-position-3.1.0.tgz 143ms (cache miss)
+1242 timing reifyNode:node_modules/unist-util-position Completed in 174ms
+1243 http fetch GET 200 https://registry.npmjs.org/vfile-message/-/vfile-message-2.0.4.tgz 144ms (cache miss)
+1244 timing reifyNode:node_modules/vfile-message Completed in 174ms
+1245 http fetch GET 200 https://registry.npmjs.org/bail/-/bail-1.0.5.tgz 144ms (cache miss)
+1246 timing reifyNode:node_modules/bail Completed in 174ms
+1247 http fetch GET 200 https://registry.npmjs.org/unist-util-generated/-/unist-util-generated-1.1.6.tgz 139ms (cache miss)
+1248 timing reifyNode:node_modules/unist-util-generated Completed in 174ms
+1249 http fetch GET 200 https://registry.npmjs.org/mdurl/-/mdurl-1.0.1.tgz 139ms (cache miss)
+1250 timing reifyNode:node_modules/mdurl Completed in 175ms
+1251 http fetch GET 200 https://registry.npmjs.org/dequal/-/dequal-2.0.3.tgz 144ms (cache miss)
+1252 http fetch GET 200 https://registry.npmjs.org/inline-style-parser/-/inline-style-parser-0.1.1.tgz 144ms (cache miss)
+1253 timing reifyNode:node_modules/inline-style-parser Completed in 175ms
+1254 http fetch GET 200 https://registry.npmjs.org/trough/-/trough-1.0.5.tgz 146ms (cache miss)
+1255 timing reifyNode:node_modules/trough Completed in 175ms
+1256 timing reifyNode:node_modules/dequal Completed in 176ms
+1257 http fetch GET 200 https://registry.npmjs.org/compute-scroll-into-view/-/compute-scroll-into-view-3.1.1.tgz 145ms (cache miss)
+1258 timing reifyNode:node_modules/use-sync-external-store Completed in 179ms
+1259 timing reifyNode:node_modules/compute-scroll-into-view Completed in 179ms
+1260 timing reifyNode:node_modules/@emnapi/wasi-threads Completed in 178ms
+1261 http fetch GET 200 https://registry.npmjs.org/unist-builder/-/unist-builder-2.0.3.tgz 145ms (cache miss)
+1262 timing reifyNode:node_modules/unist-builder Completed in 182ms
+1263 http fetch GET 200 https://registry.npmjs.org/mdast-util-to-hast/-/mdast-util-to-hast-10.2.0.tgz 147ms (cache miss)
+1264 timing reifyNode:node_modules/mdast-util-to-hast Completed in 183ms
+1265 timing reifyNode:node_modules/@emnapi/runtime Completed in 180ms
+1266 timing reifyNode:node_modules/@tybys/wasm-util Completed in 187ms
+1267 timing reifyNode:node_modules/@emnapi/core Completed in 204ms
+1268 http fetch GET 200 https://registry.npmjs.org/micromark-extension-gfm-table/-/micromark-extension-gfm-table-0.4.3.tgz 172ms (cache miss)
+1269 timing reifyNode:node_modules/micromark-extension-gfm-table Completed in 210ms
+1270 http fetch GET 200 https://registry.npmjs.org/@types/mdast/-/mdast-3.0.15.tgz 176ms (cache miss)
+1271 timing reifyNode:node_modules/@types/mdast Completed in 211ms
+1272 http fetch GET 200 https://registry.npmjs.org/character-reference-invalid/-/character-reference-invalid-1.1.4.tgz 175ms (cache miss)
+1273 timing reifyNode:node_modules/character-reference-invalid Completed in 211ms
+1274 http fetch GET 200 https://registry.npmjs.org/is-alphanumerical/-/is-alphanumerical-1.0.4.tgz 174ms (cache miss)
+1275 timing reifyNode:node_modules/is-alphanumerical Completed in 211ms
+1276 http fetch GET 200 https://registry.npmjs.org/unist-util-stringify-position/-/unist-util-stringify-position-2.0.3.tgz 176ms (cache miss)
+1277 timing reifyNode:node_modules/unist-util-stringify-position Completed in 211ms
+1278 http fetch GET 200 https://registry.npmjs.org/is-hexadecimal/-/is-hexadecimal-1.0.4.tgz 174ms (cache miss)
+1279 timing reifyNode:node_modules/is-hexadecimal Completed in 211ms
+1280 http fetch GET 200 https://registry.npmjs.org/character-entities/-/character-entities-1.2.4.tgz 174ms (cache miss)
+1281 timing reifyNode:node_modules/character-entities Completed in 212ms
+1282 http fetch GET 200 https://registry.npmjs.org/is-decimal/-/is-decimal-1.0.4.tgz 176ms (cache miss)
+1283 timing reifyNode:node_modules/is-decimal Completed in 212ms
+1284 http fetch GET 200 https://registry.npmjs.org/character-entities-legacy/-/character-entities-legacy-1.1.4.tgz 175ms (cache miss)
+1285 timing reifyNode:node_modules/character-entities-legacy Completed in 212ms
+1286 http fetch GET 200 https://registry.npmjs.org/is-alphabetical/-/is-alphabetical-1.0.4.tgz 177ms (cache miss)
+1287 timing reifyNode:node_modules/is-alphabetical Completed in 212ms
+1288 http fetch GET 200 https://registry.npmjs.org/micromark-extension-gfm-task-list-item/-/micromark-extension-gfm-task-list-item-0.3.3.tgz 175ms (cache miss)
+1289 timing reifyNode:node_modules/micromark-extension-gfm-task-list-item Completed in 212ms
+1290 http fetch GET 200 https://registry.npmjs.org/mdast-util-from-markdown/-/mdast-util-from-markdown-0.8.5.tgz 176ms (cache miss)
+1291 http fetch GET 200 https://registry.npmjs.org/mdast-util-definitions/-/mdast-util-definitions-4.0.0.tgz 174ms (cache miss)
+1292 timing reifyNode:node_modules/mdast-util-definitions Completed in 213ms
+1293 timing reifyNode:node_modules/mdast-util-from-markdown Completed in 213ms
+1294 http fetch GET 200 https://registry.npmjs.org/micromark-extension-gfm-strikethrough/-/micromark-extension-gfm-strikethrough-0.6.5.tgz 178ms (cache miss)
+1295 timing reifyNode:node_modules/micromark-extension-gfm-strikethrough Completed in 216ms
+1296 http fetch GET 200 https://registry.npmjs.org/repeat-string/-/repeat-string-1.6.1.tgz 200ms (cache miss)
+1297 timing reifyNode:node_modules/repeat-string Completed in 241ms
+1298 http fetch GET 200 https://registry.npmjs.org/unist-util-visit-parents/-/unist-util-visit-parents-3.1.1.tgz 202ms (cache miss)
+1299 timing reifyNode:node_modules/unist-util-visit-parents Completed in 241ms
+1300 http fetch GET 200 https://registry.npmjs.org/mdast-util-to-string/-/mdast-util-to-string-2.0.0.tgz 202ms (cache miss)
+1301 timing reifyNode:node_modules/mdast-util-to-string Completed in 241ms
+1302 http fetch GET 200 https://registry.npmjs.org/zwitch/-/zwitch-1.0.5.tgz 202ms (cache miss)
+1303 timing reifyNode:node_modules/zwitch Completed in 241ms
+1304 http fetch GET 200 https://registry.npmjs.org/micromark-extension-gfm-tagfilter/-/micromark-extension-gfm-tagfilter-0.3.0.tgz 202ms (cache miss)
+1305 timing reifyNode:node_modules/micromark-extension-gfm-tagfilter Completed in 241ms
+1306 http fetch GET 200 https://registry.npmjs.org/parse-entities/-/parse-entities-2.0.0.tgz 203ms (cache miss)
+1307 timing reifyNode:node_modules/parse-entities Completed in 242ms
+1308 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 259ms
+1309 timing auditReport:getReport Completed in 262ms
+1310 silly audit report {
+1310 silly audit report   glob: [
+1310 silly audit report     {
+1310 silly audit report       id: 1109842,
+1310 silly audit report       url: 'https://github.com/advisories/GHSA-5j98-mcp5-4vw2',
+1310 silly audit report       title: 'glob CLI: Command injection via -c/--cmd executes matches with shell:true',
+1310 silly audit report       severity: 'high',
+1310 silly audit report       vulnerable_versions: '>=10.2.0 <10.5.0',
+1310 silly audit report       cwe: [Array],
+1310 silly audit report       cvss: [Object]
+1310 silly audit report     }
+1310 silly audit report   ],
+1310 silly audit report   next: [
+1310 silly audit report     {
+1310 silly audit report       id: 1101438,
+1310 silly audit report       url: 'https://github.com/advisories/GHSA-7m27-7ghc-44w9',
+1310 silly audit report       title: 'Next.js Allows a Denial of Service (DoS) with Server Actions',
+1310 silly audit report       severity: 'moderate',
+1310 silly audit report       vulnerable_versions: '>=14.0.0 <14.2.21',
+1310 silly audit report       cwe: [Array],
+1310 silly audit report       cvss: [Object]
+1310 silly audit report     },
+1310 silly audit report     {
+1310 silly audit report       id: 1105461,
+1310 silly audit report       url: 'https://github.com/advisories/GHSA-3h52-269p-cp9r',
+1310 silly audit report       title: 'Information exposure in Next.js dev server due to lack of origin verification',
+1310 silly audit report       severity: 'low',
+1310 silly audit report       vulnerable_versions: '>=13.0 <14.2.30',
+1310 silly audit report       cwe: [Array],
+1310 silly audit report       cvss: [Object]
+1310 silly audit report     },
+1310 silly audit report     {
+1310 silly audit report       id: 1111391,
+1310 silly audit report       url: 'https://github.com/advisories/GHSA-mwv6-3258-q52c',
+1310 silly audit report       title: 'Next Vulnerable to Denial of Service with Server Components',
+1310 silly audit report       severity: 'high',
+1310 silly audit report       vulnerable_versions: '>=13.3.0 <14.2.34',
+1310 silly audit report       cwe: [Array],
+1310 silly audit report       cvss: [Object]
+1310 silly audit report     },
+1310 silly audit report     {
+1310 silly audit report       id: 1111461,
+1310 silly audit report       url: 'https://github.com/advisories/GHSA-5j59-xgg2-r9c4',
+1310 silly audit report       title: 'Next has a Denial of Service with Server Components - Incomplete Fix Follow-Up',
+1310 silly audit report       severity: 'high',
+1310 silly audit report       vulnerable_versions: '>=13.3.1-canary.0 <14.2.35',
+1310 silly audit report       cwe: [Array],
+1310 silly audit report       cvss: [Object]
+1310 silly audit report     },
+1310 silly audit report     {
+1310 silly audit report       id: 1107226,
+1310 silly audit report       url: 'https://github.com/advisories/GHSA-g5qg-72qw-gw5v',
+1310 silly audit report       title: 'Next.js Affected by Cache Key Confusion for Image Optimization API Routes',
+1310 silly audit report       severity: 'moderate',
+1310 silly audit report       vulnerable_versions: '>=0.9.9 <14.2.31',
+1310 silly audit report       cwe: [Array],
+1310 silly audit report       cvss: [Object]
+1310 silly audit report     },
+1310 silly audit report     {
+1310 silly audit report       id: 1107512,
+1310 silly audit report       url: 'https://github.com/advisories/GHSA-4342-x723-ch2f',
+1310 silly audit report       title: 'Next.js Improper Middleware Redirect Handling Leads to SSRF',
+1310 silly audit report       severity: 'moderate',
+1310 silly audit report       vulnerable_versions: '>=0.9.9 <14.2.32',
+1310 silly audit report       cwe: [Array],
+1310 silly audit report       cvss: [Object]
+1310 silly audit report     },
+1310 silly audit report     {
+1310 silly audit report       id: 1107513,
+1310 silly audit report       url: 'https://github.com/advisories/GHSA-xv57-4mr9-wg8v',
+1310 silly audit report       title: 'Next.js Content Injection Vulnerability for Image Optimization',
+1310 silly audit report       severity: 'moderate',
+1310 silly audit report       vulnerable_versions: '>=0.9.9 <14.2.31',
+1310 silly audit report       cwe: [Array],
+1310 silly audit report       cvss: [Object]
+1310 silly audit report     },
+1310 silly audit report     {
+1310 silly audit report       id: 1108291,
+1310 silly audit report       url: 'https://github.com/advisories/GHSA-qpjv-v59x-3qc4',
+1310 silly audit report       title: 'Next.js Race Condition to Cache Poisoning',
+1310 silly audit report       severity: 'low',
+1310 silly audit report       vulnerable_versions: '>=0.9.9 <14.2.24',
+1310 silly audit report       cwe: [Array],
+1310 silly audit report       cvss: [Object]
+1310 silly audit report     },
+1310 silly audit report     {
+1310 silly audit report       id: 1108953,
+1310 silly audit report       url: 'https://github.com/advisories/GHSA-f82v-jwr5-mffw',
+1310 silly audit report       title: 'Authorization Bypass in Next.js Middleware',
+1310 silly audit report       severity: 'critical',
+1310 silly audit report       vulnerable_versions: '>=14.0.0 <14.2.25',
+1310 silly audit report       cwe: [Array],
+1310 silly audit report       cvss: [Object]
+1310 silly audit report     }
+1310 silly audit report   ]
+1310 silly audit report }
+1311 timing metavuln:packument:next Completed in 1ms
+1312 http fetch GET 200 https://registry.npmjs.org/mdast-util-gfm-table/-/mdast-util-gfm-table-0.1.6.tgz 224ms (cache miss)
+1313 timing reifyNode:node_modules/mdast-util-gfm-table Completed in 265ms
+1314 timing metavuln:cache:get:security-advisory:glob:NTB2XjbDOgk4lkd8PZ3tUAm1F3E/ohGF6rl9/3LEO7Z0FDzSR5nWwzd3nUENA3NCNdyeR+35DOC12wPml2IV+g== Completed in 8ms
+1315 http fetch GET 200 https://registry.npmjs.org/mdast-util-find-and-replace/-/mdast-util-find-and-replace-1.1.1.tgz 225ms (cache miss)
+1316 timing reifyNode:node_modules/mdast-util-find-and-replace Completed in 266ms
+1317 timing metavuln:cache:get:security-advisory:next:kXDE+ksbJYUI4TFImWPb/49o4hwXXT1nqPUeSTV/SE/IB3qFFazOXmXgn5PPbKkz9ewVGi6qMNNgGfrNX4hqIg== Completed in 9ms
+1318 timing metavuln:load:security-advisory:next:1111391 Completed in 28ms
+1319 timing metavuln:calculate:security-advisory:next:1111391 Completed in 37ms
+1320 timing metavuln:cache:get:security-advisory:next:NpdQYf+4OaOvlNiZgkhHLNCcOTe84gjeay11sdJQ2HSe2hRovddeIJqZfGwiLh+ns7klO1J2oxhVS+ou+h9gmw== Completed in 37ms
+1321 timing metavuln:load:security-advisory:next:1101438 Completed in 24ms
+1322 timing metavuln:calculate:security-advisory:next:1101438 Completed in 61ms
+1323 timing metavuln:cache:get:security-advisory:next:WrVaG6WkSvpCYPPQKNUv2SLuXz5XL9xKn9KHPtqw/Y+V4JFUbfvGu7iPZR/4d1/dHzlII2csAkP3UXbKSPpZTA== Completed in 62ms
+1324 timing metavuln:load:security-advisory:next:1105461 Completed in 24ms
+1325 timing metavuln:calculate:security-advisory:next:1105461 Completed in 86ms
+1326 timing metavuln:cache:get:security-advisory:next:WQCkHVGQkg6zsfYbmLOI+zBNEYhu4v1g6kXs5vVSFeehybhiXOKxuSPsV71Q4mBoY+gct03Ww794KjXwXHvGWA== Completed in 87ms
+1327 timing metavuln:load:security-advisory:next:1107226 Completed in 25ms
+1328 timing metavuln:calculate:security-advisory:next:1107226 Completed in 112ms
+1329 timing metavuln:cache:get:security-advisory:next:+SMXIcdP7mb700j3lAUXRoUbwPUmDwsGMfkqi8EBxAInsFmBr7fDz7ceH3WCcBFoF44s9qJcAZp3YRfZSyk8qw== Completed in 112ms
+1330 timing metavuln:load:security-advisory:next:1107512 Completed in 25ms
+1331 timing metavuln:calculate:security-advisory:next:1107512 Completed in 138ms
+1332 timing metavuln:cache:get:security-advisory:next:wuip4wDsTZjo4d3/z9QjnRcIBZQ1esowoxOIwRBkhcWvroesSKviBUIK3vmq1VFi9wMlBDSqpVDBqG5FiJtdeg== Completed in 138ms
+1333 timing metavuln:load:security-advisory:next:1111461 Completed in 24ms
+1334 timing metavuln:calculate:security-advisory:next:1111461 Completed in 162ms
+1335 timing metavuln:cache:get:security-advisory:next:VmINk4sjQ5jqxRvJ2axYcaD3FqreNBMC4jAobfjDjUAn5dOOUzgsn/LLTyEYZvi7HDGR/ppGR9Jxp8UWVvHDIw== Completed in 163ms
+1336 timing metavuln:load:security-advisory:next:1107513 Completed in 25ms
+1337 timing metavuln:calculate:security-advisory:next:1107513 Completed in 188ms
+1338 timing metavuln:cache:get:security-advisory:next:3YEnowU0F/efIZFkDoFxQZjNq2qcmakBCRjEbrgPcrnqNOUxoJgvhg+PrXGQZbW/4yvsmMJX4gbpxuAhPD8bvg== Completed in 187ms
+1339 timing metavuln:load:security-advisory:next:1108291 Completed in 26ms
+1340 timing metavuln:calculate:security-advisory:next:1108291 Completed in 213ms
+1341 timing metavuln:cache:get:security-advisory:next:n5a9KQ6qrNT6JQ44Rf2Xtzz6WJl955smjsX9drReW2YE8Ijlcs8Nw86TABEapCU3g0czO4BxXFB5ulSPlPgU9w== Completed in 213ms
+1342 timing metavuln:load:security-advisory:next:1108953 Completed in 23ms
+1343 timing metavuln:calculate:security-advisory:next:1108953 Completed in 236ms
+1344 http fetch GET 200 https://registry.npmjs.org/mdast-util-gfm-task-list-item/-/mdast-util-gfm-task-list-item-0.1.6.tgz 470ms (cache miss)
+1345 timing reifyNode:node_modules/mdast-util-gfm-task-list-item Completed in 511ms
+1346 http fetch GET 200 https://registry.npmjs.org/mdast-util-to-markdown/-/mdast-util-to-markdown-0.6.5.tgz 471ms (cache miss)
+1347 http fetch GET 200 https://registry.npmjs.org/ccount/-/ccount-1.1.0.tgz 473ms (cache miss)
+1348 timing reifyNode:node_modules/ccount Completed in 514ms
+1349 timing reifyNode:node_modules/@napi-rs/wasm-runtime Completed in 511ms
+1350 http fetch GET 200 https://registry.npmjs.org/longest-streak/-/longest-streak-2.0.4.tgz 474ms (cache miss)
+1351 timing reifyNode:node_modules/longest-streak Completed in 515ms
+1352 http fetch GET 200 https://registry.npmjs.org/micromark-extension-gfm-autolink-literal/-/micromark-extension-gfm-autolink-literal-0.5.7.tgz 477ms (cache miss)
+1353 timing reifyNode:node_modules/micromark-extension-gfm-autolink-literal Completed in 515ms
+1354 http fetch GET 200 https://registry.npmjs.org/glob 259ms (cache hit)
+1355 timing metavuln:packument:glob Completed in 260ms
+1356 timing metavuln:load:security-advisory:glob:1109842 Completed in 0ms
+1357 timing metavuln:calculate:security-advisory:glob:1109842 Completed in 260ms
+1358 http fetch GET 200 https://registry.npmjs.org/markdown-table/-/markdown-table-2.0.0.tgz 476ms (cache miss)
+1359 timing reifyNode:node_modules/markdown-table Completed in 521ms
+1360 http fetch GET 200 https://registry.npmjs.org/micromark-extension-gfm/-/micromark-extension-gfm-0.3.3.tgz 476ms (cache miss)
+1361 timing reifyNode:node_modules/micromark-extension-gfm Completed in 522ms
+1362 http fetch GET 200 https://registry.npmjs.org/space-separated-tokens/-/space-separated-tokens-1.1.5.tgz 476ms (cache miss)
+1363 timing reifyNode:node_modules/space-separated-tokens Completed in 522ms
+1364 http fetch GET 200 https://registry.npmjs.org/xtend/-/xtend-4.0.2.tgz 478ms (cache miss)
+1365 timing reifyNode:node_modules/xtend Completed in 522ms
+1366 http fetch GET 200 https://registry.npmjs.org/unist-util-visit/-/unist-util-visit-2.0.3.tgz 477ms (cache miss)
+1367 timing reifyNode:node_modules/unist-util-visit Completed in 522ms
+1368 http fetch GET 200 https://registry.npmjs.org/@types/unist/-/unist-2.0.11.tgz 475ms (cache miss)
+1369 timing reifyNode:node_modules/@types/unist Completed in 522ms
+1370 http fetch GET 200 https://registry.npmjs.org/style-to-object/-/style-to-object-0.3.0.tgz 477ms (cache miss)
+1371 timing reifyNode:node_modules/style-to-object Completed in 523ms
+1372 http fetch GET 200 https://registry.npmjs.org/mdast-util-gfm-strikethrough/-/mdast-util-gfm-strikethrough-0.2.3.tgz 482ms (cache miss)
+1373 timing reifyNode:node_modules/mdast-util-gfm-strikethrough Completed in 523ms
+1374 http fetch GET 200 https://registry.npmjs.org/remark-parse/-/remark-parse-9.0.0.tgz 476ms (cache miss)
+1375 timing reifyNode:node_modules/remark-parse Completed in 523ms
+1376 http fetch GET 200 https://registry.npmjs.org/mdast-util-gfm-autolink-literal/-/mdast-util-gfm-autolink-literal-0.1.3.tgz 481ms (cache miss)
+1377 timing reifyNode:node_modules/mdast-util-gfm-autolink-literal Completed in 523ms
+1378 http fetch GET 200 https://registry.npmjs.org/vfile/-/vfile-4.2.1.tgz 477ms (cache miss)
+1379 http fetch GET 200 https://registry.npmjs.org/unist-util-is/-/unist-util-is-4.1.0.tgz 481ms (cache miss)
+1380 timing reifyNode:node_modules/unist-util-is Completed in 523ms
+1381 timing metavuln:cache:get:security-advisory:@next/eslint-plugin-next:PvOLmaLvBa62/MSwOoeVcFtG41ceA4r3c/+CRslQCFHIqz2IKPEVFqVWr5T0jcFHrN6kR5E5FbNMo23kCF9gdg== Completed in 6ms
+1382 http fetch GET 200 https://registry.npmjs.org/mdast-util-gfm/-/mdast-util-gfm-0.1.2.tgz 479ms (cache miss)
+1383 timing reifyNode:node_modules/mdast-util-gfm Completed in 524ms
+1384 http fetch GET 200 https://registry.npmjs.org/unified/-/unified-9.2.2.tgz 479ms (cache miss)
+1385 timing reifyNode:node_modules/unified Completed in 524ms
+1386 timing reifyNode:node_modules/vfile Completed in 526ms
+1387 http fetch GET 200 https://registry.npmjs.org/property-information/-/property-information-5.6.0.tgz 482ms (cache miss)
+1388 timing reifyNode:node_modules/property-information Completed in 529ms
+1389 http fetch GET 200 https://registry.npmjs.org/@next%2feslint-plugin-next 19ms (cache hit)
+1390 timing metavuln:packument:@next/eslint-plugin-next Completed in 27ms
+1391 timing metavuln:load:security-advisory:@next/eslint-plugin-next:NTB2XjbDOgk4lkd8PZ3tUAm1F3E/ohGF6rl9/3LEO7Z0FDzSR5nWwzd3nUENA3NCNdyeR+35DOC12wPml2IV+g== Completed in 19ms
+1392 timing metavuln:calculate:security-advisory:@next/eslint-plugin-next:NTB2XjbDOgk4lkd8PZ3tUAm1F3E/ohGF6rl9/3LEO7Z0FDzSR5nWwzd3nUENA3NCNdyeR+35DOC12wPml2IV+g== Completed in 46ms
+1393 timing metavuln:packument:@ant-design/nextjs-registry Completed in 0ms
+1394 timing metavuln:packument:@refinedev/nextjs-router Completed in 0ms
+1395 timing metavuln:cache:get:security-advisory:@ant-design/nextjs-registry:R3httc7gcn4kqMY3u+GuZG6IpgCh6N4MVFWdgyf6LQ/xJ06OTm9qtiu/oSA65VJyR7a5GnXo87ybT5U2eXaDBg== Completed in 1ms
+1396 timing metavuln:load:security-advisory:@ant-design/nextjs-registry:NpdQYf+4OaOvlNiZgkhHLNCcOTe84gjeay11sdJQ2HSe2hRovddeIJqZfGwiLh+ns7klO1J2oxhVS+ou+h9gmw== Completed in 18ms
+1397 timing metavuln:cache:get:security-advisory:@refinedev/nextjs-router:IUf+RYsS24sx49oOwX2R8gvEKq+Tx3Lr4GGU0wHFgK/dUc1Bzw5ELQYE5lF5R+4CuKge1K1u+oQIKMvS+2NuDw== Completed in 19ms
+1398 timing metavuln:load:security-advisory:@refinedev/nextjs-router:NpdQYf+4OaOvlNiZgkhHLNCcOTe84gjeay11sdJQ2HSe2hRovddeIJqZfGwiLh+ns7klO1J2oxhVS+ou+h9gmw== Completed in 1ms
+1399 timing reifyNode:node_modules/mdast-util-to-markdown Completed in 612ms
+1400 http fetch GET 200 https://registry.npmjs.org/remark-rehype/-/remark-rehype-8.1.0.tgz 580ms (cache miss)
+1401 timing reifyNode:node_modules/remark-rehype Completed in 628ms
+1402 http fetch GET 200 https://registry.npmjs.org/toggle-selection/-/toggle-selection-1.0.6.tgz 581ms (cache miss)
+1403 timing reifyNode:node_modules/toggle-selection Completed in 630ms
+1404 http fetch GET 200 https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-1.0.8.tgz 583ms (cache miss)
+1405 timing reifyNode:node_modules/comma-separated-tokens Completed in 630ms
+1406 http fetch GET 200 https://registry.npmjs.org/scroll-into-view-if-needed/-/scroll-into-view-if-needed-3.1.0.tgz 577ms (cache miss)
+1407 http fetch GET 200 https://registry.npmjs.org/@types/hast/-/hast-2.3.10.tgz 582ms (cache miss)
+1408 timing reifyNode:node_modules/@types/hast Completed in 631ms
+1409 http fetch GET 200 https://registry.npmjs.org/stackframe/-/stackframe-1.3.4.tgz 582ms (cache miss)
+1410 timing reifyNode:node_modules/stackframe Completed in 631ms
+1411 http fetch GET 200 https://registry.npmjs.org/rc-upload/-/rc-upload-4.11.0.tgz 577ms (cache miss)
+1412 http fetch GET 200 https://registry.npmjs.org/@rc-component/portal/-/portal-1.1.2.tgz 581ms (cache miss)
+1413 timing metavuln:cache:put:security-advisory:@ant-design/nextjs-registry:R3httc7gcn4kqMY3u+GuZG6IpgCh6N4MVFWdgyf6LQ/xJ06OTm9qtiu/oSA65VJyR7a5GnXo87ybT5U2eXaDBg== Completed in 34ms
+1414 timing metavuln:calculate:security-advisory:@ant-design/nextjs-registry:NpdQYf+4OaOvlNiZgkhHLNCcOTe84gjeay11sdJQ2HSe2hRovddeIJqZfGwiLh+ns7klO1J2oxhVS+ou+h9gmw== Completed in 53ms
+1415 timing metavuln:cache:put:security-advisory:@refinedev/nextjs-router:IUf+RYsS24sx49oOwX2R8gvEKq+Tx3Lr4GGU0wHFgK/dUc1Bzw5ELQYE5lF5R+4CuKge1K1u+oQIKMvS+2NuDw== Completed in 33ms
+1416 timing metavuln:calculate:security-advisory:@refinedev/nextjs-router:NpdQYf+4OaOvlNiZgkhHLNCcOTe84gjeay11sdJQ2HSe2hRovddeIJqZfGwiLh+ns7klO1J2oxhVS+ou+h9gmw== Completed in 54ms
+1417 http fetch GET 200 https://registry.npmjs.org/@rc-component/mini-decimal/-/mini-decimal-1.1.0.tgz 584ms (cache miss)
+1418 http fetch GET 200 https://registry.npmjs.org/throttle-debounce/-/throttle-debounce-5.0.2.tgz 583ms (cache miss)
+1419 http fetch GET 200 https://registry.npmjs.org/string-convert/-/string-convert-0.2.1.tgz 583ms (cache miss)
+1420 timing reifyNode:node_modules/string-convert Completed in 633ms
+1421 http fetch GET 200 https://registry.npmjs.org/json2mq/-/json2mq-0.2.0.tgz 584ms (cache miss)
+1422 timing reifyNode:node_modules/json2mq Completed in 634ms
+1423 timing reifyNode:node_modules/scroll-into-view-if-needed Completed in 636ms
+1424 timing metavuln:cache:get:security-advisory:eslint-config-next:volOrje9bMc3dFnnsdrvpxPiUdLeCov80INEmkNw6JaX2GvepJi9bsm+RGK6makQSL3N/126SYrBcGcbXdAW0g== Completed in 7ms
+1425 timing reifyNode:node_modules/throttle-debounce Completed in 641ms
+1426 http fetch GET 200 https://registry.npmjs.org/rc-tooltip/-/rc-tooltip-6.4.0.tgz 588ms (cache miss)
+1427 http fetch GET 200 https://registry.npmjs.org/eslint-config-next 41ms (cache hit)
+1428 timing metavuln:packument:eslint-config-next Completed in 51ms
+1429 timing metavuln:load:security-advisory:eslint-config-next:PvOLmaLvBa62/MSwOoeVcFtG41ceA4r3c/+CRslQCFHIqz2IKPEVFqVWr5T0jcFHrN6kR5E5FbNMo23kCF9gdg== Completed in 16ms
+1430 timing metavuln:calculate:security-advisory:eslint-config-next:PvOLmaLvBa62/MSwOoeVcFtG41ceA4r3c/+CRslQCFHIqz2IKPEVFqVWr5T0jcFHrN6kR5E5FbNMo23kCF9gdg== Completed in 67ms
+1431 timing auditReport:init Completed in 450ms
+1432 timing reify:audit Completed in 714ms
+1433 http fetch GET 200 https://registry.npmjs.org/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz 660ms (cache miss)
+1434 timing reifyNode:node_modules/@rc-component/portal Completed in 718ms
+1435 timing reifyNode:node_modules/@rc-component/mini-decimal Completed in 719ms
+1436 timing reifyNode:node_modules/resize-observer-polyfill Completed in 729ms
+1437 http fetch GET 200 https://registry.npmjs.org/rc-segmented/-/rc-segmented-2.7.0.tgz 682ms (cache miss)
+1438 http fetch GET 200 https://registry.npmjs.org/rc-steps/-/rc-steps-6.0.1.tgz 682ms (cache miss)
+1439 http fetch GET 200 https://registry.npmjs.org/rc-switch/-/rc-switch-4.1.0.tgz 682ms (cache miss)
+1440 timing reifyNode:node_modules/rc-switch Completed in 738ms
+1441 http fetch GET 200 https://registry.npmjs.org/rc-overflow/-/rc-overflow-1.5.0.tgz 690ms (cache miss)
+1442 timing reifyNode:node_modules/rc-tooltip Completed in 741ms
+1443 timing reifyNode:node_modules/rc-overflow Completed in 742ms
+1444 timing reifyNode:node_modules/rc-upload Completed in 747ms
+1445 http fetch GET 200 https://registry.npmjs.org/rc-mentions/-/rc-mentions-2.20.0.tgz 693ms (cache miss)
+1446 http fetch GET 200 https://registry.npmjs.org/rc-input/-/rc-input-1.8.0.tgz 694ms (cache miss)
+1447 http fetch GET 200 https://registry.npmjs.org/rc-collapse/-/rc-collapse-3.9.0.tgz 693ms (cache miss)
+1448 http fetch GET 200 https://registry.npmjs.org/rc-dropdown/-/rc-dropdown-4.2.1.tgz 693ms (cache miss)
+1449 http fetch GET 200 https://registry.npmjs.org/rc-checkbox/-/rc-checkbox-3.5.0.tgz 694ms (cache miss)
+1450 timing reifyNode:node_modules/rc-checkbox Completed in 754ms
+1451 timing reifyNode:node_modules/rc-segmented Completed in 756ms
+1452 http fetch GET 200 https://registry.npmjs.org/@rc-component/context/-/context-1.4.0.tgz 705ms (cache miss)
+1453 timing reifyNode:node_modules/rc-steps Completed in 761ms
+1454 timing reifyNode:node_modules/@rc-component/context Completed in 769ms
+1455 http fetch GET 200 https://registry.npmjs.org/rc-rate/-/rc-rate-2.13.1.tgz 714ms (cache miss)
+1456 http fetch GET 200 https://registry.npmjs.org/rc-drawer/-/rc-drawer-7.3.0.tgz 709ms (cache miss)
+1457 http fetch GET 200 https://registry.npmjs.org/rc-textarea/-/rc-textarea-1.10.2.tgz 719ms (cache miss)
+1458 timing reifyNode:node_modules/rc-rate Completed in 777ms
+1459 timing reifyNode:node_modules/rc-textarea Completed in 779ms
+1460 timing reifyNode:node_modules/rc-dropdown Completed in 802ms
+1461 http fetch GET 200 https://registry.npmjs.org/rc-progress/-/rc-progress-4.0.0.tgz 751ms (cache miss)
+1462 timing reifyNode:node_modules/rc-collapse Completed in 807ms
+1463 http fetch GET 200 https://registry.npmjs.org/rc-notification/-/rc-notification-5.6.4.tgz 752ms (cache miss)
+1464 http fetch GET 200 https://registry.npmjs.org/copy-to-clipboard/-/copy-to-clipboard-3.3.3.tgz 749ms (cache miss)
+1465 timing reifyNode:node_modules/copy-to-clipboard Completed in 809ms
+1466 http fetch GET 200 https://registry.npmjs.org/@types/phoenix/-/phoenix-1.6.7.tgz 745ms (cache miss)
+1467 timing reifyNode:node_modules/@types/phoenix Completed in 810ms
+1468 http fetch GET 200 https://registry.npmjs.org/rc-input-number/-/rc-input-number-9.5.0.tgz 752ms (cache miss)
+1469 timing reifyNode:node_modules/rc-progress Completed in 814ms
+1470 timing reifyNode:node_modules/rc-notification Completed in 815ms
+1471 timing reifyNode:node_modules/rc-input-number Completed in 816ms
+1472 http fetch GET 200 https://registry.npmjs.org/@rc-component/mutate-observer/-/mutate-observer-1.1.0.tgz 760ms (cache miss)
+1473 http fetch GET 200 https://registry.npmjs.org/@rc-component/tour/-/tour-1.15.1.tgz 759ms (cache miss)
+1474 http fetch GET 200 https://registry.npmjs.org/@ant-design/cssinjs-utils/-/cssinjs-utils-1.1.3.tgz 759ms (cache miss)
+1475 http fetch GET 200 https://registry.npmjs.org/@types/ws/-/ws-8.18.1.tgz 759ms (cache miss)
+1476 timing reifyNode:node_modules/@types/ws Completed in 824ms
+1477 http fetch GET 200 https://registry.npmjs.org/@rc-component/color-picker/-/color-picker-2.0.1.tgz 771ms (cache miss)
+1478 timing reifyNode:node_modules/rc-drawer Completed in 836ms
+1479 timing reifyNode:node_modules/rc-mentions Completed in 840ms
+1480 timing reifyNode:node_modules/rc-input Completed in 843ms
+1481 http fetch GET 200 https://registry.npmjs.org/iceberg-js/-/iceberg-js-0.8.1.tgz 783ms (cache miss)
+1482 timing reifyNode:node_modules/iceberg-js Completed in 856ms
+1483 http fetch GET 200 https://registry.npmjs.org/error-stack-parser/-/error-stack-parser-2.1.4.tgz 792ms (cache miss)
+1484 timing reifyNode:node_modules/@rc-component/mutate-observer Completed in 861ms
+1485 http fetch GET 200 https://registry.npmjs.org/warn-once/-/warn-once-0.1.1.tgz 795ms (cache miss)
+1486 timing reifyNode:node_modules/warn-once Completed in 862ms
+1487 http fetch GET 200 https://registry.npmjs.org/ws/-/ws-8.18.3.tgz 797ms (cache miss)
+1488 timing reifyNode:node_modules/error-stack-parser Completed in 864ms
+1489 http fetch GET 200 https://registry.npmjs.org/rc-dialog/-/rc-dialog-9.6.0.tgz 807ms (cache miss)
+1490 timing reifyNode:node_modules/ws Completed in 869ms
+1491 timing reifyNode:node_modules/rc-dialog Completed in 874ms
+1492 http fetch GET 200 https://registry.npmjs.org/pluralize/-/pluralize-8.0.0.tgz 817ms (cache miss)
+1493 timing reifyNode:node_modules/pluralize Completed in 885ms
+1494 http fetch GET 200 https://registry.npmjs.org/rc-virtual-list/-/rc-virtual-list-3.19.2.tgz 838ms (cache miss)
+1495 http fetch GET 200 https://registry.npmjs.org/safe-stable-stringify/-/safe-stable-stringify-2.5.0.tgz 818ms (cache miss)
+1496 http fetch GET 200 https://registry.npmjs.org/warning/-/warning-4.0.3.tgz 819ms (cache miss)
+1497 timing reifyNode:node_modules/warning Completed in 887ms
+1498 timing reifyNode:node_modules/safe-stable-stringify Completed in 889ms
+1499 http fetch GET 200 https://registry.npmjs.org/rc-tree/-/rc-tree-5.13.1.tgz 838ms (cache miss)
+1500 timing reifyNode:node_modules/rc-virtual-list Completed in 892ms
+1501 timing reifyNode:node_modules/rc-tree Completed in 897ms
+1502 http fetch GET 200 https://registry.npmjs.org/rc-motion/-/rc-motion-2.9.5.tgz 847ms (cache miss)
+1503 timing reifyNode:node_modules/rc-motion Completed in 913ms
+1504 http fetch GET 200 https://registry.npmjs.org/@rc-component/qrcode/-/qrcode-1.1.1.tgz 853ms (cache miss)
+1505 http fetch GET 200 https://registry.npmjs.org/rc-tree-select/-/rc-tree-select-5.27.0.tgz 868ms (cache miss)
+1506 timing reifyNode:node_modules/@rc-component/qrcode Completed in 924ms
+1507 timing reifyNode:node_modules/rc-tree-select Completed in 931ms
+1508 timing reifyNode:node_modules/@rc-component/tour Completed in 939ms
+1509 http fetch GET 200 https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-8.2.0.tgz 870ms (cache miss)
+1510 timing reifyNode:node_modules/path-to-regexp Completed in 945ms
+1511 http fetch GET 200 https://registry.npmjs.org/rc-image/-/rc-image-7.12.0.tgz 891ms (cache miss)
+1512 http fetch GET 200 https://registry.npmjs.org/rc-slider/-/rc-slider-11.1.9.tgz 893ms (cache miss)
+1513 http fetch GET 200 https://registry.npmjs.org/papaparse/-/papaparse-5.5.3.tgz 880ms (cache miss)
+1514 http fetch GET 200 https://registry.npmjs.org/@rc-component/async-validator/-/async-validator-5.0.4.tgz 903ms (cache miss)
+1515 http fetch GET 200 https://registry.npmjs.org/qs/-/qs-6.14.0.tgz 883ms (cache miss)
+1516 timing reifyNode:node_modules/rc-image Completed in 956ms
+1517 timing reifyNode:node_modules/rc-slider Completed in 957ms
+1518 timing reifyNode:node_modules/papaparse Completed in 956ms
+1519 timing reifyNode:node_modules/@rc-component/async-validator Completed in 958ms
+1520 timing reifyNode:node_modules/qs Completed in 959ms
+1521 http fetch GET 200 https://registry.npmjs.org/rc-field-form/-/rc-field-form-2.7.1.tgz 913ms (cache miss)
+1522 http fetch GET 200 https://registry.npmjs.org/rc-tabs/-/rc-tabs-15.7.0.tgz 916ms (cache miss)
+1523 timing reifyNode:node_modules/rc-tabs Completed in 1004ms
+1524 timing reifyNode:node_modules/rc-field-form Completed in 1003ms
+1525 http fetch GET 200 https://registry.npmjs.org/classnames/-/classnames-2.5.1.tgz 932ms (cache miss)
+1526 timing reifyNode:node_modules/classnames Completed in 1005ms
+1527 http fetch GET 200 https://registry.npmjs.org/rc-resize-observer/-/rc-resize-observer-1.4.3.tgz 937ms (cache miss)
+1528 http fetch GET 200 https://registry.npmjs.org/remark-gfm/-/remark-gfm-1.0.0.tgz 937ms (cache miss)
+1529 timing reifyNode:node_modules/remark-gfm Completed in 1010ms
+1530 http fetch GET 200 https://registry.npmjs.org/@supabase/functions-js/-/functions-js-2.87.3.tgz 946ms (cache miss)
+1531 timing reifyNode:node_modules/@rc-component/color-picker Completed in 1014ms
+1532 timing reifyNode:node_modules/@supabase/functions-js Completed in 1016ms
+1533 http fetch GET 200 https://registry.npmjs.org/@rc-component/trigger/-/trigger-2.3.0.tgz 958ms (cache miss)
+1534 http fetch GET 200 https://registry.npmjs.org/sunflower-antd/-/sunflower-antd-1.0.0-beta.3.tgz 946ms (cache miss)
+1535 timing reifyNode:node_modules/@rc-component/trigger Completed in 1022ms
+1536 http fetch GET 200 https://registry.npmjs.org/react-markdown/-/react-markdown-6.0.3.tgz 962ms (cache miss)
+1537 http fetch GET 200 https://registry.npmjs.org/is-mobile/-/is-mobile-5.0.0.tgz 968ms (cache miss)
+1538 timing reifyNode:node_modules/is-mobile Completed in 1043ms
+1539 timing reifyNode:node_modules/react-markdown Completed in 1043ms
+1540 http fetch GET 200 https://registry.npmjs.org/@ant-design/react-slick/-/react-slick-1.1.2.tgz 981ms (cache miss)
+1541 timing reifyNode:node_modules/@ant-design/react-slick Completed in 1048ms
+1542 timing reifyNode:node_modules/rc-resize-observer Completed in 1050ms
+1543 http fetch GET 200 https://registry.npmjs.org/rc-cascader/-/rc-cascader-3.34.0.tgz 992ms (cache miss)
+1544 http fetch GET 200 https://registry.npmjs.org/@umijs/use-params/-/use-params-1.0.9.tgz 980ms (cache miss)
+1545 timing reifyNode:node_modules/@umijs/use-params Completed in 1052ms
+1546 timing reifyNode:node_modules/rc-cascader Completed in 1055ms
+1547 timing reifyNode:node_modules/@ant-design/cssinjs-utils Completed in 1058ms
+1548 http fetch GET 200 https://registry.npmjs.org/rc-menu/-/rc-menu-9.16.1.tgz 1009ms (cache miss)
+1549 timing reifyNode:node_modules/rc-menu Completed in 1070ms
+1550 http fetch GET 200 https://registry.npmjs.org/clsx/-/clsx-2.1.1.tgz 994ms (cache miss)
+1551 timing reifyNode:node_modules/clsx Completed in 1070ms
+1552 http fetch GET 200 https://registry.npmjs.org/micromark/-/micromark-2.11.4.tgz 1047ms (cache miss)
+1553 http fetch GET 200 https://registry.npmjs.org/@ctrl/tinycolor/-/tinycolor-3.6.1.tgz 1018ms (cache miss)
+1554 timing reifyNode:node_modules/micromark Completed in 1093ms
+1555 timing reifyNode:node_modules/@ctrl/tinycolor Completed in 1094ms
+1556 http fetch GET 200 https://registry.npmjs.org/@ant-design/fast-color/-/fast-color-3.0.0.tgz 1028ms (cache miss)
+1557 timing reifyNode:node_modules/sunflower-antd Completed in 1109ms
+1558 http fetch GET 200 https://registry.npmjs.org/swr/-/swr-2.3.8.tgz 1049ms (cache miss)
+1559 http fetch GET 200 https://registry.npmjs.org/rc-select/-/rc-select-14.16.8.tgz 1063ms (cache miss)
+1560 timing reifyNode:node_modules/swr Completed in 1121ms
+1561 timing reifyNode:node_modules/@ant-design/fast-color Completed in 1122ms
+1562 timing reifyNode:node_modules/rc-select Completed in 1125ms
+1563 http fetch GET 200 https://registry.npmjs.org/@ant-design/colors/-/colors-8.0.0.tgz 1068ms (cache miss)
+1564 http fetch GET 200 https://registry.npmjs.org/stylis/-/stylis-4.3.6.tgz 1069ms (cache miss)
+1565 timing reifyNode:node_modules/@ant-design/colors Completed in 1146ms
+1566 timing reifyNode:node_modules/stylis Completed in 1148ms
+1567 http fetch GET 200 https://registry.npmjs.org/@emotion/unitless/-/unitless-0.7.5.tgz 1088ms (cache miss)
+1568 timing reifyNode:node_modules/@emotion/unitless Completed in 1169ms
+1569 http fetch GET 200 https://registry.npmjs.org/@supabase/realtime-js/-/realtime-js-2.87.3.tgz 1121ms (cache miss)
+1570 timing reifyNode:node_modules/@supabase/realtime-js Completed in 1188ms
+1571 http fetch GET 200 https://registry.npmjs.org/@supabase/postgrest-js/-/postgrest-js-2.87.3.tgz 1129ms (cache miss)
+1572 timing reifyNode:node_modules/@supabase/postgrest-js Completed in 1201ms
+1573 http fetch GET 200 https://registry.npmjs.org/@emotion/hash/-/hash-0.8.0.tgz 1136ms (cache miss)
+1574 timing reifyNode:node_modules/@emotion/hash Completed in 1223ms
+1575 http fetch GET 200 https://registry.npmjs.org/rc-table/-/rc-table-7.54.0.tgz 1171ms (cache miss)
+1576 timing reifyNode:node_modules/rc-table Completed in 1230ms
+1577 http fetch GET 200 https://registry.npmjs.org/rc-util/-/rc-util-5.44.4.tgz 1235ms (cache miss)
+1578 timing reifyNode:node_modules/rc-util Completed in 1312ms
+1579 http fetch GET 200 https://registry.npmjs.org/@refinedev/devtools-shared/-/devtools-shared-2.0.1.tgz 1255ms (cache miss)
+1580 http fetch GET 200 https://registry.npmjs.org/rc-pagination/-/rc-pagination-5.1.0.tgz 1274ms (cache miss)
+1581 timing reifyNode:node_modules/rc-pagination Completed in 1336ms
+1582 http fetch GET 200 https://registry.npmjs.org/@ant-design/nextjs-registry/-/nextjs-registry-1.3.0.tgz 1258ms (cache miss)
+1583 timing reifyNode:node_modules/@ant-design/nextjs-registry Completed in 1338ms
+1584 http fetch GET 200 https://registry.npmjs.org/@ant-design/fast-color/-/fast-color-2.0.6.tgz 1307ms (cache miss)
+1585 http fetch GET 200 https://registry.npmjs.org/@ant-design/pro-provider/-/pro-provider-2.16.2.tgz 1318ms (cache miss)
+1586 timing reifyNode:node_modules/@ant-design/pro-provider Completed in 1395ms
+1587 timing reifyNode:node_modules/@rc-component/color-picker/node_modules/@ant-design/fast-color Completed in 1399ms
+1588 timing reifyNode:node_modules/@refinedev/devtools-shared Completed in 1428ms
+1589 http fetch GET 200 https://registry.npmjs.org/react-is/-/react-is-18.3.1.tgz 1354ms (cache miss)
+1590 timing reifyNode:node_modules/rc-util/node_modules/react-is Completed in 1439ms
+1591 http fetch GET 200 https://registry.npmjs.org/@supabase/storage-js/-/storage-js-2.87.3.tgz 1383ms (cache miss)
+1592 timing reifyNode:node_modules/@supabase/storage-js Completed in 1449ms
+1593 http fetch GET 200 https://registry.npmjs.org/@supabase/auth-js/-/auth-js-2.87.3.tgz 1410ms (cache miss)
+1594 timing reifyNode:node_modules/@supabase/auth-js Completed in 1476ms
+1595 http fetch GET 200 https://registry.npmjs.org/@ant-design/fast-color/-/fast-color-2.0.6.tgz 1397ms (cache miss)
+1596 timing reifyNode:node_modules/@ant-design/pro-utils/node_modules/@ant-design/fast-color Completed in 1489ms
+1597 http fetch GET 200 https://registry.npmjs.org/@supabase/supabase-js/-/supabase-js-2.87.3.tgz 1459ms (cache miss)
+1598 timing reifyNode:node_modules/@supabase/supabase-js Completed in 1540ms
+1599 http fetch GET 200 https://registry.npmjs.org/@refinedev/devtools-internal/-/devtools-internal-2.0.1.tgz 1475ms (cache miss)
+1600 http fetch GET 200 https://registry.npmjs.org/@babel/runtime/-/runtime-7.28.4.tgz 1468ms (cache miss)
+1601 timing reifyNode:node_modules/@refinedev/devtools-internal Completed in 1548ms
+1602 timing reifyNode:node_modules/@babel/runtime Completed in 1548ms
+1603 http fetch GET 200 https://registry.npmjs.org/@ant-design/colors/-/colors-7.2.1.tgz 1480ms (cache miss)
+1604 http fetch GET 200 https://registry.npmjs.org/@umijs/route-utils/-/route-utils-4.0.3.tgz 1520ms (cache miss)
+1605 timing reifyNode:node_modules/@umijs/route-utils Completed in 1697ms
+1606 timing reifyNode:node_modules/@ant-design/pro-utils/node_modules/@ant-design/colors Completed in 1697ms
+1607 http fetch GET 200 https://registry.npmjs.org/@ant-design/colors/-/colors-7.2.1.tgz 1629ms (cache miss)
+1608 http fetch GET 200 https://registry.npmjs.org/@ant-design/fast-color/-/fast-color-2.0.6.tgz 1629ms (cache miss)
+1609 http fetch GET 200 https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz 1630ms (cache miss)
+1610 timing reifyNode:node_modules/react-markdown/node_modules/react-is Completed in 1720ms
+1611 timing reifyNode:node_modules/@ant-design/pro-layout/node_modules/@ant-design/fast-color Completed in 1730ms
+1612 http fetch GET 200 https://registry.npmjs.org/react-is/-/react-is-18.3.1.tgz 1658ms (cache miss)
+1613 timing reifyNode:node_modules/@rc-component/util/node_modules/react-is Completed in 1747ms
+1614 timing reifyNode:node_modules/@ant-design/pro-layout/node_modules/@ant-design/colors Completed in 1753ms
+1615 http fetch GET 200 https://registry.npmjs.org/@ant-design/colors/-/colors-7.2.1.tgz 1668ms (cache miss)
+1616 timing reifyNode:node_modules/antd/node_modules/@ant-design/colors Completed in 1789ms
+1617 http fetch GET 200 https://registry.npmjs.org/@ant-design/cssinjs/-/cssinjs-1.24.0.tgz 1713ms (cache miss)
+1618 timing reifyNode:node_modules/@ant-design/cssinjs-utils/node_modules/@ant-design/cssinjs Completed in 1804ms
+1619 http fetch GET 200 https://registry.npmjs.org/@ant-design/fast-color/-/fast-color-2.0.6.tgz 1730ms (cache miss)
+1620 timing reifyNode:node_modules/antd/node_modules/@ant-design/fast-color Completed in 1830ms
+1621 http fetch GET 200 https://registry.npmjs.org/@ant-design/colors/-/colors-7.2.1.tgz 1752ms (cache miss)
+1622 http fetch GET 200 https://registry.npmjs.org/@refinedev/supabase/-/supabase-6.0.1.tgz 1768ms (cache miss)
+1623 timing reifyNode:node_modules/@refinedev/supabase Completed in 1850ms
+1624 http fetch GET 200 https://registry.npmjs.org/@refinedev/ui-types/-/ui-types-2.0.1.tgz 1818ms (cache miss)
+1625 timing reifyNode:node_modules/@refinedev/antd/node_modules/@ant-design/colors Completed in 1892ms
+1626 timing reifyNode:node_modules/@refinedev/ui-types Completed in 1895ms
+1627 http fetch GET 200 https://registry.npmjs.org/@ant-design/pro-utils/-/pro-utils-2.18.0.tgz 1872ms (cache miss)
+1628 http fetch GET 200 https://registry.npmjs.org/@ant-design/cssinjs/-/cssinjs-1.24.0.tgz 1862ms (cache miss)
+1629 timing reifyNode:node_modules/@ant-design/pro-utils Completed in 1948ms
+1630 timing reifyNode:node_modules/@ant-design/pro-provider/node_modules/@ant-design/cssinjs Completed in 1951ms
+1631 http fetch GET 200 https://registry.npmjs.org/@ant-design/cssinjs/-/cssinjs-1.24.0.tgz 1953ms (cache miss)
+1632 http fetch GET 200 https://registry.npmjs.org/@rc-component/util/-/util-1.6.0.tgz 1963ms (cache miss)
+1633 timing reifyNode:node_modules/antd/node_modules/@ant-design/cssinjs Completed in 2071ms
+1634 timing reifyNode:node_modules/@rc-component/util Completed in 2071ms
+1635 http fetch GET 200 https://registry.npmjs.org/@ant-design/cssinjs/-/cssinjs-2.0.1.tgz 1999ms (cache miss)
+1636 timing reifyNode:node_modules/@ant-design/cssinjs Completed in 2081ms
+1637 http fetch GET 200 https://registry.npmjs.org/rc-picker/-/rc-picker-4.11.3.tgz 2039ms (cache miss)
+1638 timing reifyNode:node_modules/rc-picker Completed in 2097ms
+1639 http fetch GET 200 https://registry.npmjs.org/@refinedev/nextjs-router/-/nextjs-router-7.0.4.tgz 2030ms (cache miss)
+1640 timing reifyNode:node_modules/@refinedev/nextjs-router Completed in 2111ms
+1641 http fetch GET 200 https://registry.npmjs.org/@ant-design/pro-layout/-/pro-layout-7.22.7.tgz 2058ms (cache miss)
+1642 http fetch GET 200 https://registry.npmjs.org/@ant-design/cssinjs/-/cssinjs-1.24.0.tgz 2050ms (cache miss)
+1643 timing reifyNode:node_modules/@ant-design/pro-layout Completed in 2138ms
+1644 timing reifyNode:node_modules/@ant-design/pro-layout/node_modules/@ant-design/cssinjs Completed in 2140ms
+1645 http fetch GET 200 https://registry.npmjs.org/lodash-es/-/lodash-es-4.17.21.tgz 2071ms (cache miss)
+1646 timing reifyNode:node_modules/lodash-es Completed in 2143ms
+1647 http fetch GET 200 https://registry.npmjs.org/@tanstack/react-query/-/react-query-5.90.12.tgz 2079ms (cache miss)
+1648 timing reifyNode:node_modules/@tanstack/react-query Completed in 2161ms
+1649 http fetch GET 200 https://registry.npmjs.org/@tanstack/query-core/-/query-core-5.90.12.tgz 2135ms (cache miss)
+1650 timing reifyNode:node_modules/@tanstack/query-core Completed in 2200ms
+1651 http fetch GET 200 https://registry.npmjs.org/@ant-design/fast-color/-/fast-color-2.0.6.tgz 2118ms (cache miss)
+1652 timing reifyNode:node_modules/@refinedev/antd/node_modules/@ant-design/fast-color Completed in 2205ms
+1653 http fetch GET 200 https://registry.npmjs.org/dayjs/-/dayjs-1.11.19.tgz 2141ms (cache miss)
+1654 timing reifyNode:node_modules/dayjs Completed in 2220ms
+1655 http fetch GET 200 https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz 2550ms (cache miss)
+1656 timing reifyNode:node_modules/lodash Completed in 2622ms
+1657 http fetch GET 200 https://registry.npmjs.org/@refinedev/antd/-/antd-6.0.3.tgz 3277ms (cache miss)
+1658 timing reifyNode:node_modules/@refinedev/antd Completed in 3360ms
+1659 http fetch GET 200 https://registry.npmjs.org/@refinedev/core/-/core-5.0.7.tgz 4002ms (cache miss)
+1660 timing reifyNode:node_modules/@refinedev/core Completed in 4081ms
+1661 http fetch GET 200 https://registry.npmjs.org/@ant-design/icons-svg/-/icons-svg-4.4.2.tgz 5279ms (cache miss)
+1662 timing reifyNode:node_modules/@ant-design/icons-svg Completed in 5355ms
+1663 http fetch GET 200 https://registry.npmjs.org/@ant-design/icons/-/icons-5.6.1.tgz 5325ms (cache miss)
+1664 timing reifyNode:node_modules/@ant-design/pro-utils/node_modules/@ant-design/icons Completed in 5410ms
+1665 http fetch GET 200 https://registry.npmjs.org/@ant-design/icons/-/icons-5.6.1.tgz 5329ms (cache miss)
+1666 timing reifyNode:node_modules/antd/node_modules/@ant-design/icons Completed in 5414ms
+1667 http fetch GET 200 https://registry.npmjs.org/@ant-design/icons/-/icons-6.1.0.tgz 5334ms (cache miss)
+1668 timing reifyNode:node_modules/@ant-design/icons Completed in 5415ms
+1669 http fetch GET 200 https://registry.npmjs.org/@ant-design/icons/-/icons-5.6.1.tgz 5366ms (cache miss)
+1670 timing reifyNode:node_modules/@refinedev/antd/node_modules/@ant-design/icons Completed in 5457ms
+1671 http fetch GET 200 https://registry.npmjs.org/@ant-design/icons/-/icons-5.6.1.tgz 5372ms (cache miss)
+1672 timing reifyNode:node_modules/@ant-design/pro-layout/node_modules/@ant-design/icons Completed in 5458ms
+1673 http fetch GET 200 https://registry.npmjs.org/antd/-/antd-5.29.2.tgz 5789ms (cache miss)
+1674 timing reifyNode:node_modules/antd Completed in 5864ms
+1675 timing reify:unpack Completed in 5868ms
+1676 timing reify:unretire Completed in 1ms
+1677 timing build:queue Completed in 2ms
+1678 timing build:deps Completed in 3ms
+1679 timing build Completed in 3ms
+1680 timing reify:build Completed in 3ms
+1681 timing reify:trash Completed in 12ms
+1682 timing reify:save Completed in 116ms
+1683 timing reify Completed in 18359ms
+1684 silly ADD node_modules/vfile-message
+1685 silly ADD node_modules/trough
+1686 silly ADD node_modules/is-plain-obj
+1687 silly ADD node_modules/is-buffer
+1688 silly ADD node_modules/extend
+1689 silly ADD node_modules/bail
+1690 silly ADD node_modules/use-sync-external-store
+1691 silly ADD node_modules/dequal
+1692 silly ADD node_modules/inline-style-parser
+1693 silly ADD node_modules/compute-scroll-into-view
+1694 silly ADD node_modules/unist-util-position
+1695 silly ADD node_modules/unist-util-generated
+1696 silly ADD node_modules/unist-builder
+1697 silly ADD node_modules/mdurl
+1698 silly ADD node_modules/mdast-util-definitions
+1699 silly ADD node_modules/mdast-util-to-hast
+1700 silly ADD node_modules/unist-util-stringify-position
+1701 silly ADD node_modules/@types/mdast
+1702 silly ADD node_modules/mdast-util-from-markdown
+1703 silly ADD node_modules/is-alphabetical
+1704 silly ADD node_modules/is-hexadecimal
+1705 silly ADD node_modules/is-decimal
+1706 silly ADD node_modules/is-alphanumerical
+1707 silly ADD node_modules/character-reference-invalid
+1708 silly ADD node_modules/character-entities-legacy
+1709 silly ADD node_modules/character-entities
+1710 silly ADD node_modules/micromark-extension-gfm-task-list-item
+1711 silly ADD node_modules/micromark-extension-gfm-tagfilter
+1712 silly ADD node_modules/micromark-extension-gfm-table
+1713 silly ADD node_modules/micromark-extension-gfm-strikethrough
+1714 silly ADD node_modules/micromark-extension-gfm-autolink-literal
+1715 silly ADD node_modules/zwitch
+1716 silly ADD node_modules/parse-entities
+1717 silly ADD node_modules/mdast-util-to-string
+1718 silly ADD node_modules/longest-streak
+1719 silly ADD node_modules/repeat-string
+1720 silly ADD node_modules/markdown-table
+1721 silly ADD node_modules/unist-util-visit-parents
+1722 silly ADD node_modules/unist-util-is
+1723 silly ADD node_modules/micromark
+1724 silly ADD node_modules/mdast-util-find-and-replace
+1725 silly ADD node_modules/ccount
+1726 silly ADD node_modules/mdast-util-to-markdown
+1727 silly ADD node_modules/mdast-util-gfm-task-list-item
+1728 silly ADD node_modules/mdast-util-gfm-table
+1729 silly ADD node_modules/mdast-util-gfm-strikethrough
+1730 silly ADD node_modules/mdast-util-gfm-autolink-literal
+1731 silly ADD node_modules/micromark-extension-gfm
+1732 silly ADD node_modules/mdast-util-gfm
+1733 silly ADD node_modules/xtend
+1734 silly ADD node_modules/vfile
+1735 silly ADD node_modules/unist-util-visit
+1736 silly ADD node_modules/unified
+1737 silly ADD node_modules/style-to-object
+1738 silly ADD node_modules/space-separated-tokens
+1739 silly ADD node_modules/remark-rehype
+1740 silly ADD node_modules/remark-parse
+1741 silly ADD node_modules/property-information
+1742 silly ADD node_modules/comma-separated-tokens
+1743 silly ADD node_modules/@types/unist
+1744 silly ADD node_modules/@types/hast
+1745 silly ADD node_modules/@rc-component/context
+1746 silly ADD node_modules/rc-virtual-list
+1747 silly ADD node_modules/rc-overflow
+1748 silly ADD node_modules/@rc-component/mini-decimal
+1749 silly ADD node_modules/@rc-component/async-validator
+1750 silly ADD node_modules/string-convert
+1751 silly ADD node_modules/stackframe
+1752 silly ADD node_modules/toggle-selection
+1753 silly ADD node_modules/@rc-component/portal
+1754 silly ADD node_modules/resize-observer-polyfill
+1755 silly ADD node_modules/json2mq
+1756 silly ADD node_modules/throttle-debounce
+1757 silly ADD node_modules/scroll-into-view-if-needed
+1758 silly ADD node_modules/rc-upload
+1759 silly ADD node_modules/rc-tree-select
+1760 silly ADD node_modules/rc-tree
+1761 silly ADD node_modules/rc-tooltip
+1762 silly ADD node_modules/rc-textarea
+1763 silly ADD node_modules/rc-tabs
+1764 silly ADD node_modules/rc-table
+1765 silly ADD node_modules/rc-switch
+1766 silly ADD node_modules/rc-steps
+1767 silly ADD node_modules/rc-slider
+1768 silly ADD node_modules/rc-select
+1769 silly ADD node_modules/rc-segmented
+1770 silly ADD node_modules/rc-rate
+1771 silly ADD node_modules/rc-progress
+1772 silly ADD node_modules/rc-picker
+1773 silly ADD node_modules/rc-pagination
+1774 silly ADD node_modules/rc-notification
+1775 silly ADD node_modules/rc-motion
+1776 silly ADD node_modules/rc-menu
+1777 silly ADD node_modules/rc-mentions
+1778 silly ADD node_modules/rc-input-number
+1779 silly ADD node_modules/rc-input
+1780 silly ADD node_modules/rc-image
+1781 silly ADD node_modules/rc-field-form
+1782 silly ADD node_modules/rc-dropdown
+1783 silly ADD node_modules/rc-drawer
+1784 silly ADD node_modules/rc-dialog
+1785 silly ADD node_modules/rc-collapse
+1786 silly ADD node_modules/rc-checkbox
+1787 silly ADD node_modules/rc-cascader
+1788 silly ADD node_modules/copy-to-clipboard
+1789 silly ADD node_modules/@rc-component/trigger
+1790 silly ADD node_modules/@rc-component/tour
+1791 silly ADD node_modules/@rc-component/qrcode
+1792 silly ADD node_modules/@rc-component/mutate-observer
+1793 silly ADD node_modules/@rc-component/color-picker
+1794 silly ADD node_modules/@rc-component/color-picker/node_modules/@ant-design/fast-color
+1795 silly ADD node_modules/@ant-design/react-slick
+1796 silly ADD node_modules/@ant-design/cssinjs-utils
+1797 silly ADD node_modules/@ant-design/cssinjs-utils/node_modules/@ant-design/cssinjs
+1798 silly ADD node_modules/@tanstack/query-core
+1799 silly ADD node_modules/iceberg-js
+1800 silly ADD node_modules/ws
+1801 silly ADD node_modules/@types/ws
+1802 silly ADD node_modules/@types/phoenix
+1803 silly ADD node_modules/@supabase/storage-js
+1804 silly ADD node_modules/@supabase/realtime-js
+1805 silly ADD node_modules/@supabase/postgrest-js
+1806 silly ADD node_modules/@supabase/functions-js
+1807 silly ADD node_modules/@supabase/auth-js
+1808 silly ADD node_modules/error-stack-parser
+1809 silly ADD node_modules/@refinedev/devtools-shared
+1810 silly ADD node_modules/warn-once
+1811 silly ADD node_modules/qs
+1812 silly ADD node_modules/pluralize
+1813 silly ADD node_modules/papaparse
+1814 silly ADD node_modules/@refinedev/devtools-internal
+1815 silly ADD node_modules/safe-stable-stringify
+1816 silly ADD node_modules/@ctrl/tinycolor
+1817 silly ADD node_modules/warning
+1818 silly ADD node_modules/swr
+1819 silly ADD node_modules/rc-util
+1820 silly ADD node_modules/rc-util/node_modules/react-is
+1821 silly ADD node_modules/rc-resize-observer
+1822 silly ADD node_modules/path-to-regexp
+1823 silly ADD node_modules/lodash-es
+1824 silly ADD node_modules/lodash
+1825 silly ADD node_modules/classnames
+1826 silly ADD node_modules/@umijs/use-params
+1827 silly ADD node_modules/@umijs/route-utils
+1828 silly ADD node_modules/@ant-design/pro-utils
+1829 silly ADD node_modules/@ant-design/pro-utils/node_modules/@ant-design/fast-color
+1830 silly ADD node_modules/@ant-design/pro-utils/node_modules/@ant-design/colors
+1831 silly ADD node_modules/@ant-design/pro-utils/node_modules/@ant-design/icons
+1832 silly ADD node_modules/@ant-design/pro-provider
+1833 silly ADD node_modules/@ant-design/pro-provider/node_modules/@ant-design/cssinjs
+1834 silly ADD node_modules/sunflower-antd
+1835 silly ADD node_modules/remark-gfm
+1836 silly ADD node_modules/react-markdown
+1837 silly ADD node_modules/react-markdown/node_modules/react-is
+1838 silly ADD node_modules/@refinedev/ui-types
+1839 silly ADD node_modules/antd
+1840 silly ADD node_modules/antd/node_modules/@ant-design/icons
+1841 silly ADD node_modules/antd/node_modules/@ant-design/fast-color
+1842 silly ADD node_modules/antd/node_modules/@ant-design/cssinjs
+1843 silly ADD node_modules/antd/node_modules/@ant-design/colors
+1844 silly ADD node_modules/@ant-design/pro-layout
+1845 silly ADD node_modules/@ant-design/pro-layout/node_modules/@ant-design/fast-color
+1846 silly ADD node_modules/@ant-design/pro-layout/node_modules/@ant-design/colors
+1847 silly ADD node_modules/@ant-design/pro-layout/node_modules/@ant-design/icons
+1848 silly ADD node_modules/@ant-design/pro-layout/node_modules/@ant-design/cssinjs
+1849 silly ADD node_modules/is-mobile
+1850 silly ADD node_modules/@ant-design/fast-color
+1851 silly ADD node_modules/@ant-design/icons-svg
+1852 silly ADD node_modules/@ant-design/colors
+1853 silly ADD node_modules/stylis
+1854 silly ADD node_modules/clsx
+1855 silly ADD node_modules/@rc-component/util
+1856 silly ADD node_modules/@rc-component/util/node_modules/react-is
+1857 silly ADD node_modules/@emotion/unitless
+1858 silly ADD node_modules/@emotion/hash
+1859 silly ADD node_modules/@babel/runtime
+1860 silly ADD node_modules/dayjs
+1861 silly ADD node_modules/@tanstack/react-query
+1862 silly ADD node_modules/@supabase/supabase-js
+1863 silly ADD node_modules/@refinedev/supabase
+1864 silly ADD node_modules/@refinedev/nextjs-router
+1865 silly ADD node_modules/@refinedev/core
+1866 silly ADD node_modules/@refinedev/antd
+1867 silly ADD node_modules/@refinedev/antd/node_modules/@ant-design/fast-color
+1868 silly ADD node_modules/@refinedev/antd/node_modules/@ant-design/colors
+1869 silly ADD node_modules/@refinedev/antd/node_modules/@ant-design/icons
+1870 silly ADD node_modules/@ant-design/cssinjs
+1871 silly ADD node_modules/@ant-design/nextjs-registry
+1872 silly ADD node_modules/@ant-design/icons
+1873 silly ADD
+1874 silly ADD
+1875 silly ADD
+1876 silly ADD
+1877 silly ADD
+1878 silly ADD
+1879 silly ADD
+1880 silly ADD
+1881 silly ADD
+1882 silly ADD
+1883 silly ADD
+1884 silly ADD
+1885 silly ADD
+1886 silly ADD
+1887 silly ADD
+1888 silly ADD
+1889 silly ADD
+1890 silly ADD
+1891 silly ADD
+1892 silly ADD
+1893 silly ADD
+1894 silly ADD
+1895 silly ADD
+1896 silly ADD
+1897 silly ADD
+1898 silly ADD
+1899 silly ADD
+1900 silly ADD
+1901 silly ADD
+1902 silly ADD
+1903 silly ADD
+1904 timing command:i Completed in 18500ms
+1905 verbose exit 0
+1906 timing npm Completed in 18688ms
+1907 info ok
