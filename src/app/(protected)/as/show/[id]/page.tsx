@@ -70,7 +70,7 @@ export default function AsShowPage({ params }: { params: { id: string } }) {
   const { queryResult } = useShow<AsRecord>({ resource: "as_requests", id: params.id });
   const record = queryResult.data?.data;
 
-  const { mutateAsync: updateAsync, isPending: isUpdating } = useUpdate();
+  const { mutateAsync: updateAsync, isLoading: isUpdating } = useUpdate();
 
   const [images, setImages] = useState<ImageRow[]>([]);
   const [quoteUrl, setQuoteUrl] = useState<string | null>(null);

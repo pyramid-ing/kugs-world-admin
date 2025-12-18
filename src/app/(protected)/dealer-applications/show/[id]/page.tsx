@@ -26,7 +26,7 @@ export default function DealerApplicationShowPage({ params }: { params: { id: st
   const { queryResult } = useShow<DealerAppRecord>({ resource: "dealer_applications", id: params.id });
   const record = queryResult.data?.data;
 
-  const { mutateAsync: updateAsync, isPending: isLoading } = useUpdate();
+  const { mutateAsync: updateAsync, isLoading } = useUpdate();
 
   const [rejectOpen, setRejectOpen] = useState(false);
   const [rejectReason, setRejectReason] = useState("");

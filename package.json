@@ -2,7 +2,7 @@
   "name": "kugs-world-admin",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@9.15.0",
+  "packageManager": "pnpm@10.0.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -18,7 +18,7 @@
     "@refinedev/nextjs-router": "6.2.3",
     "@refinedev/supabase": "5.9.8",
     "@supabase/supabase-js": "2.56.0",
-    "@tanstack/react-query": "^5.90.12",
+    "@tanstack/react-query": "^4.42.0",
     "antd": "^5.29.2",
     "axios": "^1.13.2",
     "dayjs": "^1.11.19",

@@ -99,7 +99,7 @@ export function BranchUpsertModal(props: {
 
     const record = queryResult?.data?.data;
 
-    const {mutateAsync: deleteAsync, isPending: isDeleting} = useDelete();
+    const {mutateAsync: deleteAsync, isLoading: isDeleting} = useDelete();
 
     const {
         options: branchTypeOptions,

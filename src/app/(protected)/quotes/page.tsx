@@ -54,7 +54,7 @@ export default function QuotesListPage() {
     },
   });
 
-  const { mutateAsync: deleteManyAsync, isPending: isDeleting } = useDeleteMany();
+  const { mutateAsync: deleteManyAsync, isLoading: isDeleting } = useDeleteMany();
   const [selectedRowKeys, setSelectedRowKeys] = React.useState<React.Key[]>([]);
 
   const onDeleteSelected = async () => {
