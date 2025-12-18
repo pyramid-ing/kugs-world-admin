@@ -19,6 +19,14 @@ type CreateAdminInput = {
 };
 
 export default function AdminUsersCreatePage() {
+  return (
+    <RequireAdmin>
+      <AdminUsersCreateInner />
+    </RequireAdmin>
+  );
+}
+
+function AdminUsersCreateInner() {
   const { list } = useNavigation();
   const { selectedOrganizationId } = useAdminContext();
   const [loading, setLoading] = useState(false);
@@ -62,75 +70,63 @@ export default function AdminUsersCreatePage() {
   };
 
   return (
-    <RequireAdmin>
-      <Create title="관리자 등록" saveButtonProps={{ loading, onClick: () => form.submit() }}>
-        <Alert
-          type="info"
-          showIcon
-          message="초기 비밀번호는 1234로 설정됩니다."
-          description="계정 생성은 관리자 REST API로 처리됩니다."
-          style={{ marginBottom: 16 }}
-        />
+    <Create title="관리자 등록" saveButtonProps={{ loading, onClick: () => form.submit() }}>
+      <Alert
+        type="info"
+        showIcon
+        message="초기 비밀번호는 1234로 설정됩니다."
+        description="계정 생성은 관리자 REST API로 처리됩니다."
+        style={{ marginBottom: 16 }}
+      />
 
-        <Form<CreateAdminInput>
-          form={form}
-          layout="vertical"
-          requiredMark={false}
-          initialValues={initialValues}
-          onFinish={onFinish}
+      <Form<CreateAdminInput> form={form} layout="vertical" requiredMark={false} initialValues={initialValues} onFinish={onFinish}>
+        <Form.Item name="name" label="성함" rules={[{ required: true, message: "성함을 입력해주세요." }]}>
+          <Input placeholder="홍길동" />
+        </Form.Item>
+
+        <Form.Item name="login_id" label="userId" rules={[{ required: true, message: "userId(로그인 ID)를 입력해주세요." }]}>
+          <Input placeholder="kugs_admin01" />
+        </Form.Item>
+
+        <Form.Item
+          name="email"
+          label="이메일(로그인용)"
+          rules={[
+            { required: true, message: "이메일을 입력해주세요." },
+            { type: "email", message: "이메일 형식이 올바르지 않습니다." },
+          ]}
         >
-          <Form.Item name="name" label="성함" rules={[{ required: true, message: "성함을 입력해주세요." }]}>
-            <Input placeholder="홍길동" />
-          </Form.Item>
+          <Input placeholder="admin@example.com" />
+        </Form.Item>
 
-          <Form.Item
-            name="login_id"
-            label="userId"
-            rules={[{ required: true, message: "userId(로그인 ID)를 입력해주세요." }]}
-          >
-            <Input placeholder="kugs_admin01" />
-          </Form.Item>
-
-          <Form.Item
-            name="email"
-            label="이메일(로그인용)"
-            rules={[
-              { required: true, message: "이메일을 입력해주세요." },
-              { type: "email", message: "이메일 형식이 올바르지 않습니다." },
+        <Form.Item name="role" label="역할" rules={[{ required: true, message: "역할을 선택해주세요." }]}>
+          <Select
+            options={[
+              { label: "관리자(admin)", value: "admin" },
+              { label: "대리점 관리자(dealer_admin)", value: "dealer_admin" },
             ]}
-          >
-            <Input placeholder="admin@example.com" />
-          </Form.Item>
+          />
+        </Form.Item>
 
-          <Form.Item name="role" label="역할" rules={[{ required: true, message: "역할을 선택해주세요." }]}>
-            <Select
-              options={[
-                { label: "관리자(admin)", value: "admin" },
-                { label: "대리점 관리자(dealer_admin)", value: "dealer_admin" },
-              ]}
-            />
-          </Form.Item>
+        <Form.Item
+          name="branch_id"
+          label="대리점"
+          tooltip="dealer_admin일 때만 필요합니다."
+          rules={isDealer ? [{ required: true, message: "대리점을 선택해주세요." }] : []}
+          hidden={!isDealer}
+        >
+          <Select {...branchSelectProps} placeholder="대리점 선택" />
+        </Form.Item>
 
-          <Form.Item
-            name="branch_id"
-            label="대리점"
-            tooltip="dealer_admin일 때만 필요합니다."
-            rules={isDealer ? [{ required: true, message: "대리점을 선택해주세요." }] : []}
-            hidden={!isDealer}
-          >
-            <Select {...branchSelectProps} placeholder="대리점 선택" />
-          </Form.Item>
+        <Form.Item name="active" label="활성화" valuePropName="checked">
+          <Switch />
+        </Form.Item>
 
-          <Form.Item name="active" label="활성화" valuePropName="checked">
-            <Switch />
-          </Form.Item>
-
-          <Typography.Paragraph type="secondary" style={{ marginBottom: 0 }}>
-            저장 버튼을 누르면 계정이 생성되며, 최초 비밀번호는 <b>1234</b>입니다.
-          </Typography.Paragraph>
-        </Form>
-      </Create>
-    </RequireAdmin>
+        <Typography.Paragraph type="secondary" style={{ marginBottom: 0 }}>
+          저장 버튼을 누르면 계정이 생성되며, 최초 비밀번호는 <b>1234</b>입니다.
+        </Typography.Paragraph>
+      </Form>
+    </Create>
   );
 }
 

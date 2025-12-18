@@ -20,6 +20,14 @@ type AdminProfileForm = {
 };
 
 export default function AdminUsersEditPage() {
+  return (
+    <RequireAdmin>
+      <AdminUsersEditInner />
+    </RequireAdmin>
+  );
+}
+
+function AdminUsersEditInner() {
   const params = useParams<{ id: string }>();
   const id = String(params?.id ?? "");
 
@@ -53,69 +61,67 @@ export default function AdminUsersEditPage() {
   };
 
   return (
-    <RequireAdmin>
-      <Edit
-        title="관리자 수정"
-        saveButtonProps={{
-          ...saveButtonProps,
-          onClick: () => formProps.form?.submit(),
-        }}
-        headerButtons={({ defaultButtons }) => (
-          <Space>
-            <Popconfirm
-              title="비밀번호를 1234로 초기화할까요?"
-              okText="초기화"
-              cancelText="취소"
-              onConfirm={() => void onResetPassword()}
-            >
-              <a>비번초기화</a>
-            </Popconfirm>
-            {defaultButtons}
-          </Space>
-        )}
-      >
-        <Form {...formProps} layout="vertical" requiredMark={false}>
-          <Form.Item label="user_id">
-            <Input value={id} disabled />
-          </Form.Item>
-
-          <Form.Item name="name" label="성함" rules={[{ required: true, message: "성함을 입력해주세요." }]}>
-            <Input />
-          </Form.Item>
-
-          <Form.Item name="login_id" label="userId" rules={[{ required: true, message: "userId를 입력해주세요." }]}>
-            <Input />
-          </Form.Item>
-
-          <Form.Item name="role" label="역할" rules={[{ required: true, message: "역할을 선택해주세요." }]}>
-            <Select
-              options={[
-                { label: "관리자(admin)", value: "admin" },
-                { label: "대리점 관리자(dealer_admin)", value: "dealer_admin" },
-              ]}
-            />
-          </Form.Item>
-
-          <Form.Item
-            name="branch_id"
-            label="대리점"
-            tooltip="dealer_admin일 때만 필요합니다."
-            rules={isDealer ? [{ required: true, message: "대리점을 선택해주세요." }] : []}
-            hidden={!isDealer}
+    <Edit
+      title="관리자 수정"
+      saveButtonProps={{
+        ...saveButtonProps,
+        onClick: () => formProps.form?.submit(),
+      }}
+      headerButtons={({ defaultButtons }) => (
+        <Space>
+          <Popconfirm
+            title="비밀번호를 1234로 초기화할까요?"
+            okText="초기화"
+            cancelText="취소"
+            onConfirm={() => void onResetPassword()}
           >
-            <Select {...branchSelectProps} placeholder="대리점 선택" />
-          </Form.Item>
+            <a>비번초기화</a>
+          </Popconfirm>
+          {defaultButtons}
+        </Space>
+      )}
+    >
+      <Form {...formProps} layout="vertical" requiredMark={false}>
+        <Form.Item label="user_id">
+          <Input value={id} disabled />
+        </Form.Item>
 
-          <Form.Item name="active" label="활성화" valuePropName="checked">
-            <Switch />
-          </Form.Item>
+        <Form.Item name="name" label="성함" rules={[{ required: true, message: "성함을 입력해주세요." }]}>
+          <Input />
+        </Form.Item>
 
-          <Typography.Paragraph type="secondary" style={{ marginBottom: 0 }}>
-            비밀번호 초기화 시 최초 비밀번호는 <b>1234</b>로 설정됩니다.
-          </Typography.Paragraph>
-        </Form>
-      </Edit>
-    </RequireAdmin>
+        <Form.Item name="login_id" label="userId" rules={[{ required: true, message: "userId를 입력해주세요." }]}>
+          <Input />
+        </Form.Item>
+
+        <Form.Item name="role" label="역할" rules={[{ required: true, message: "역할을 선택해주세요." }]}>
+          <Select
+            options={[
+              { label: "관리자(admin)", value: "admin" },
+              { label: "대리점 관리자(dealer_admin)", value: "dealer_admin" },
+            ]}
+          />
+        </Form.Item>
+
+        <Form.Item
+          name="branch_id"
+          label="대리점"
+          tooltip="dealer_admin일 때만 필요합니다."
+          rules={isDealer ? [{ required: true, message: "대리점을 선택해주세요." }] : []}
+          hidden={!isDealer}
+        >
+          <Select {...branchSelectProps} placeholder="대리점 선택" />
+        </Form.Item>
+
+        <Form.Item name="active" label="활성화" valuePropName="checked">
+          <Switch />
+        </Form.Item>
+
+        <Typography.Paragraph type="secondary" style={{ marginBottom: 0 }}>
+          비밀번호 초기화 시 최초 비밀번호는 <b>1234</b>로 설정됩니다.
+        </Typography.Paragraph>
+      </Form>
+    </Edit>
   );
 }
 
