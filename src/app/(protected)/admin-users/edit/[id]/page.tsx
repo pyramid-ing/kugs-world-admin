@@ -6,7 +6,7 @@ import { Edit, useForm, useSelect } from "@refinedev/antd";
 import { Form, Input, Popconfirm, Select, Space, Switch, Typography, message } from "antd";
 
 import { RequireAdmin } from "@/components/auth/RequireAdmin";
-import { getSupabaseBrowserClient } from "@/lib/supabase/client";
+import { adminApi } from "@/lib/restApi";
 
 type AdminProfileForm = {
   user_id: string;
@@ -23,11 +23,12 @@ export default function AdminUsersEditPage() {
   const params = useParams<{ id: string }>();
   const id = String(params?.id ?? "");
 
-  const { formProps, saveButtonProps, queryResult } = useForm<AdminProfileForm>({
+  const { formProps, saveButtonProps } = useForm<AdminProfileForm>({
     resource: "admin_profiles",
     id,
     redirect: "list",
     meta: {
+      idColumnName: "user_id",
       select: "user_id, name, login_id, role, branch_id, active, must_change_password, registered_at",
     },
   });
@@ -42,16 +43,13 @@ export default function AdminUsersEditPage() {
   const isDealer = role === "dealer_admin";
 
   const onResetPassword = async () => {
-    const supabase = getSupabaseBrowserClient();
-    const { error } = await supabase.functions.invoke("admin_reset_password", {
-      body: { user_id: id },
-    });
-    if (error) {
-      console.warn("[admin_reset_password] failed", error);
-      message.error("비밀번호 초기화에 실패했습니다. (Edge Function 설정/권한 확인)");
-      return;
+    try {
+      await adminApi.resetPassword(id);
+      message.success("비밀번호가 1234로 초기화되었습니다.");
+    } catch (e) {
+      console.warn("[users/reset_password] failed", e);
+      message.error("비밀번호 초기화에 실패했습니다.");
     }
-    message.success("비밀번호가 1234로 초기화되었습니다.");
   };
 
   return (

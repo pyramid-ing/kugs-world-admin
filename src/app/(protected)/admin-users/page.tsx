@@ -5,8 +5,8 @@ import { List, useTable } from "@refinedev/antd";
 import { type BaseRecord, useNavigation } from "@refinedev/core";
 import { Button, Popconfirm, Space, Table, Tag, Typography, message } from "antd";
 
-import { getSupabaseBrowserClient } from "@/lib/supabase/client";
 import { RequireAdmin } from "@/components/auth/RequireAdmin";
+import { adminApi } from "@/lib/restApi";
 
 type AdminProfileRecord = BaseRecord & {
   user_id: string;
@@ -25,22 +25,20 @@ export default function AdminUsersListPage() {
     pagination: { pageSize: 20 },
     sorters: { initial: [{ field: "registered_at", order: "desc" }] },
     meta: {
+      idColumnName: "user_id",
       select:
         "user_id, name, login_id, role, active, must_change_password, registered_at, organization_id, branch_id",
     },
   });
 
   const onResetPassword = async (userId: string) => {
-    const supabase = getSupabaseBrowserClient();
-    const { error } = await supabase.functions.invoke("admin_reset_password", {
-      body: { user_id: userId },
-    });
-    if (error) {
-      console.warn("[admin_reset_password] failed", error);
-      message.error("비밀번호 초기화에 실패했습니다. (Edge Function 설정/권한 확인)");
-      return;
+    try {
+      await adminApi.resetPassword(userId);
+      message.success("비밀번호가 1234로 초기화되었습니다.");
+    } catch (e) {
+      console.warn("[users/reset_password] failed", e);
+      message.error("비밀번호 초기화에 실패했습니다.");
     }
-    message.success("비밀번호가 1234로 초기화되었습니다.");
   };
 
   return (

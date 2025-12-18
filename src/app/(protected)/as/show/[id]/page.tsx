@@ -9,7 +9,9 @@ import dayjs from "dayjs";
 import { AS_STATUS_LABEL } from "@/lib/constants";
 import { getSupabaseBrowserClient } from "@/lib/supabase/client";
 import { invokeEdgeFunction } from "@/lib/edgeFunctions";
-import { STORAGE_BUCKETS, createSignedUrls } from "@/lib/storage";
+import { getErrorMessage } from "@/lib/errors";
+import { publicApi } from "@/lib/restApi";
+import { buildQuoteIntakeUrl } from "@/lib/env";
 
 type AsRecord = {
   id: string;
@@ -28,44 +30,21 @@ type AsRecord = {
 
 type ImageRow = {
   id: string;
-  path?: string | null;
-  storage_path?: string | null;
-  file_path?: string | null;
-  url?: string | null;
-  public_url?: string | null;
-  sort_order?: number | null;
-  created_at?: string;
+  path: string;
+  signed_url: string | null;
+  created_at: string;
+  sign_error?: string | null;
 };
 
-function pickImagePath(row: ImageRow) {
-  return row.path ?? row.storage_path ?? row.file_path ?? null;
-}
-
 async function fetchAsImages(asRequestId: string): Promise<ImageRow[]> {
-  const supabase = getSupabaseBrowserClient();
-  const candidates: Array<{ field: string; value: string }> = [
-    { field: "as_request_id", value: asRequestId },
-    { field: "request_id", value: asRequestId },
-    { field: "as_id", value: asRequestId },
-  ];
-
-  for (const c of candidates) {
-    try {
-      const { data, error } = await supabase
-        .from("as_request_images")
-        .select("id, path, storage_path, file_path, url, public_url, sort_order, created_at")
-        .eq(c.field, c.value)
-        .order("sort_order", { ascending: true })
-        .order("created_at", { ascending: true });
-      if (error) throw error;
-      return (data ?? []) as ImageRow[];
-    } catch {
-      // 컬럼이 없거나 권한 문제일 수 있음 → 다음 후보로 시도
-      continue;
-    }
-  }
-
-  return [];
+  const res = await publicApi.getAsImages(asRequestId, 3600);
+  return (res.images ?? []).map((it) => ({
+    id: it.id,
+    path: it.path,
+    signed_url: it.signed_url,
+    created_at: it.created_at,
+    sign_error: it.sign_error,
+  }));
 }
 
 async function fetchLatestQuoteUrlByCarNumber(carNumber?: string | null) {
@@ -74,13 +53,14 @@ async function fetchLatestQuoteUrlByCarNumber(carNumber?: string | null) {
   try {
     const { data, error } = await supabase
       .from("quote_requests")
-      .select("intake_url, created_at")
+      // 테이블 스키마 기준: uuid/intake_url 컬럼이 없는 환경이 있어 id 기반으로 URL 생성합니다.
+      .select("id, created_at")
       .eq("car_number", carNumber)
       .order("created_at", { ascending: false })
       .limit(1)
       .maybeSingle();
     if (error) throw error;
-    return data?.intake_url ? String(data.intake_url) : null;
+    return data?.id ? buildQuoteIntakeUrl(String(data.id)) : null;
   } catch {
     return null;
   }
@@ -90,10 +70,9 @@ export default function AsShowPage({ params }: { params: { id: string } }) {
   const { queryResult } = useShow<AsRecord>({ resource: "as_requests", id: params.id });
   const record = queryResult.data?.data;
 
-  const { mutateAsync: updateAsync, isLoading: isUpdating } = useUpdate();
+  const { mutateAsync: updateAsync, isPending: isUpdating } = useUpdate();
 
   const [images, setImages] = useState<ImageRow[]>([]);
-  const [signedMap, setSignedMap] = useState<Record<string, string | null>>({});
   const [quoteUrl, setQuoteUrl] = useState<string | null>(null);
 
   const status = String(record?.status ?? "");
@@ -103,14 +82,6 @@ export default function AsShowPage({ params }: { params: { id: string } }) {
     if (!record?.id) return;
     const rows = await fetchAsImages(record.id);
     setImages(rows);
-
-    const paths = rows.map(pickImagePath).filter((p): p is string => Boolean(p));
-    if (paths.length === 0) {
-      setSignedMap({});
-      return;
-    }
-    const map = await createSignedUrls({ bucket: STORAGE_BUCKETS.asImages, paths });
-    setSignedMap(map);
   }, [record?.id]);
 
   useEffect(() => {
@@ -141,9 +112,9 @@ export default function AsShowPage({ params }: { params: { id: string } }) {
       });
       message.success("시트 발송 처리 완료");
       await queryResult.refetch();
-    } catch (e: any) {
+    } catch (e: unknown) {
       console.warn(e);
-      message.error(e?.message ? String(e.message) : "시트 발송에 실패했습니다.");
+      message.error(getErrorMessage(e) ?? "시트 발송에 실패했습니다.");
     }
   };
 
@@ -160,23 +131,20 @@ export default function AsShowPage({ params }: { params: { id: string } }) {
       });
       message.success("시공완료 처리 완료");
       await queryResult.refetch();
-    } catch (e: any) {
+    } catch (e: unknown) {
       console.warn(e);
-      message.error(e?.message ? String(e.message) : "시공완료 처리에 실패했습니다.");
+      message.error(getErrorMessage(e) ?? "시공완료 처리에 실패했습니다.");
     }
   };
 
   const previewItems = useMemo(() => {
     return images
       .map((row) => {
-        const direct = row.public_url ?? row.url ?? null;
-        const path = pickImagePath(row);
-        const signed = path ? signedMap[path] : null;
-        const src = signed ?? direct;
+        const src = row.signed_url;
         return src ? { id: row.id, src } : null;
       })
       .filter((v): v is { id: string; src: string } => Boolean(v));
-  }, [images, signedMap]);
+  }, [images]);
 
   return (
     <Show
@@ -189,7 +157,7 @@ export default function AsShowPage({ params }: { params: { id: string } }) {
       )}
     >
       <Card>
-        <Descriptions bordered size="small" column={2}>
+        <Descriptions size="small" column={2}>
           <Descriptions.Item label="NO">{record?.no ?? "-"}</Descriptions.Item>
           <Descriptions.Item label="상태">
             <Tag>{statusLabel}</Tag>
@@ -235,7 +203,14 @@ export default function AsShowPage({ params }: { params: { id: string } }) {
           <Image.PreviewGroup>
             <Space wrap>
               {previewItems.map((it) => (
-                <Image key={it.id} src={it.src} width={140} height={140} style={{ objectFit: "cover" }} />
+                <Image
+                  key={it.id}
+                  alt="A/S 이미지"
+                  src={it.src}
+                  width={140}
+                  height={140}
+                  style={{ objectFit: "cover" }}
+                />
               ))}
             </Space>
           </Image.PreviewGroup>

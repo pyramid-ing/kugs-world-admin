@@ -55,40 +55,69 @@ export function AdminProvider({ children }: { children: React.ReactNode }) {
       return null;
     }
 
-    const { data, error } = await supabase
-      .from("admin_profiles")
-      .select(
-        "user_id, organization_id, branch_id, role, name, login_id, active, must_change_password, registered_at",
-      )
-      .eq("user_id", userId)
-      .maybeSingle();
+    // admin_profiles 테이블 스키마 기준: id/auth_user_id 없이 user_id만 존재합니다.
+    const { data, error } = await supabase.from("admin_profiles").select("*").eq("user_id", userId).maybeSingle();
+    const row = !error && data && typeof data === "object" ? (data as Record<string, unknown>) : null;
 
-    if (error) {
-      // RLS/설정 전에도 로그인 화면까지는 동작해야 하므로, 하드 실패 대신 경고만.
-      console.warn("[admin_profiles] fetch failed", error);
-      message.error("관리자 프로필을 불러오지 못했습니다. (RLS/권한 설정 확인)");
+    if (!row) {
       setProfile(null);
       return null;
     }
 
-    if (!data) {
-      setProfile(null);
-      return null;
-    }
+    const roleRaw = (typeof row.role === "string" ? row.role : typeof row.admin_role === "string" ? row.admin_role : null) as
+      | AdminRole
+      | null;
+    const role: AdminRole = roleRaw === "admin" || roleRaw === "dealer_admin" ? roleRaw : "dealer_admin";
 
-    setProfile(data as AdminProfile);
+    const active =
+      typeof row.active === "boolean" ? row.active : typeof row.is_active === "boolean" ? row.is_active : typeof row.enabled === "boolean" ? row.enabled : true;
+
+    const mustChange =
+      typeof row.must_change_password === "boolean"
+        ? row.must_change_password
+        : typeof row.must_change_pw === "boolean"
+          ? row.must_change_pw
+          : false;
+
+    const profileMapped: AdminProfile = {
+      user_id: (typeof row.user_id === "string" ? row.user_id : userId) as string,
+      organization_id: (typeof row.organization_id === "string" ? row.organization_id : typeof row.org_id === "string" ? row.org_id : "") as string,
+      branch_id: (typeof row.branch_id === "string" ? row.branch_id : null) as string | null,
+      role,
+      name: (typeof row.name === "string" ? row.name : typeof row.full_name === "string" ? row.full_name : "") as string,
+      login_id: (typeof row.login_id === "string" ? row.login_id : typeof row.username === "string" ? row.username : "") as string,
+      active,
+      must_change_password: mustChange,
+      registered_at:
+        (typeof row.registered_at === "string"
+          ? row.registered_at
+          : typeof row.created_at === "string"
+            ? row.created_at
+            : typeof row.updated_at === "string"
+              ? row.updated_at
+              : "") as string,
+    };
+
+    // 필수 값(조직/이름)이 비어 있으면 UX 상 최소한의 값 보정
+    if (!profileMapped.name) profileMapped.name = profileMapped.login_id || profileMapped.user_id;
+    if (!profileMapped.login_id) profileMapped.login_id = profileMapped.user_id;
+
+    setProfile(profileMapped);
     // 기본 조직 선택: dealer_admin은 고정, admin은 로컬 저장값 우선.
-    const nextProfile = data as AdminProfile;
+    const nextProfile = profileMapped;
     const stored =
       typeof window !== "undefined" ? window.localStorage.getItem(`kugs_admin_selected_org:${nextProfile.user_id}`) : null;
     const preferred = nextProfile.role === "dealer_admin" ? nextProfile.organization_id : stored ?? null;
     setSelectedOrganizationId((prev) => prev ?? preferred ?? nextProfile.organization_id);
-    return data as AdminProfile;
+    return profileMapped;
   }, []);
 
   const refreshOrganizations = useCallback(async () => {
     const supabase = getSupabaseBrowserClient();
-    const { data, error } = await supabase.from("organizations").select("id, code, name").order("created_at");
+    // created_at 컬럼 변경 대비: order 실패하면 order 없이 재시도
+    const first = await supabase.from("organizations").select("id, code, name").order("created_at");
+    const data = first.error ? (await supabase.from("organizations").select("id, code, name")).data : first.data;
+    const error = first.error ? (await supabase.from("organizations").select("id, code, name")).error : null;
     if (error) {
       console.warn("[organizations] fetch failed", error);
       message.error("조직 목록을 불러오지 못했습니다.");

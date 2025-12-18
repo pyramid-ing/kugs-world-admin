@@ -3,50 +3,65 @@
 import React, { useMemo, useState } from "react";
 import { Create, useForm } from "@refinedev/antd";
 import type { HttpError } from "@refinedev/core";
-import { Button, Card, Checkbox, Form, Input, Radio, Space, Typography, Upload, message } from "antd";
+import { Button, Card, Checkbox, Form, Input, Select, Space, Typography, Upload, message } from "antd";
 import type { UploadFile } from "antd";
 
-import { STORAGE_BUCKETS, buildStoragePath, uploadToStorage } from "@/lib/storage";
-import { getSupabaseBrowserClient } from "@/lib/supabase/client";
+import { getErrorMessage } from "@/lib/errors";
+import { adminApi, uploadToSignedUrl } from "@/lib/restApi";
+import { CODE_MASTER_KEY_CANDIDATES, getMetaParentId, useCodeOptions } from "@/lib/codebook";
 
 type BranchRecord = {
   id: string;
-  branch_type: string;
+  branch_type_id: string;
   name: string;
   owner_name?: string | null;
   phone?: string | null;
   is_visible?: boolean;
-  sido?: string | null;
-  sigungu?: string | null;
+  region_sido_id?: string | null;
+  region_sigungu_id?: string | null;
   address?: string | null;
   address_detail?: string | null;
-  note?: string | null;
+  memo?: string | null;
 };
 
-async function insertBranchImage(params: { branchId: string; path: string; sortOrder: number }) {
-  const supabase = getSupabaseBrowserClient();
-  const candidates: Array<Record<string, any>> = [
-    { branch_id: params.branchId, path: params.path, sort_order: params.sortOrder },
-    { branch_id: params.branchId, storage_path: params.path, sort_order: params.sortOrder },
-    { branch_id: params.branchId, file_path: params.path, sort_order: params.sortOrder },
-  ];
-  for (const payload of candidates) {
-    try {
-      const { error } = await supabase.from("branch_images").insert(payload);
-      if (error) throw error;
-      return;
-    } catch {
-      continue;
-    }
-  }
-  throw new Error("branch_images 저장에 실패했습니다. (컬럼명/권한 확인)");
+type BranchForm = Omit<BranchRecord, "id">;
+
+function extractCreatedId(result: unknown): string | null {
+  if (!result || typeof result !== "object") return null;
+  const data = (result as { data?: unknown }).data;
+  if (!data || typeof data !== "object") return null;
+
+  const direct = (data as { id?: unknown }).id;
+  if (typeof direct === "string" || typeof direct === "number") return String(direct);
+
+  const nested = (data as { data?: unknown }).data;
+  if (!nested || typeof nested !== "object") return null;
+  const nestedId = (nested as { id?: unknown }).id;
+  if (typeof nestedId === "string" || typeof nestedId === "number") return String(nestedId);
+
+  return null;
 }
 
 export default function BranchCreatePage() {
-  const { formProps, saveButtonProps, onFinish } = useForm<BranchRecord, HttpError>({
+  const { formProps, saveButtonProps, onFinish } = useForm<BranchForm, HttpError>({
     resource: "branches",
     redirect: "edit",
   });
+
+  const { options: branchTypeOptions, isLoading: isLoadingBranchTypes } = useCodeOptions([...CODE_MASTER_KEY_CANDIDATES.branchType]);
+  const { options: sidoOptions, isLoading: isLoadingSido } = useCodeOptions([...CODE_MASTER_KEY_CANDIDATES.regionSido]);
+  const { options: sigunguOptionsAll, isLoading: isLoadingSigungu } = useCodeOptions([...CODE_MASTER_KEY_CANDIDATES.regionSigungu]);
+
+  const selectedSidoId = Form.useWatch("region_sido_id", formProps.form);
+  const sigunguOptions = useMemo(() => {
+    const sidoId = typeof selectedSidoId === "string" ? selectedSidoId : null;
+    if (!sidoId) return sigunguOptionsAll;
+    // meta에 parent_id(또는 유사 키)가 있는 경우에만 필터링
+    return sigunguOptionsAll.filter((o) => {
+      const parentId = getMetaParentId(o.row.meta);
+      return !parentId || parentId === sidoId;
+    });
+  }, [selectedSidoId, sigunguOptionsAll]);
 
   const [fileList, setFileList] = useState<UploadFile[]>([]);
   const [isUploading, setIsUploading] = useState(false);
@@ -56,28 +71,40 @@ export default function BranchCreatePage() {
     [],
   );
 
-  const handleFinish = async (values: any) => {
-    const res = await onFinish?.(values);
+  const handleFinish = async (values: unknown) => {
+    const payload = (values ?? {}) as BranchForm;
+    const res = await onFinish?.(payload);
     // refine의 onFinish 반환은 환경에 따라 다르므로, 직접 ID를 다시 꺼내옵니다.
-    const createdId = (res as any)?.data?.id ?? (res as any)?.data?.data?.id;
+    const createdId = extractCreatedId(res);
     if (!createdId) return res;
 
     if (fileList.length === 0) return res;
 
     setIsUploading(true);
     try {
-      for (let i = 0; i < fileList.length; i++) {
-        const f = fileList[i];
-        const origin = f.originFileObj as File | undefined;
-        if (!origin) continue;
-        const path = buildStoragePath(`branches/${createdId}`, origin.name);
-        await uploadToStorage({ bucket: STORAGE_BUCKETS.branchImages, path, file: origin, upsert: true });
-        await insertBranchImage({ branchId: createdId, path, sortOrder: i });
+      const files = fileList
+        .map((f) => f.originFileObj as File | undefined)
+        .filter((f): f is File => Boolean(f));
+      const metas = files.map((f) => {
+        const name = f.name ?? "";
+        const ext = name.includes(".") ? name.split(".").pop() ?? "" : "";
+        return { ext: ext || undefined, contentType: f.type || undefined };
+      });
+      const { uploads } = await adminApi.branchSignedUpload(createdId, metas);
+      if (!uploads || uploads.length !== files.length) throw new Error("signed_upload 응답이 올바르지 않습니다.");
+
+      for (let i = 0; i < uploads.length; i++) {
+        await uploadToSignedUrl({ signedUrl: uploads[i].signed_url, file: files[i], contentType: files[i].type });
       }
-      message.success("이미지 업로드/등록 완료");
-    } catch (e: any) {
+      await adminApi.branchFinalizeImages(
+        createdId,
+        uploads.map((u) => u.path),
+      );
+
+      message.success("이미지 업로드 완료");
+    } catch (e: unknown) {
       console.warn(e);
-      message.error(e?.message ? String(e.message) : "이미지 업로드에 실패했습니다.");
+      message.error(getErrorMessage(e) ?? "이미지 업로드에 실패했습니다.");
     } finally {
       setIsUploading(false);
     }
@@ -97,14 +124,18 @@ export default function BranchCreatePage() {
         <Form
           {...formProps}
           layout="vertical"
-          onFinish={(values) => handleFinish(values)}
-          initialValues={{ branch_type: "dealer", is_visible: true }}
+          onFinish={(values: unknown) => handleFinish(values)}
+          initialValues={{ is_visible: true }}
         >
-          <Form.Item label="구분" name="branch_type" rules={[{ required: true }]}>
-            <Radio.Group>
-              <Radio value="hq">본점</Radio>
-              <Radio value="dealer">대리점</Radio>
-            </Radio.Group>
+          <Form.Item label="구분(branch_type_id)" name="branch_type_id" rules={[{ required: true }]}>
+            <Select
+              placeholder="구분 선택"
+              loading={isLoadingBranchTypes}
+              options={branchTypeOptions}
+              showSearch
+              optionFilterProp="label"
+              filterOption={(input, option) => String(option?.label ?? "").toLowerCase().includes(String(input).toLowerCase())}
+            />
           </Form.Item>
 
           <Form.Item label="지점명" name="name" rules={[{ required: true }]}>
@@ -126,11 +157,27 @@ export default function BranchCreatePage() {
           <DividerBlock />
 
           <Space size="large" wrap>
-            <Form.Item label="시/도" name="sido">
-              <Input style={{ width: 260 }} placeholder="예: 서울" />
+            <Form.Item label="지역(시/도) region_sido_id" name="region_sido_id">
+              <Select
+                style={{ width: 260 }}
+                placeholder="시/도 선택"
+                allowClear
+                loading={isLoadingSido}
+                options={sidoOptions}
+                showSearch
+                optionFilterProp="label"
+              />
             </Form.Item>
-            <Form.Item label="시/군/구" name="sigungu">
-              <Input style={{ width: 260 }} placeholder="예: 강남구" />
+            <Form.Item label="지역(시/군/구) region_sigungu_id" name="region_sigungu_id">
+              <Select
+                style={{ width: 260 }}
+                placeholder="시/군/구 선택"
+                allowClear
+                loading={isLoadingSigungu}
+                options={sigunguOptions}
+                showSearch
+                optionFilterProp="label"
+              />
             </Form.Item>
           </Space>
 
@@ -140,7 +187,7 @@ export default function BranchCreatePage() {
           <Form.Item label="상세주소" name="address_detail">
             <Input />
           </Form.Item>
-          <Form.Item label="비고" name="note">
+          <Form.Item label="비고(memo)" name="memo">
             <Input.TextArea rows={3} />
           </Form.Item>
 

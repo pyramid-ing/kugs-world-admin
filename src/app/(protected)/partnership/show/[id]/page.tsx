@@ -32,7 +32,7 @@ export default function PartnershipShowPage({ params }: { params: { id: string }
       )}
     >
       <Card>
-        <Descriptions bordered size="small" column={2}>
+        <Descriptions size="small" column={2}>
           <Descriptions.Item label="NO">{record?.no ?? "-"}</Descriptions.Item>
           <Descriptions.Item label="등록일">{record?.created_at ?? "-"}</Descriptions.Item>
           <Descriptions.Item label="성함">{record?.name ?? "-"}</Descriptions.Item>
@@ -42,7 +42,7 @@ export default function PartnershipShowPage({ params }: { params: { id: string }
           </Descriptions.Item>
           <Descriptions.Item label="전달사항" span={2}>
             <Typography.Paragraph style={{ marginBottom: 0, whiteSpace: "pre-wrap" }}>
-              {(record as any)?.message ?? (record as any)?.content ?? "-"}
+              {record?.message ?? record?.content ?? "-"}
             </Typography.Paragraph>
           </Descriptions.Item>
         </Descriptions>

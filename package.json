@@ -2,11 +2,13 @@
   "name": "kugs-world-admin",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@9.15.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@ant-design/icons": "^6.1.0",
@@ -18,6 +20,7 @@
     "@supabase/supabase-js": "2.56.0",
     "@tanstack/react-query": "^5.90.12",
     "antd": "^5.29.2",
+    "axios": "^1.13.2",
     "dayjs": "^1.11.19",
     "next": "14.2.20",
     "react": "^18",

@@ -6,6 +6,7 @@ import { useShow, useUpdate } from "@refinedev/core";
 import { Button, Card, Descriptions, Divider, Modal, Space, Tag, Typography, message, Input } from "antd";
 
 import { DEALER_APP_STATUS_LABEL } from "@/lib/constants";
+import { getErrorMessage } from "@/lib/errors";
 
 type DealerAppRecord = {
   id: string;
@@ -13,6 +14,7 @@ type DealerAppRecord = {
   applicant_name?: string;
   title?: string;
   content?: string;
+  message?: string;
   phone?: string;
   email?: string;
   status?: string;
@@ -24,7 +26,7 @@ export default function DealerApplicationShowPage({ params }: { params: { id: st
   const { queryResult } = useShow<DealerAppRecord>({ resource: "dealer_applications", id: params.id });
   const record = queryResult.data?.data;
 
-  const { mutateAsync: updateAsync, isLoading } = useUpdate();
+  const { mutateAsync: updateAsync, isPending: isLoading } = useUpdate();
 
   const [rejectOpen, setRejectOpen] = useState(false);
   const [rejectReason, setRejectReason] = useState("");
@@ -45,9 +47,9 @@ export default function DealerApplicationShowPage({ params }: { params: { id: st
       });
       message.success("승인 처리 완료");
       await queryResult.refetch();
-    } catch (e: any) {
+    } catch (e: unknown) {
       console.warn(e);
-      message.error(e?.message ? String(e.message) : "승인 처리에 실패했습니다.");
+      message.error(getErrorMessage(e) ?? "승인 처리에 실패했습니다.");
     }
   };
 
@@ -63,9 +65,9 @@ export default function DealerApplicationShowPage({ params }: { params: { id: st
       setRejectOpen(false);
       setRejectReason("");
       await queryResult.refetch();
-    } catch (e: any) {
+    } catch (e: unknown) {
       console.warn(e);
-      message.error(e?.message ? String(e.message) : "반려 처리에 실패했습니다.");
+      message.error(getErrorMessage(e) ?? "반려 처리에 실패했습니다.");
     }
   };
 
@@ -81,7 +83,7 @@ export default function DealerApplicationShowPage({ params }: { params: { id: st
       )}
     >
       <Card>
-        <Descriptions bordered size="small" column={2}>
+        <Descriptions size="small" column={2}>
           <Descriptions.Item label="NO">{record?.no ?? "-"}</Descriptions.Item>
           <Descriptions.Item label="상태">
             <Tag>{statusLabel}</Tag>
@@ -95,7 +97,7 @@ export default function DealerApplicationShowPage({ params }: { params: { id: st
           </Descriptions.Item>
           <Descriptions.Item label="내용" span={2}>
             <Typography.Paragraph style={{ marginBottom: 0, whiteSpace: "pre-wrap" }}>
-              {(record as any)?.content ?? (record as any)?.message ?? "-"}
+              {record?.content ?? record?.message ?? "-"}
             </Typography.Paragraph>
           </Descriptions.Item>
           <Descriptions.Item label="반려사유" span={2}>

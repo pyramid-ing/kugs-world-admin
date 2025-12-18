@@ -3,14 +3,15 @@
 import React, { useEffect, useMemo } from "react";
 import { Refine, Authenticated } from "@refinedev/core";
 import routerProvider from "@refinedev/nextjs-router";
-import { ThemedLayoutV2, ErrorComponent, useNotificationProvider } from "@refinedev/antd";
-import { ConfigProvider } from "antd";
+import { ThemedLayoutV2, useNotificationProvider } from "@refinedev/antd";
+import { App as AntdApp, ConfigProvider } from "antd";
 import koKR from "antd/locale/ko_KR";
 import { DashboardOutlined, ShopOutlined, UserOutlined, FormOutlined, ToolOutlined } from "@ant-design/icons";
 
 import { getDataProvider } from "@/providers/refine/dataProvider";
 import { useAuthProvider } from "@/providers/refine/authProvider";
 import { AdminHeader } from "@/components/ui/AdminHeader";
+import { AdminSider } from "@/components/ui/AdminSider";
 import { useAdminContext } from "@/contexts/AdminContext";
 
 export function RefineRoot({ children }: { children: React.ReactNode }) {
@@ -43,6 +44,7 @@ export function RefineRoot({ children }: { children: React.ReactNode }) {
         name: "quote_requests",
         list: "/quotes",
         show: "/quotes/show/:id",
+        edit: "/quotes/edit/:id",
         meta: { label: "접수관리", icon: <FormOutlined /> },
       },
       {
@@ -68,7 +70,9 @@ export function RefineRoot({ children }: { children: React.ReactNode }) {
           list: "/admin-users",
           create: "/admin-users/create",
           edit: "/admin-users/edit/:id",
-          meta: { label: "관리자계정관리", icon: <UserOutlined /> },
+          // admin_profiles 테이블은 PK가 id가 아니라 user_id인 환경이 많습니다.
+          // refinedev/supabase dataProvider가 기본으로 id를 쓰기 때문에 여기서 명시해줍니다.
+          meta: { label: "관리자계정관리", icon: <UserOutlined />, idColumnName: "user_id" },
         },
         ...base.slice(1),
         {
@@ -90,22 +94,73 @@ export function RefineRoot({ children }: { children: React.ReactNode }) {
   }, [profile?.role]);
 
   return (
-    <ConfigProvider locale={koKR}>
-      <Refine
-        routerProvider={routerProvider}
-        dataProvider={dataProvider}
-        authProvider={authProvider}
-        notificationProvider={notificationProvider}
-        resources={resources}
-        options={{
-          syncWithLocation: true,
-          warnWhenUnsavedChanges: true,
-        }}
-      >
-        <Authenticated key="protected" redirectOnFail="/login">
-          <ThemedLayoutV2 Header={AdminHeader}>{children}</ThemedLayoutV2>
-        </Authenticated>
-      </Refine>
+    <ConfigProvider
+      locale={koKR}
+      theme={{
+        token: {
+          colorPrimary: "#1677ff",
+          colorBgLayout: "#f5f7fb",
+          colorBgContainer: "#ffffff",
+          colorBorder: "#e5e7eb",
+          borderRadius: 10,
+          fontSize: 13,
+        },
+        components: {
+          Layout: {
+            headerBg: "#ffffff",
+            siderBg: "#ffffff",
+            bodyBg: "#f5f7fb",
+          },
+          Menu: {
+            itemBorderRadius: 10,
+            itemHeight: 40,
+            itemMarginBlock: 6,
+          },
+          Card: {
+            borderRadiusLG: 14,
+          },
+          Table: {
+            headerBg: "#f7f9fc",
+            headerColor: "#111827",
+            rowHoverBg: "#f3f6ff",
+          },
+          Button: {
+            borderRadius: 10,
+            controlHeight: 36,
+          },
+          Input: {
+            borderRadius: 10,
+            controlHeight: 36,
+          },
+          Select: {
+            borderRadius: 10,
+            controlHeight: 36,
+          },
+          Modal: {
+            borderRadiusLG: 14,
+          },
+        },
+      }}
+    >
+      <AntdApp>
+        <Refine
+          routerProvider={routerProvider}
+          dataProvider={dataProvider}
+          authProvider={authProvider}
+          notificationProvider={notificationProvider}
+          resources={resources}
+          options={{
+            syncWithLocation: true,
+            warnWhenUnsavedChanges: true,
+          }}
+        >
+          <Authenticated key="protected" redirectOnFail="/login">
+            <ThemedLayoutV2 Header={AdminHeader} Sider={AdminSider}>
+              {children}
+            </ThemedLayoutV2>
+          </Authenticated>
+        </Refine>
+      </AntdApp>
     </ConfigProvider>
   );
 }

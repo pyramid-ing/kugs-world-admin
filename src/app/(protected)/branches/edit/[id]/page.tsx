@@ -2,102 +2,46 @@
 
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Edit, RefreshButton, useForm } from "@refinedev/antd";
-import { Button, Card, Checkbox, Form, Image, Input, Radio, Space, Typography, Upload, message } from "antd";
+import { Button, Card, Checkbox, Form, Image, Input, Select, Space, Typography, Upload, message } from "antd";
 import type { UploadFile } from "antd";
 
-import { getSupabaseBrowserClient } from "@/lib/supabase/client";
-import { STORAGE_BUCKETS, buildStoragePath, createSignedUrls, uploadToStorage } from "@/lib/storage";
+import { getErrorMessage } from "@/lib/errors";
+import { adminApi, uploadToSignedUrl } from "@/lib/restApi";
+import { CODE_MASTER_KEY_CANDIDATES, getMetaParentId, useCodeOptions } from "@/lib/codebook";
 
 type BranchRecord = {
   id: string;
-  branch_type: string;
+  branch_type_id: string;
   name: string;
   owner_name?: string | null;
   phone?: string | null;
   is_visible?: boolean;
-  sido?: string | null;
-  sigungu?: string | null;
+  region_sido_id?: string | null;
+  region_sigungu_id?: string | null;
   address?: string | null;
   address_detail?: string | null;
-  note?: string | null;
+  memo?: string | null;
 };
 
 type ImageRow = {
   id: string;
-  path?: string | null;
-  storage_path?: string | null;
-  file_path?: string | null;
-  url?: string | null;
-  public_url?: string | null;
-  sort_order?: number | null;
-  created_at?: string;
+  path: string;
+  signed_url: string | null;
+  sort_order: number;
+  created_at: string;
+  sign_error?: string | null;
 };
 
-function pickImagePath(row: ImageRow) {
-  return row.path ?? row.storage_path ?? row.file_path ?? null;
-}
-
 async function fetchBranchImages(branchId: string): Promise<ImageRow[]> {
-  const supabase = getSupabaseBrowserClient();
-  const candidates: Array<{ field: string; value: string }> = [
-    { field: "branch_id", value: branchId },
-    { field: "branches_id", value: branchId },
-  ];
-  for (const c of candidates) {
-    try {
-      const { data, error } = await supabase
-        .from("branch_images")
-        .select("id, path, storage_path, file_path, url, public_url, sort_order, created_at")
-        .eq(c.field, c.value)
-        .order("sort_order", { ascending: true })
-        .order("created_at", { ascending: true });
-      if (error) throw error;
-      return (data ?? []) as ImageRow[];
-    } catch {
-      continue;
-    }
-  }
-  return [];
-}
-
-async function updateImageSort(id: string, sortOrder: number) {
-  const supabase = getSupabaseBrowserClient();
-  const candidates: Array<Record<string, any>> = [{ sort_order: sortOrder }, { order: sortOrder }, { sort: sortOrder }];
-  for (const values of candidates) {
-    try {
-      const { error } = await supabase.from("branch_images").update(values).eq("id", id);
-      if (error) throw error;
-      return;
-    } catch {
-      continue;
-    }
-  }
-  throw new Error("정렬값 저장에 실패했습니다. (컬럼명/권한 확인)");
-}
-
-async function deleteImageRow(id: string) {
-  const supabase = getSupabaseBrowserClient();
-  const { error } = await supabase.from("branch_images").delete().eq("id", id);
-  if (error) throw error;
-}
-
-async function insertBranchImage(params: { branchId: string; path: string; sortOrder: number }) {
-  const supabase = getSupabaseBrowserClient();
-  const candidates: Array<Record<string, any>> = [
-    { branch_id: params.branchId, path: params.path, sort_order: params.sortOrder },
-    { branch_id: params.branchId, storage_path: params.path, sort_order: params.sortOrder },
-    { branch_id: params.branchId, file_path: params.path, sort_order: params.sortOrder },
-  ];
-  for (const payload of candidates) {
-    try {
-      const { error } = await supabase.from("branch_images").insert(payload);
-      if (error) throw error;
-      return;
-    } catch {
-      continue;
-    }
-  }
-  throw new Error("branch_images 저장에 실패했습니다. (컬럼명/권한 확인)");
+  const res = await adminApi.getBranchImages(branchId, 3600);
+  return (res.images ?? []).map((it) => ({
+    id: it.id,
+    path: it.path,
+    signed_url: it.signed_url,
+    sort_order: it.sort_order,
+    created_at: it.created_at,
+    sign_error: it.sign_error,
+  }));
 }
 
 export default function BranchEditPage({ params }: { params: { id: string } }) {
@@ -107,9 +51,32 @@ export default function BranchEditPage({ params }: { params: { id: string } }) {
   });
 
   const branch = queryResult?.data?.data;
+  const mergedInitialValues = useMemo(() => {
+    const base = (formProps as unknown as { initialValues?: unknown }).initialValues;
+    const obj = base && typeof base === "object" ? (base as Record<string, unknown>) : {};
+    return {
+      ...obj,
+      is_visible: typeof obj.is_visible === "boolean" ? obj.is_visible : true,
+    } as Partial<BranchRecord>;
+  }, [formProps]);
+
+  const { options: branchTypeOptions, isLoading: isLoadingBranchTypes, labelById: branchTypeLabelById } = useCodeOptions([
+    ...CODE_MASTER_KEY_CANDIDATES.branchType,
+  ]);
+  const { options: sidoOptions, isLoading: isLoadingSido } = useCodeOptions([...CODE_MASTER_KEY_CANDIDATES.regionSido]);
+  const { options: sigunguOptionsAll, isLoading: isLoadingSigungu } = useCodeOptions([...CODE_MASTER_KEY_CANDIDATES.regionSigungu]);
+
+  const selectedSidoId = Form.useWatch("region_sido_id", formProps.form);
+  const sigunguOptions = useMemo(() => {
+    const sidoId = typeof selectedSidoId === "string" ? selectedSidoId : null;
+    if (!sidoId) return sigunguOptionsAll;
+    return sigunguOptionsAll.filter((o) => {
+      const parentId = getMetaParentId(o.row.meta);
+      return !parentId || parentId === sidoId;
+    });
+  }, [selectedSidoId, sigunguOptionsAll]);
 
   const [images, setImages] = useState<ImageRow[]>([]);
-  const [signedMap, setSignedMap] = useState<Record<string, string | null>>({});
   const [fileList, setFileList] = useState<UploadFile[]>([]);
   const [busy, setBusy] = useState(false);
 
@@ -117,13 +84,6 @@ export default function BranchEditPage({ params }: { params: { id: string } }) {
     if (!params.id) return;
     const rows = await fetchBranchImages(params.id);
     setImages(rows);
-    const paths = rows.map(pickImagePath).filter((p): p is string => Boolean(p));
-    if (paths.length === 0) {
-      setSignedMap({});
-      return;
-    }
-    const map = await createSignedUrls({ bucket: STORAGE_BUCKETS.branchImages, paths });
-    setSignedMap(map);
   }, [params.id]);
 
   useEffect(() => {
@@ -133,74 +93,42 @@ export default function BranchEditPage({ params }: { params: { id: string } }) {
   const previewItems = useMemo(() => {
     return images
       .map((row) => {
-        const direct = row.public_url ?? row.url ?? null;
-        const path = pickImagePath(row);
-        const signed = path ? signedMap[path] : null;
-        const src = signed ?? direct;
+        const src = row.signed_url;
         return src ? { id: row.id, src, sort_order: row.sort_order ?? 0 } : null;
       })
       .filter((v): v is { id: string; src: string; sort_order: number } => Boolean(v));
-  }, [images, signedMap]);
-
-  const move = async (id: string, dir: -1 | 1) => {
-    const idx = images.findIndex((x) => x.id === id);
-    if (idx < 0) return;
-    const targetIdx = idx + dir;
-    if (targetIdx < 0 || targetIdx >= images.length) return;
-
-    const cur = images[idx];
-    const other = images[targetIdx];
-    const curOrder = cur.sort_order ?? idx;
-    const otherOrder = other.sort_order ?? targetIdx;
-
-    setBusy(true);
-    try {
-      await updateImageSort(cur.id, otherOrder);
-      await updateImageSort(other.id, curOrder);
-      message.success("정렬 변경 완료");
-      await refreshImages();
-    } catch (e: any) {
-      console.warn(e);
-      message.error(e?.message ? String(e.message) : "정렬 변경에 실패했습니다.");
-    } finally {
-      setBusy(false);
-    }
-  };
-
-  const onDelete = async (id: string) => {
-    setBusy(true);
-    try {
-      await deleteImageRow(id);
-      message.success("이미지 레코드 삭제 완료");
-      await refreshImages();
-    } catch (e: any) {
-      console.warn(e);
-      message.error(e?.message ? String(e.message) : "삭제에 실패했습니다.");
-    } finally {
-      setBusy(false);
-    }
-  };
+  }, [images]);
 
   const onUpload = async () => {
     if (!params.id) return;
     if (fileList.length === 0) return;
     setBusy(true);
     try {
-      const baseOrder = images.length > 0 ? Math.max(...images.map((x) => x.sort_order ?? 0)) + 1 : 0;
-      for (let i = 0; i < fileList.length; i++) {
-        const f = fileList[i];
-        const origin = f.originFileObj as File | undefined;
-        if (!origin) continue;
-        const path = buildStoragePath(`branches/${params.id}`, origin.name);
-        await uploadToStorage({ bucket: STORAGE_BUCKETS.branchImages, path, file: origin, upsert: true });
-        await insertBranchImage({ branchId: params.id, path, sortOrder: baseOrder + i });
+      const files = fileList
+        .map((f) => f.originFileObj as File | undefined)
+        .filter((f): f is File => Boolean(f));
+      const metas = files.map((f) => {
+        const name = f.name ?? "";
+        const ext = name.includes(".") ? name.split(".").pop() ?? "" : "";
+        return { ext: ext || undefined, contentType: f.type || undefined };
+      });
+      const { uploads } = await adminApi.branchSignedUpload(params.id, metas);
+      if (!uploads || uploads.length !== files.length) throw new Error("signed_upload 응답이 올바르지 않습니다.");
+
+      for (let i = 0; i < uploads.length; i++) {
+        await uploadToSignedUrl({ signedUrl: uploads[i].signed_url, file: files[i], contentType: files[i].type });
       }
+      await adminApi.branchFinalizeImages(
+        params.id,
+        uploads.map((u) => u.path),
+      );
+
       setFileList([]);
       message.success("업로드/등록 완료");
       await refreshImages();
-    } catch (e: any) {
+    } catch (e: unknown) {
       console.warn(e);
-      message.error(e?.message ? String(e.message) : "업로드에 실패했습니다.");
+      message.error(getErrorMessage(e) ?? "업로드에 실패했습니다.");
     } finally {
       setBusy(false);
     }
@@ -218,13 +146,22 @@ export default function BranchEditPage({ params }: { params: { id: string } }) {
       )}
     >
       <Card>
-        <Form {...formProps} layout="vertical" initialValues={{ is_visible: true }}>
-          <Form.Item label="구분" name="branch_type" rules={[{ required: true }]}>
-            <Radio.Group>
-              <Radio value="hq">본점</Radio>
-              <Radio value="dealer">대리점</Radio>
-            </Radio.Group>
+        <Form {...formProps} layout="vertical" initialValues={mergedInitialValues}>
+          <Form.Item label="구분(branch_type_id)" name="branch_type_id" rules={[{ required: true }]}>
+            <Select
+              placeholder="구분 선택"
+              loading={isLoadingBranchTypes}
+              options={branchTypeOptions}
+              showSearch
+              optionFilterProp="label"
+            />
           </Form.Item>
+
+          {branch?.branch_type_id ? (
+            <Typography.Paragraph type="secondary" style={{ marginTop: -8 }}>
+              현재 구분: {branchTypeLabelById.get(String(branch.branch_type_id)) ?? String(branch.branch_type_id)}
+            </Typography.Paragraph>
+          ) : null}
 
           <Form.Item label="지점명" name="name" rules={[{ required: true }]}>
             <Input />
@@ -243,11 +180,27 @@ export default function BranchEditPage({ params }: { params: { id: string } }) {
           </Space>
 
           <Space size="large" wrap>
-            <Form.Item label="시/도" name="sido">
-              <Input style={{ width: 260 }} />
+            <Form.Item label="지역(시/도) region_sido_id" name="region_sido_id">
+              <Select
+                style={{ width: 260 }}
+                placeholder="시/도 선택"
+                allowClear
+                loading={isLoadingSido}
+                options={sidoOptions}
+                showSearch
+                optionFilterProp="label"
+              />
             </Form.Item>
-            <Form.Item label="시/군/구" name="sigungu">
-              <Input style={{ width: 260 }} />
+            <Form.Item label="지역(시/군/구) region_sigungu_id" name="region_sigungu_id">
+              <Select
+                style={{ width: 260 }}
+                placeholder="시/군/구 선택"
+                allowClear
+                loading={isLoadingSigungu}
+                options={sigunguOptions}
+                showSearch
+                optionFilterProp="label"
+              />
             </Form.Item>
           </Space>
 
@@ -257,7 +210,7 @@ export default function BranchEditPage({ params }: { params: { id: string } }) {
           <Form.Item label="상세주소" name="address_detail">
             <Input />
           </Form.Item>
-          <Form.Item label="비고" name="note">
+          <Form.Item label="비고(memo)" name="memo">
             <Input.TextArea rows={3} />
           </Form.Item>
         </Form>
@@ -265,7 +218,7 @@ export default function BranchEditPage({ params }: { params: { id: string } }) {
 
       <Card title={`이미지 (${previewItems.length})`} style={{ marginTop: 16 }}>
         <Typography.Paragraph type="secondary" style={{ marginBottom: 8 }}>
-          새 이미지 선택 → “업로드” 클릭 시 Storage 업로드 후 branch_images에 등록됩니다.
+          새 이미지 선택 → “업로드” 클릭 시 Signed Upload → Finalize API로 등록됩니다.
         </Typography.Paragraph>
         <Space wrap>
           <Upload
@@ -289,30 +242,14 @@ export default function BranchEditPage({ params }: { params: { id: string } }) {
         ) : (
           <Image.PreviewGroup>
             <Space wrap>
-              {previewItems.map((it, idx) => (
+              {previewItems.map((it) => (
                 <Card
                   key={it.id}
                   size="small"
                   style={{ width: 170 }}
-                  bodyStyle={{ padding: 8 }}
-                  actions={[
-                    <Button key="up" size="small" onClick={() => move(it.id, -1)} disabled={busy || idx === 0}>
-                      ↑
-                    </Button>,
-                    <Button
-                      key="down"
-                      size="small"
-                      onClick={() => move(it.id, 1)}
-                      disabled={busy || idx === previewItems.length - 1}
-                    >
-                      ↓
-                    </Button>,
-                    <Button key="del" size="small" danger onClick={() => onDelete(it.id)} disabled={busy}>
-                      삭제
-                    </Button>,
-                  ]}
+                  styles={{ body: { padding: 8 } }}
                 >
-                  <Image src={it.src} width={150} height={150} style={{ objectFit: "cover" }} />
+                  <Image alt="지점 이미지" src={it.src} width={150} height={150} style={{ objectFit: "cover" }} />
                 </Card>
               ))}
             </Space>

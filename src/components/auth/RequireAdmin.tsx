@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ErrorComponent } from "@refinedev/antd";
+import { Result } from "antd";
 
 import { useAdminContext } from "@/contexts/AdminContext";
 
@@ -12,10 +12,12 @@ export function RequireAdmin({ children }: { children: React.ReactNode }) {
   if (!profile) return null;
 
   if (profile.role !== "admin") {
-    return <ErrorComponent statusCode={403} title="접근 권한이 없습니다." />;
+    return <Result status="403" title="403" subTitle="접근 권한이 없습니다." />;
   }
 
   return <>{children}</>;
 }
+
+
 
 

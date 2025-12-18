@@ -7,7 +7,7 @@ import { Alert, Form, Input, Select, Switch, Typography, message } from "antd";
 
 import { RequireAdmin } from "@/components/auth/RequireAdmin";
 import { useAdminContext } from "@/contexts/AdminContext";
-import { getSupabaseBrowserClient } from "@/lib/supabase/client";
+import { adminApi } from "@/lib/restApi";
 
 type CreateAdminInput = {
   name: string;
@@ -46,19 +46,14 @@ export default function AdminUsersCreatePage() {
 
     setLoading(true);
     try {
-      const supabase = getSupabaseBrowserClient();
-      const { error } = await supabase.functions.invoke("admin_create_user", {
-        body: {
-          organization_id: selectedOrganizationId,
-          ...values,
-          branch_id: values.role === "dealer_admin" ? values.branch_id ?? null : null,
-        },
+      await adminApi.createUser({
+        organization_id: selectedOrganizationId,
+        email: values.email,
+        login_id: values.login_id,
+        name: values.name,
+        role: values.role,
+        branch_id: values.role === "dealer_admin" ? values.branch_id ?? null : null,
       });
-      if (error) {
-        console.warn("[admin_create_user] failed", error);
-        message.error("계정 생성에 실패했습니다. (Edge Function 설정/권한 확인)");
-        return;
-      }
       message.success("계정이 생성되었습니다. (초기 비밀번호: 1234)");
       list("admin_profiles");
     } finally {
@@ -73,7 +68,7 @@ export default function AdminUsersCreatePage() {
           type="info"
           showIcon
           message="초기 비밀번호는 1234로 설정됩니다."
-          description="계정 생성은 Edge Function(service_role)로 처리됩니다."
+          description="계정 생성은 관리자 REST API로 처리됩니다."
           style={{ marginBottom: 16 }}
         />
 

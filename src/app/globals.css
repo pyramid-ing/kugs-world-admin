@@ -1,6 +1,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --kw-bg: #f5f7fb;
+  --kw-card-border: #eef2f7;
+  --kw-text: #111827;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,10 +21,78 @@ body {
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: var(--kw-bg);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---- KUGS WORLD Admin UI skin (antd/refine) ---- */
+
+.ant-layout {
+  background: var(--kw-bg);
+}
+
+.ant-layout-header {
+  background: #fff !important;
+  border-bottom: 1px solid var(--kw-card-border);
+}
+
+.ant-layout-sider {
+  background: #fff !important;
+  border-right: 1px solid var(--kw-card-border);
+}
+
+.ant-layout-content {
+  padding: 24px !important;
+}
+
+.kw-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.kw-page-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--kw-text);
+}
+
+.kw-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.kw-filter-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.kw-card {
+  background: #fff;
+  border: 1px solid var(--kw-card-border);
+  border-radius: 14px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.kw-table .ant-table {
+  background: transparent;
+}
+
+.kw-table .ant-table-thead > tr > th {
+  font-weight: 700;
+  color: var(--kw-text);
+}
+
+.kw-muted {
+  color: #6b7280;
 }
 
 * {
